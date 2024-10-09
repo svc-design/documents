@@ -4,8 +4,8 @@
 - **Name**: 潘海涛 (Pan Haitao)
 - **Location**: Shanghai, China
 - **Current Status**: Unemployed
-- **Phone**: 13691175694
-- **Email**: manbuzhe2009@qq.com
+- **Phone**: +86 13691175694
+- **Email**: manbuzhe2008@gmail.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **LANGUAGES**: Chinese(native), English(conversational)
 
@@ -35,16 +35,17 @@ A cloud engineer and site reliability engineer with 13 years of experience in cl
 
 ### Work Experience
 
-| Duration           | Company                               | Position                   |
-| ------------------ | ------------------------------------- | -------------------------- |
-| 2024.1 - 2024.5    | Tesla (Shanghai) Co., Ltd.           | Site Reliability Engineer  |
-| 2022.3 - 2023.10   | Eccom Network System Co., Ltd.       | Senior Public Cloud Solution Architect |
-| 2020.7 - 2021.11   | UCloud Technology Co., Ltd.          | Senior Solution Architect  |
-| 2018.5 - 2020.6    | Alauda Cloud Technology Co., Ltd.    | Delivery Engineer          |
-| 2015.5 - 2018.4    | Tongxin Software Co., Ltd.           | Software Engineer          |
-| 2013.11 - 2015.4   | KnowSec Technology Co., Ltd.         | Operations Engineer        |
-| 2013.5 - 2013.10   | Inspur Electronic Information Co., Ltd. | System Software Engineer |
-| 2011.5 - 2013.4    | China Standard Software Co., Ltd.    | Software Engineer          |
+| **Duration**          | **Company**                               | **Job Title**                   |
+|-----------------------|-------------------------------------------|---------------------------------|
+| 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer       |
+| 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect |
+| 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect       |
+| 2020.7 ~ 2021.11      | UCloud Technology Co., Ltd.              | Senior Solution Architect       |
+| 2018.5 ~ 2020.6       | Alauda Cloud Technology Co., Ltd.        | Delivery Engineer               |
+| 2015.5 ~ 2018.4       | Tongxin Software Co., Ltd.               | Software Engineer               |
+| 2013.11 ~ 2015.4      | KnowSec Technology Co., Ltd.             | Operations Engineer             |
+| 2013.5 ~ 2013.10      | Inspur Electronic Information Co., Ltd.  | System Software Engineer        |
+| 2011.5 ~ 2013.4       | China Standard Software Co., Ltd.        | Software Engineer               |
 
 ### Project Summary
 

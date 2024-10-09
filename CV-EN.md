@@ -1,86 +1,54 @@
+# Personal Information
 
-# PERSONAL PARTICULARS
+Name: Pan Haitao
+Location: Shanghai, China
+Current Status: Unemployed
+Phone: +86 13691175694
+Email: manbuzhe2008@gmail.com
+LinkedIn: www.linkedin.com/in/haitaopan
+Languages: Chinese (Native), English (Conversational)
 
-Name				: Pan haitao （Chinese）
+## Key Experience and Expertise
+- **Years of Experience in IT**: 13 years
+- **Technical Expertise**: Linux / Python / Ansible / Docker / Kubernetes / IaC / DevOps
+- **Industry Fields**: Manufacturing, Finance, Internet
+- **English Proficiency**: No certification
+- **Certifications/Highlights**: None
 
-KEY EXPERIENCES AND SPECIALIZATION
+# Education Background
+| Time Range        | Highest Degree | School           | Major             |
+| ------------------| -------------- | ---------------- | ----------------- |
+| 2006.9 ~ 2010.6   | Bachelor's     | Changchun University of Technology | Electrical Engineering and Automation |
 
-Years in IT			:  13
+# Work Experience
 
-Technology Expertise	:  Linux/Python/Ansible/Docker/Kubernetes/Cloud/CICD
-	
-Domain Expertise		:  manufacturing industry, finance, internet
-
-English Level			:  no certificate
-
-Certification/Highlight	:  no certificate
-
-
-# EDUCATION
-
-Period	Highest Education	University	Major
-2006.9 ~ 2010.6	Bachelor	Changchun Institute of Technology	Electrical Engineering and Automation
-
+| **Duration**          | **Company**                               | **Job Title**                   |
+|-----------------------|-------------------------------------------|---------------------------------|
+| 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer       |
+| 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect |
+| 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect       |
+| 2020.7 ~ 2021.11      | UCloud Technology Co., Ltd.               | Senior Solution Architect       |
+| 2018.5 ~ 2020.6       | Alauda Cloud Technology Co., Ltd.        | Delivery Engineer               |
+| 2015.5 ~ 2018.4       | Tongxin Software Co., Ltd.               | Software Engineer               |
+| 2013.11 ~ 2015.4      | KnowSec Technology Co., Ltd.             | Operations Engineer             |
+| 2013.5 ~ 2013.10      | Inspur Electronic Information Co., Ltd.  | System Software Engineer        |
+| 2011.5 ~ 2013.4       | China Standard Software Co., Ltd.        | Software Engineer               |
 
 # Project Summary
 
-2024.01-2024.4
-Client：		Tesla (Shanghai)
-Project Name：	Tesla Shanghai Internal Project
-Role：			SRE
-Tech Stack：		GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins/HashiCorp / Linux system administration 
-
-2022.06-2023.9
-
-Client：		Roche 
-Project Name：	MSP services
-Role：			Solution Architect
-Tech Stack：		Cloud infrastructure / Infrastructure as Code(terraform) / Gitlab CI /GitOPS(FluxCD)/ Datadog / Linux system administration
-
-2020.07-2021.11
-	
-Client：           Ucloud
-Project Name：     Ucloud cutomer project
-TechStack:         Cloud migration, Kubernetes, hybrid cloud, distributed storage, network security, logging, monitoring, CI/CD.
-Company Name:    UCloud Technology Co., Ltd. (ucloud.cn)
+| Time Range         | Client           | Project Name            | Role                     | Tech Stack                                         |
+| ------------------ | ---------------- | ----------------------- | ------------------------ | -------------------------------------------------- |
+| 2024.01-2024.04    | Tesla (Shanghai) | Internal Project at Tesla | SRE (Site Reliability Engineer) | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins / HashiCorp / Linux Server |
+| 2022.06-2023.09    | Roche            | Roche MSP Services      | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
+| 2020.07-2021.11    | UCloud          | UCloud Client Projects   | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
+| 2019.06-2020.06    | Everbright Bank  | Everbright Bank CPaaS Project | On-site Implementation Engineer | Alauda Container Platform/VMware CNI NSX-T/DevOps/ES/Prometheus |
+| 2015.5-2018.8      | Tongxin Software Co., Ltd. | Deepin Server Product Development | Software Engineer  | Linux (Debian/CentOS), Shell Scripting, Docker, Jenkins |
+| 2013.11-2015.4     | KnowSec Technology Co., Ltd. | Infrastructure and Operations Management | Operations Engineer | Linux, Shell, Python, Saltstack, Nginx, Nagios, CDN Technology |
+| 2013.5-2013.10     | Inspur Electronic Information Co., Ltd. | KUX-OS Server Version Maintenance | System Software Engineer | Linux, Apache, Bash Scripting, Monitoring Tools |
+| 2011.05-2013.04    | China Standard Software Co., Ltd. | Linux System Porting and RPM Build Automation | Software Engineer | Linux, RPM Packaging, Koji Build System, Shell Scripting |
 
 
-2019.06-2020.06
-
-Client：		Everbright Bank    
-Project Name：	Everbright Bank PaaS project	
-Role：			On-site implementation engineer
-Tech Stack：		Alauda Container Platform/DevOPS/ES 
-
-2015.5-2018.8
-
-Project Name:       UOS Server Product Development
-Role:              Software Engineer
-Tech Stack:         Linux, Shell Scripting, Docker, Jenkins
-Company Name:     Tongxin Software Co., Ltd.
-
-2013.11-2015.4
-
-Project Name:       Infrastructure and Operations Management
-Role:              Operations Engineer
-Tech Stack:         Linux,Shell,Python,Saltstack Nginx, Nagios, CDN Technologies
-Company Name:     KnowSec Technology Co., Ltd.
-
-2013.5-2013.10
-
-Project Name: 	Linux Server Maintenance
-Role: 			System Software Engineer
-Tech Stack:		Linux, Apache, Bash Scripting, Monitoring Tools
-Company Name: 	Inspur Electronic Information Co., Ltd.
-
-2011.05 - 2013.04
-
-Project Name: 	Linux System Porting and RPM Build Automation
-Role: 			Software Engineer
-Tech Stack:		Linux,RPM Packaging ,Koji Build System,Shell Scripting
-Company Name: 	China Standard Software Co., Ltd. (CS2C)
-
-PROJECT/ CONSULTANCY SERVICES EXPERIENCE 
+# PROJECT/ CONSULTANCY SERVICES EXPERIENCE 
 
 Project 1: Tesla Shanghai Internal Project
 2024.01-2024.04 	Tesla Shanghai Internal Project 	Site Reliability Engineering

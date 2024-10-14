@@ -55,7 +55,11 @@ jobs:
     - name: Upload PDFs to Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # 使用创建的 tag
-        files: ./CV-EN.pdf ./CV-ZH.pdf ./Resume-EN.pdf ./Resume-ZH.pdf
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}
+        files: |
+          ./CV-EN.pdf
+          ./CV-ZH.pdf
+          ./Resume-EN.pdf
+          ./Resume-ZH.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

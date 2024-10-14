@@ -1,7 +1,8 @@
 # RESUME
 
 ### Personal Information
-- **Name**: 潘海涛 (Pan Haitao)
+
+- **Name**: Haitao Pan
 - **Location**: Shanghai, China
 - **Current Status**: Unemployed
 - **Phone**: +86 13691175694
@@ -20,10 +21,10 @@
 A cloud engineer and site reliability engineer with 13 years of experience in cloud technology, IT infrastructure, and DevOps practices. Skilled in using Kubernetes, Docker, and CI/CD automation tools like GitHub Actions, Jenkins, and Ansible to deliver scalable solutions. Extensive experience leading cloud migration projects, developing hybrid cloud solutions, and implementing monitoring and observability systems. Conversational English proficiency; salary negotiable.
 
 ### Skills Overview
-- **Cloud Platforms**: AWS, GCP, Aliyun, Azure
-- **Containerization & Orchestration**: Docker, Kubernetes
+- **Cloud Platforms**: AWS, GCP, Azure, AliCloud
+- **Containerization & Orchestration**: Linux, Docker, Kubernetes
 - **Programming Languages**: Proficient in Python and Shell; familiar with Go, Rust, JavaScript
-- **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch (ES), Nagios
+- **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch (ES), DeepFlow(APM)
 - **Infrastructure as Code (IaC)**: Terraform, Pulumi, GitLab CI, GitOps (ArgoCD, FluxCD)
 - **Automation Tools**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
 

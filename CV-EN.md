@@ -1,26 +1,25 @@
 # Personal Information
 
-Name: Pan Haitao
-Location: Shanghai, China
-Current Status: Unemployed
-Phone: +86 13691175694
-Email: manbuzhe2008@gmail.com
-LinkedIn: www.linkedin.com/in/haitaopan
-Languages: Chinese (Native), English (Conversational)
+- Name: Pan Haitao
+- Location: Shanghai, China
+- Current Status: Unemployed
+- Phone: +86 13691175694
+- Email: manbuzhe2008@gmail.com
+- LinkedIn: www.linkedin.com/in/haitaopan
+- Languages: Chinese (Native), English (Conversational)
 
 ## Key Experience and Expertise
-- **Years of Experience in IT**: 13 years
-- **Technical Expertise**: Linux / Python / Ansible / Docker / Kubernetes / IaC / DevOps
-- **Industry Fields**: Manufacturing, Finance, Internet
-- **English Proficiency**: No certification
-- **Certifications/Highlights**: None
+
+- **Years of  Experience in IT**: 13 years
+- **Technical Expertise**: Linux / Docker / Kubernetes / Ansible/ IaC / DevOps/ Ansible / Python /Shell
+- **Industry  Fields**:    Manufacturing, Finance, Internet
 
 # Education Background
 | Time Range        | Highest Degree | School           | Major             |
 | ------------------| -------------- | ---------------- | ----------------- |
 | 2006.9 ~ 2010.6   | Bachelor's     | Changchun University of Technology | Electrical Engineering and Automation |
 
-# Work Experience
+# JOB HISTORY
 
 | **Duration**          | **Company**                               | **Job Title**                   |
 |-----------------------|-------------------------------------------|---------------------------------|
@@ -182,15 +181,3 @@ Achievements:
 3.Improved software deployment cycles and ensured high-quality releases by establishing automated testing procedures within the build pipeline.
 TechStack:		Linux,RPM Packaging ,Koji Build System,Shell Scripting
 CompanyName: 	China Standard Software Co., Ltd. (CS2C)
-
-
-# JOB HISTORY
-
-- 2024.1-2024.5     Tesla (Shanghai) Co., Ltd.		    Site Reliability Engineering
-- 2022.3-2023.10    Eccom Network System Co.,Ltd.	    Senior Public Cloud Solution Architect
-- 2020.7-2021.11    UCloud Technology Co., Ltd.             Senior Solution architect
-- 2018.5-2020.6     Alauda Cloud Technology Co., Ltd. 	    Delivery engineer
-- 2015.5-2018.4     Tongxin Software Co., Ltd. 		    Software engineer
-- 2013.11-2015.4    KnowSec Technology Co., Ltd.            Operations engineer
-- 2013.5-2013.10    Inspur Electronic Information Co., Ltd. System software engineer
-- 2011.5-2013.4     China Standard Software Co., Ltd.       Software engineer

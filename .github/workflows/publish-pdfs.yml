@@ -16,26 +16,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up TeX environment
-      run: sudo apt-get update && sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-lang-chinese fonts-noto-cjk fonts-dejavu
+    - name: Set up build environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-lang-chinese fonts-noto-cjk fonts-dejavu
+        sudo apt-get install -y pandoc
 
-    - name: Install pandoc
-      run: sudo apt-get install -y pandoc
-
-    - name: Install fonts
-      run: sudo apt-get install -y fonts-dejavu fonts-noto-cjk
-
-    - name: Build CV-EN.pdf
-      run: pandoc CV-EN.md -o CV-EN.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
-
-    - name: Build CV-ZH.pdf
-      run: pandoc CV-ZH.md -o CV-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
-
-    - name: Build Resume-EN.pdf
-      run: pandoc Resume-EN.md -o Resume-EN.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
-
-    - name: Build Resume-ZH.pdf
-      run: pandoc Resume-ZH.md -o Resume-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
+    - name: Build PDFs
+      run: |
+        pandoc CV-EN.md -o CV-EN.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
+        pandoc CV-ZH.md -o CV-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
+        pandoc Resume-EN.md -o Resume-EN.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
+        pandoc Resume-ZH.md -o Resume-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
 
     - name: Upload PDFs to GitHub Artifacts
       uses: actions/upload-artifact@v3
@@ -46,3 +38,12 @@ jobs:
           CV-ZH.pdf
           Resume-EN.pdf
           Resume-ZH.pdf
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ format('{0:yyyyMMdd}', github.event.pull_request.created_at) }}  # 使用当前日期作为版本号
+        release_name: Release ${{ format('{0:yyyyMMdd}', github.event.pull_request.created_at) }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

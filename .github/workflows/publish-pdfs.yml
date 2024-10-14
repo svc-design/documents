@@ -1,0 +1,45 @@
+name: Build and Publish PDFs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up TeX environment
+      run: sudo apt-get update && sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+    - name: Install pandoc
+      run: sudo apt-get install -y pandoc
+
+    - name: Build CV-EN.pdf
+      run: pandoc CV-EN.md -o CV-EN.pdf --pdf-engine=xelatex -V CJKmainfont="PingFang SC" -V mainfont="Times New Roman" -V geometry:margin=1in -V fontsize=12pt
+
+    - name: Build CV-ZH.pdf
+      run: pandoc CV-ZH.md -o CV-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="PingFang SC" -V mainfont="Times New Roman" -V geometry:margin=1in -V fontsize=12pt
+
+    - name: Build Resume-EN.pdf
+      run: pandoc Resume-EN.md -o Resume-EN.pdf --pdf-engine=xelatex -V CJKmainfont="PingFang SC" -V mainfont="Times New Roman" -V geometry:margin=1in -V fontsize=12pt
+
+    - name: Build Resume-ZH.pdf
+      run: pandoc Resume-ZH.md -o Resume-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="PingFang SC" -V mainfont="Times New Roman" -V geometry:margin=1in -V fontsize=12pt
+
+    - name: Upload PDFs to GitHub Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: PDFs
+        path: |
+          CV-EN.pdf
+          CV-ZH.pdf
+          Resume-EN.pdf
+          Resume-ZH.pdf

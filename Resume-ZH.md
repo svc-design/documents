@@ -17,10 +17,10 @@
 
 ### 职业概述
 
-拥有13年云技术、IT基础设施和DevOps实践经验的云工程师和网站可靠性工程师。熟练使用Kubernetes、Docker和CI/CD自动化工具，如GitHub Actions、Jenkins和Ansible，以提供可扩展的解决方案。具有丰富的云迁移项目领导经验、开发混合云解决方案和实施监控与可观察性系统的经验。具备工作英语能力；薪资可协商。
+拥有13年ITf支撑服务经验，包括云技术、IT基础设施和DevOps实践经验。熟练使用Kubernetes、Docker和CI/CD自动化工具，如GitHub Actions、Jenkins和Ansible，以提供可扩展的解决方案。具有丰富的云迁移项目经验、混合云解决方案和监控与可观察性系统的经验。
 
 ### 技能概述
-- **云平台**: AWS, GCP, 阿里云, Azure
+- **云平台**: AWS, GCP, Azure，AliCloud
 - **容器化与编排**: Docker, Kubernetes
 - **编程语言**: 熟悉Python和Shell；了解Go、Rust、JavaScript
 - **可观察性与监控**: Prometheus, Grafana, Elasticsearch (ES), Nagios

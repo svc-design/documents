@@ -18,7 +18,7 @@
 
 ### Professional Summary
 
-A cloud engineer and site reliability engineer with 13 years of experience in cloud technology, IT infrastructure, and DevOps practices. Skilled in using Kubernetes, Docker, and CI/CD automation tools like GitHub Actions, Jenkins, and Ansible to deliver scalable solutions. Extensive experience leading cloud migration projects, developing hybrid cloud solutions, and implementing monitoring and observability systems. Conversational English proficiency; salary negotiable.
+A cloud engineer and site reliability engineer with 13 years of experience in cloud technology, IT infrastructure, and DevOps practices. Skilled in using Kubernetes, Docker, and CI/CD automation tools like GitHub Actions, Jenkins, and Ansible to deliver scalable solutions. Extensive experience leading cloud migration projects, developing hybrid cloud solutions, and implementing monitoring and observability systems.
 
 ### Skills Overview
 - **Cloud Platforms**: AWS, GCP, Azure, AliCloud

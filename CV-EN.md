@@ -112,21 +112,24 @@ Gathered customers' business needs and provided technical consulting services to
     4. DevOps and Automation: Leveraged Jenkins CI for continuous integration and delivery pipelines, automating the deployment process and reducing manual intervention. Enhanced the DevOps processes to streamline application deployment and management across multiple environments.
     5. Log and Monitoring Integration: Integrated comprehensive logging and monitoring solutions to track application performance, system health, and user activity. This involved setting up Elasticsearch (ES) and Prometheus for real-time monitoring and alerting.
     6. Customer Feedback and Product Improvement: Collected feedback and usage patterns from the customer, which were relayed to product managers and the research team for continuous improvement of the platform features and functionalities.
+- Achievements:
+    1. Successfully completed platform upgrades 6 times with 8 k8s clusters, for Everbright Bank Container Platform
+    1. Successfully fulfilled a year-long on-site operation and maintenance assignment, ensuring platform stability and providing valuable product improvement feedback.
 
 ## Project 5: Deepin Server Product Development	
 
 2015.05-2018.04 Deepin Server Product Development	        Software Engineer
 
-- Company Name: Tongxin Software Co., Ltd.
+- Company Name: Deepin Technology Co., Ltd.
 - TechStack:    Linux, Python, Shell Scripting, Docker, Jenkins
-- Project Description: The project focused on the development and maintenance of the UOS server product, a domestic Linux-based operating system tailored for enterprise environments. This involved regular release packaging, code compilation, and automation script development.
+- Project Description: The project focused on the development and maintenance of the Deepin Server product, a domestic Linux-based operating system tailored for enterprise environments. This involved regular release packaging, code compilation, and automation script development.
 - Responsibilities:
     1. Developed and maintained UOS server product features.
     2. Created automated scripts for packaging, compiling, and deploying server releases.
     3. Provided technical support for server projects, including remote on-call support.
     4. Conducted pre-research on container platform technologies and customized solutions for clients. 
 - Achievements:
-    1. Successfully released multiple stable versions of the UOS server product.
+    1. Successfully released multiple stable versions of the Deepin Server product.
     2. Improved system performance and reduced deployment time through automation. 
 
 ## Project 6: Infrastructure and Operations Management

@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # 允许手动触发工作流
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   build:
@@ -52,7 +52,7 @@ jobs:
     - name: Upload PDFs to Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ steps.create_release.outputs.tag_name }}  # 使用创建的标签
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # 使用创建的 tag
         files: CV-EN.pdf CV-ZH.pdf Resume-EN.pdf Resume-ZH.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

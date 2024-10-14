@@ -52,7 +52,7 @@ jobs:
     - name: Upload PDFs to Release
       uses: softprops/action-gh-release@v1
       with:
-        tag: ${{ steps.create_release.outputs.tag_name }}  # 使用创建的标签
+        tag_name: ${{ steps.create_release.outputs.tag_name }}  # 使用创建的标签
         files: CV-EN.pdf CV-ZH.pdf Resume-EN.pdf Resume-ZH.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

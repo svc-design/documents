@@ -43,7 +43,7 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       with:
-        tag_name: ${{ format('{0:yyyyMMdd}', github.event.pull_request.created_at) }}  # 使用当前日期作为版本号
-        release_name: Release ${{ format('{0:yyyyMMdd}', github.event.pull_request.created_at) }}
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # 生成版本号
+        release_name: Release v${{ github.run_number }}-${{ github.run_id }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

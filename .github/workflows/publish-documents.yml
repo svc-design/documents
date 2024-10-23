@@ -1,4 +1,4 @@
-name: Build and Publish PDFs
+name: Build and Publish Documents
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   build:
@@ -30,21 +30,32 @@ jobs:
         pandoc Resume-EN.md -o Resume-EN.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
         pandoc Resume-ZH.md -o Resume-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="Noto Sans CJK SC" -V mainfont="DejaVu Serif" -V geometry:margin=1in -V fontsize=12pt
 
-    - name: Upload PDFs to GitHub Artifacts
+    - name: Build DOCX
+      run: |
+        pandoc CV-EN.md -o CV-EN.docx --variable mainfont="DejaVu Serif" --variable fontsize=12pt
+        pandoc CV-ZH.md -o CV-ZH.docx --variable mainfont="DejaVu Serif" --variable fontsize=12pt
+        pandoc Resume-EN.md -o Resume-EN.docx --variable mainfont="DejaVu Serif" --variable fontsize=12pt
+        pandoc Resume-ZH.md -o Resume-ZH.docx --variable mainfont="DejaVu Serif" --variable fontsize=12pt
+
+    - name: Upload PDFs and DOCX files to GitHub Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: PDFs
+        name: PDFs and DOCX Files
         path: |
           CV-EN.pdf
           CV-ZH.pdf
           Resume-EN.pdf
           Resume-ZH.pdf
+          CV-EN.docx
+          CV-ZH.docx
+          Resume-EN.docx
+          Resume-ZH.docx
 
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       with:
-        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # 生成版本号
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # Generate version number
         release_name: Release v${{ github.run_number }}-${{ github.run_id }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,14 +63,18 @@ jobs:
     - name: List files for debug
       run: ls -la
 
-    - name: Upload PDFs to Release
+    - name: Upload PDFs and DOCX files to Release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ github.run_number }}-${{ github.run_id }}
         files: |
-          ./CV-EN.pdf
-          ./CV-ZH.pdf
-          ./Resume-EN.pdf
-          ./Resume-ZH.pdf
+          CV-EN.pdf
+          CV-ZH.pdf
+          Resume-EN.pdf
+          Resume-ZH.pdf
+          CV-EN.docx
+          CV-ZH.docx
+          Resume-EN.docx
+          Resume-ZH.docx
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

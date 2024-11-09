@@ -1,0 +1,57 @@
+name: Build and Publish Personal Documents
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Personal repository
+      uses: actions/checkout@v3
+      with:
+        path: Personal
+
+    - name: Set up build environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-lang-chinese fonts-noto-cjk fonts-dejavu
+        sudo apt-get install -y pandoc make
+
+    - name: Build documents using Makefile
+      run: make -C Personal
+
+    - name: Upload PDFs and DOCX files to GitHub Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: PDFs and DOCX Files
+        path: |
+          Personal/*.pdf
+          Personal/*.docx
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}  # Generate version number
+        release_name: Release v${{ github.run_number }}-${{ github.run_id }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload PDFs and DOCX files to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ github.run_number }}-${{ github.run_id }}
+        files: |
+          Personal/*.pdf
+          Personal/*.docx
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

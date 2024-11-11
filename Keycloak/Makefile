@@ -34,13 +34,21 @@ CHAPTERS = chapters/01-overview.md                       \
            chapters/06-troubleshooting.md                \
            chapters/07-conclusion.md
 
+# 目标：生成 HTML 电子书
+book.html: $(CHAPTERS)
+	$(PANDOC_CMD) $(CHAPTERS) -o Keycloak-SSO-Design-and-Implementation.html \
+		--toc --toc-depth=3                  \
+		--variable mainfont="$(MAIN_FONT)"   \
+		--variable CJKmainfont="$(CJK_FONT)" \
+		--variable fontsize=12pt
+
 # 目标：生成 PDF 电子书
 book.pdf: $(CHAPTERS)
 	$(PANDOC_CMD) $(CHAPTERS) -o Keycloak-SSO-Design-and-Implementation.pdf --pdf-engine=xelatex \
-		--variable mainfont="$(MAIN_FONT)" \
+		--variable mainfont="$(MAIN_FONT)"   \
 		--variable CJKmainfont="$(CJK_FONT)" \
-		--variable geometry:margin=1in \
-		--variable fontsize=12pt
+		--variable geometry:margin=1in       \
+		--variable fontsize=12pt             \
 
 # 目标：生成 DOCX 电子书
 book.docx: $(CHAPTERS)
@@ -50,4 +58,4 @@ book.docx: $(CHAPTERS)
 
 # 清理中间文件
 clean:
-	$(RM_CMD) *.aux *.log *.out *.toc *.pdf *.docx
+	$(RM_CMD) *.aux *.log *.out *.toc *.pdf *.docx *.html

@@ -26,6 +26,7 @@ CHAPTERS = chapters/01-overview.md                       \
            chapters/02-4-events-overview.md              \
            chapters/02-5-profiles-overview.md            \
            chapters/02-6-network-tuple-analysis.md       \
+           chapters/02-7-sla-slo-sli-overview.md         \
            chapters/03-1-bpf-introduction.md             \
            chapters/03-2-bpf-kernel-hooks.md             \
            chapters/03-3-bpf-network-protocols.md        \

@@ -23,7 +23,7 @@
 
 | **Duration**          | **Company**                               | **Job Title**                   |
 |-----------------------|-------------------------------------------|---------------------------------|
-| 2024.11 ～ Present    | Deepflow Technology Co., Ltd.             | Senior Technical Support Engineer ｜
+| 2024.11 ～ Present    | Deepflow Technology Co., Ltd.             | Senior Technical Support Engineer |
 | 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer       |
 | 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect |
 | 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect       |

@@ -23,6 +23,7 @@
 
 | **Duration**          | **Company**                               | **Job Title**                   |
 |-----------------------|-------------------------------------------|---------------------------------|
+| 2024.11 ～ Present    | Deepflow Technology Co., Ltd.             | Senior Technical Support Engineer ｜
 | 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer       |
 | 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect |
 | 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect       |
@@ -48,6 +49,19 @@
 
 
 # PROJECT/ CONSULTANCY SERVICES EXPERIENCE 
+
+## Project 1: Deepflow Customer Projects
+
+2024.11 ～ Present     Deepflow Technology Co., Ltd.    Senior Technical Support Engineer 
+
+Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
+Main Responsibilities:
+
+Provided post-sales technical support for DeepFlow, ensuring system stability and efficiency.
+Performed system upgrades to optimize performance and scalability.
+Troubleshot and resolved network monitoring issues to ensure continuous service availability.
+Offered technical consulting to help clients understand and effectively use DeepFlow for monitoring, traffic analysis, and fault localization.
+
 
 ## Project 1: Tesla Shanghai Internal Project
 

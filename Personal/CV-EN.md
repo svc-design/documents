@@ -81,7 +81,7 @@ Implemented monitoring and alerting mechanisms to quickly detect and address iss
     2. Developed Jenkins pipelines to automate edge software deployment, Ignition deployment, and upgrades, significantly improving deployment efficiency.
 
 
-## Project 2: Roche MSP service with AWS/AliCloud
+## Project 3: Roche MSP service with AWS/AliCloud
 
    2022.06-2023.09	Roche MSP service with AWS/AliCloud	Solution Architect
 
@@ -97,7 +97,7 @@ Implemented monitoring and alerting mechanisms to quickly detect and address iss
 - Achievements:
     Delivered ongoing consulting and development services for Roche Pharma China, including designing GitLab IAC automation solutions, implementing GitOps tools with FluxCD, and optimizing EKS IAC code.
 
-## Project 3: Ucloud cutomer project
+## Project 4: Ucloud cutomer project
 
 2020.07-2021.11	Ucloud cutomer project	        Solution Architect
 
@@ -112,7 +112,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully migrated 106 hosts and 3 Kubernetes (K8S) clusters from Tencent Cloud to UCloud
     2. Guided Walnut Education Company to deploy 10 K8S clusters (over 200 nodes) on UCloud, providing comprehensive logging, monitoring, and CICD services
 
-## Project 4: Everbright Bank PaaS project	 
+## Project 5: Everbright Bank PaaS project	 
 
 2019.06-2020.06	Everbright Bank PaaS project	        On-site implementation engineer
 
@@ -130,7 +130,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully completed platform upgrades 6 times with 8 k8s clusters, for Everbright Bank Container Platform
     1. Successfully fulfilled a year-long on-site operation and maintenance assignment, ensuring platform stability and providing valuable product improvement feedback.
 
-## Project 5: Deepin Server Product Development	
+## Project 6: Deepin Server Product Development	
 
 2015.05-2018.04 Deepin Server Product Development	        Software Engineer
 
@@ -146,7 +146,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully released multiple stable versions of the Deepin Server product.
     2. Improved system performance and reduced deployment time through automation. 
 
-## Project 6: Infrastructure and Operations Management
+## Project 7: Infrastructure and Operations Management
 
 2013.11-2015.4   Infrastructure and Operations Management	Operations Engineer
 
@@ -161,7 +161,7 @@ Gathered customers' business needs and provided technical consulting services to
     5. Improved infrastructure stability and performance through proactive maintenance and optimization.
     6. Reduced downtime and enhanced service reliability through effective fault management.
 
-## Project 7: Linux Server Maintenance
+## Project 8: Linux Server Maintenance
 
 2013.5-2013.10	 Linux Server Maintenance	System Software Engineer	
 
@@ -173,7 +173,7 @@ Gathered customers' business needs and provided technical consulting services to
     2. Performed regular updates and patches to keep the servers secure and up-to-date.
 
 
-## Project 8: Linux Server Maintenance
+## Project 9: Linux Server Maintenance
 
 2011.5-2013.4	 	Linux Server Maintenance	System Software Engineer
 

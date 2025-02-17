@@ -10,7 +10,7 @@
 ## Key Experience and Expertise
 
 - **Years of  Experience in IT**: 14 years
-- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC(Terraform) / DevOps( Gitlab/Github Actions ) / APM / Python / Shell
+- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC(Terraform) / DevOps( Gitlab CICD / Github Actions ) / APM / Python / Shell
 - **Industry  Fields**:    Manufacturing, Finance, Internet
 
 # Education Background

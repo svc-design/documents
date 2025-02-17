@@ -54,14 +54,13 @@
 
 2024.11 ～ Present        Deepflow Technology Co., Ltd.        Senior Technical Support Engineer 
 
-Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
-Main Responsibilities:
-
-Provided post-sales technical support for DeepFlow, ensuring system stability and efficiency.
-Performed system upgrades to optimize performance and scalability.
-Troubleshot and resolved network monitoring issues to ensure continuous service availability.
-Offered technical consulting to help clients understand and effectively use DeepFlow for monitoring, traffic analysis, and fault localization.
-
+- Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
+- Tech Stack:    Linux, Kubernetes, APM，Network traffic/performance monitoring
+- Main Responsibilities:
+    1. Provided post-sales technical support for DeepFlow, ensuring system stability and efficiency.
+    2. Performed system upgrades to optimize performance and scalability.
+    3. Troubleshot and resolved network monitoring issues to ensure continuous service availability.
+    4. Offered technical consulting to help clients understand and effectively use DeepFlow for monitoring, traffic analysis, and fault localization.
 
 ## Project 2: Tesla Shanghai Internal Project
 

@@ -9,8 +9,8 @@
 
 ## Key Experience and Expertise
 
-- **Years of  Experience in IT**: 13 years
-- **Technical Expertise**: Linux / Docker / Kubernetes / Ansible/ IaC / DevOps/ Ansible / Python /Shell
+- **Years of  Experience in IT**: 14 years
+- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC / DevOps / APM / Python / Shell
 - **Industry  Fields**:    Manufacturing, Finance, Internet
 
 # Education Background
@@ -37,6 +37,7 @@
 
 | Time Range         | Client           | Project Name            | Role                     | Tech Stack                                         |
 | ------------------ | ---------------- | ----------------------- | ------------------------ | -------------------------------------------------- |
+| 2024.11 ～ Present | Deepflow Technology Co., Ltd. |  Deepflow Customer Projects|  Senior Technical Support Engineer | Linux / Kubernetes / APM  |
 | 2024.01-2024.04    | Tesla (Shanghai) | Internal Project at Tesla | SRE (Site Reliability Engineer) | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins / HashiCorp / Linux Server |
 | 2022.06-2023.09    | Roche            | Roche MSP Services      | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
 | 2020.07-2021.11    | UCloud          | UCloud Client Projects   | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
@@ -51,7 +52,7 @@
 
 ## Project 1: Deepflow Customer Projects
 
-2024.11 ～ Present     Deepflow Technology Co., Ltd.    Senior Technical Support Engineer 
+2024.11 ～ Present        Deepflow Technology Co., Ltd.        Senior Technical Support Engineer 
 
 Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
 Main Responsibilities:
@@ -62,7 +63,7 @@ Troubleshot and resolved network monitoring issues to ensure continuous service 
 Offered technical consulting to help clients understand and effectively use DeepFlow for monitoring, traffic analysis, and fault localization.
 
 
-## Project 1: Tesla Shanghai Internal Project
+## Project 2: Tesla Shanghai Internal Project
 
 2024.01-2024.04 	Tesla Shanghai Internal Project 	Site Reliability Engineering
 

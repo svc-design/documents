@@ -1,7 +1,7 @@
 # 个人信息
 - **姓名**: 潘海涛
 - **位置**: 中国上海
-- **当前状态**: 离职
+- **当前状态**: 在职
 - **电话**: 13691175694
 - **邮箱**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
@@ -60,7 +60,7 @@
   5. 利用 Ansible、Helm、Jenkins 和 GitHub Actions 进行软件和系统的常规更新，提升安全性和性能。
 - **成就**：
   1. 通过 GitHub Actions 和 ArgoCD 重新设计发布流程，改进了 ITSM 系统的 CI/CD 流水线。
-  2. 开发 Jenkins 流水线自动化边缘软件的部署、点火部署和升级，大大提升了部署效率。
+  2. 开发 Jenkins 流水线自动化边缘软件的部署、和升级，大大提升了部署效率。
 
 ## 项目 2：罗氏 MSP 服务（AWS/AliCloud）
 

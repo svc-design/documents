@@ -10,7 +10,7 @@
 ## Key Experience and Expertise
 
 - **Years of  Experience in IT**: 14 years
-- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC(Terraform) / DevOps( Gitlab CICD / Github Actions ) / APM / Python / Shell
+- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC(Terraform/Pulumi) /NPM /DevOps( Gitlab CICD / Github Actions ) / Python / Shell
 - **Industry  Fields**:    Manufacturing, Finance, Internet
 
 # Education Background
@@ -35,12 +35,12 @@
 
 # Project Summary
 
-| Time Range         | Client           | Project Name            | Role                     | Tech Stack                                         |
-| ------------------ | ---------------- | ----------------------- | ------------------------ | -------------------------------------------------- |
-| 2024.11 ～ Present | Deepflow Technology Co., Ltd. |  Deepflow Customer Projects|  Senior Technical Support Engineer | Linux / Kubernetes / APM  |
+| Time Range         | Client           | Project Name              | Role                     | Tech Stack                                         |
+| ------------------ | ---------------- | ------------------------- | ------------------------ | -------------------------------------------------- |
+| 2024.11 ～ Present | Deepflow Technology Co., Ltd.                |  Deepflow Customer Projects|  Senior Technical Support Engineer | Linux / Kubernetes / NPM & APM / eBPF / Hybrid Cloud  |
 | 2024.01-2024.04    | Tesla (Shanghai) | Internal Project at Tesla | SRE (Site Reliability Engineer) | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins / HashiCorp / Linux Server |
-| 2022.06-2023.09    | Roche            | Roche MSP Services      | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
-| 2020.07-2021.11    | UCloud          | UCloud Client Projects   | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
+| 2022.06-2023.09    | Roche            | Roche MSP Services        | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
+| 2020.07-2021.11    | UCloud           | UCloud Client Projects    | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
 | 2019.06-2020.06    | Everbright Bank  | Everbright Bank CPaaS Project | On-site Implementation Engineer | Alauda Container Platform/VMware CNI NSX-T/DevOps/ES/Prometheus |
 | 2015.5-2018.8      | Tongxin Software Co., Ltd. | Deepin Server Product Development | Software Engineer  | Linux (Debian/CentOS), Shell Scripting, Docker, Jenkins |
 | 2013.11-2015.4     | KnowSec Technology Co., Ltd. | Infrastructure and Operations Management | Operations Engineer | Linux, Shell, Python, Saltstack, Nginx, Nagios, CDN Technology |

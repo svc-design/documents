@@ -82,3 +82,230 @@
 - **privateKey / shortId**：在中转节点生成的 REALITY 私钥及对应短 ID。
 - **serverName**：填写 `global-homepage.onwalk.net`（已部署在 Cloudflare）。
 - **DNS**：将 `www.svc.plus` 的 A 记录指向中转节点公网 IP，并确保 TLS SNI 能正常生效。
+## 进阶：Nginx 与 Xray 分层部署
+
+当需要将 TLS 终端和转发逻辑分别托管于 Nginx 和 Xray 时，可以使用 `nginx → xray-client → xray-server` 的方式。整体链路下图：
+
+```text
+Browser
+  ↓ HTTPS (TLS)
+Nginx (TLS termination)
+  ↓ http://127.0.0.1:1081
+Xray (HTTP Inbound)
+  ↓ VLESS+REALITY to 127.0.0.1:8443
+Xray (REALITY Inbound)
+  ↓ freedom
+global-homepage.onwalk.net
+```
+
+### systemd 服务单元示例
+
+`xray-client.service`
+
+```ini
+[Unit]
+Description=Xray Client (HTTP Inbound → VLESS+REALITY)
+After=network.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/xray -config /etc/xray/in.config
+Restart=always
+RestartSec=5s
+User=nobody
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+`xray-server.service`
+
+```ini
+[Unit]
+Description=Xray Server (REALITY Inbound → freedom)
+After=network.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/xray -config /etc/xray/out.config
+Restart=always
+RestartSec=5s
+User=nobody
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+如使用自编译的 Nginx，还需创建 `nginx.service`：
+
+```ini
+[Unit]
+Description=NGINX HTTPS Forwarder (TLS termination)
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/nginx -g 'daemon off;'
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -QUIT $MAINPID
+PIDFile=/run/nginx.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+启用并启动全部服务：
+
+```bash
+systemctl daemon-reexec
+systemctl enable --now xray-server.service xray-client.service nginx.service
+```
+
+### Nginx 配置
+
+`/etc/nginx/conf.d/www.svc.plus.conf`
+
+```nginx
+server {
+  listen 443 ssl http2;
+  server_name www.svc.plus;
+
+  ssl_certificate     /etc/ssl/certs/www.svc.plus.pem;
+  ssl_certificate_key /etc/ssl/private/www.svc.plus.key;
+
+  location / {
+    proxy_pass http://127.0.0.1:1081;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+```
+
+### Xray 客户端配置 `/etc/xray/in.config`
+
+```json
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 1081,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "tag": "http-in",
+      "settings": {}
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "to-reality",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "127.0.0.1",
+            "port": 8443,
+            "users": [
+              {
+                "id": "REPLACE-WITH-UUID",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "global-homepage.onwalk.net",
+          "publicKey": "REPLACE-WITH-PUBLIC-KEY",
+          "shortId": "12345678"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": ["http-in"],
+        "outboundTag": "to-reality"
+      }
+    ]
+  }
+}
+```
+
+### Xray 服务端配置 `/etc/xray/out.config`
+
+```json
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 8443,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "tag": "reality-in",
+      "settings": {
+        "clients": [
+          {
+            "id": "REPLACE-WITH-UUID",
+            "flow": ""
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "global-homepage.onwalk.net:443",
+          "xver": 0,
+          "serverNames": ["global-homepage.onwalk.net"],
+          "privateKey": "REPLACE-WITH-PRIVATE-KEY",
+          "shortIds": ["12345678"]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": ["reality-in"],
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
+```
+
+启动测试方式：
+
+```bash
+xray -config /etc/xray/out.config &
+xray -config /etc/xray/in.config &
+systemctl restart nginx
+```
+
+今后访问 `https://www.svc.plus` 应可看到 Cloudflare Worker 的返回内容。

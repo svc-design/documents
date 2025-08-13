@@ -1,0 +1,82 @@
+# 最小代价 RAG 性能提升蓝图（Chains 优化版）
+
+## 0. 基础链式流程（现状）
+
+User Query -> Prompt Template -> 向量化 → 检索 Top-K 文档（纯向量搜索） -> 拼接上下文 → LLM 生成
+
+存在问题：
+- 召回单一（容易漏关键信息）
+- 精排缺失（无关内容进入上下文）
+- 上下文利用率低（重复、冗余内容占 token）
+
+## 1. 混合检索（Hybrid Search）
+
+目标：提升召回全面性，防止只靠向量丢掉关键词匹配的高相关文档。
+
+实现：
+- 向量搜索（embedding + ANN 索引）
+- 关键词/BM25 搜索（全文索引）
+- 合并结果，按相关性排序（加权或去重）
+
+优点：
+- 基本不增加推理成本
+- 适用所有数据类型（代码、表格、长文档）
+- 能直接提升 Recall 和用户感知质量
+
+## 2. Re-ranking（轻量精排）
+
+目标：减少幻觉，提升上下文相关性。
+
+实现：
+- 检索出 20~50 条候选
+- 用轻量精排模型（如 bge-reranker-large, Cohere Rerank, VoyageAI rerank）重排
+- 选取 Top-K 进入 Prompt
+
+优点：
+- 大幅提高 Precision（相关文档比例）
+- 部署成本低（CPU/GPU 皆可，延迟低）
+- 对 LLM Token 消耗影响小
+
+## 3. Query Expansion / HyDE
+
+目标：让用户问题更完整地覆盖搜索空间。
+
+实现：
+- Query Expansion：自动补充同义词、专业术语、上下位词
+- HyDE（Hypothetical Document Embeddings）：先用 LLM 生成一个假想答案/文档 → 向量化 → 检索
+- 可与混合检索结合
+
+优点：
+- 解决长尾问法和语义偏移问题
+- 对稀疏领域数据特别有效
+- 提升 Recall，对 Precision 影响可用精排弥补
+
+## 4. MMR + 压缩
+
+目标：减少冗余，提高上下文多样性和有效信息密度。
+
+实现：
+- MMR（Maximal Marginal Relevance）：优先选择相关性高且互相差异大的文档
+- 压缩：
+  - LLM 生成摘要（Chunk-Level Summarization）
+  - 只保留与 Query 强相关的句子（Context Filtering）
+
+优点：
+- 同样的上下文窗口能装更多关键信息
+- 降低重复信息对 LLM 输出质量的干扰
+
+## 优先级建议
+
+1. 混合检索 — 成本最低，立即提升 Recall
+2. Re-ranking — 小投入，Precision 飞跃
+3. Query Expansion / HyDE — 提升长尾召回
+4. MMR + 压缩 — 提高上下文利用率，尤其是小 context 窗口场景
+
+## 方案对比
+
+| 方案 | 作用点 | 主要收益 | 可能副作用 | 依赖/改动面 | 复杂度 | 典型时延开销（单问） |
+| --- | --- | --- | --- | --- | --- | --- |
+| 一：Hybrid Search（向量+BM25） | store.EnsureSchema + Service.Query | Recall 明显提升、对关键字/代码/符号类问题更稳 | 排序融合不当会“抢权重”；文本清洗影响大 | PG 新增 tsvector 索引、BM25/ts_rank 查询、权重 α 参数 | ★★☆ | +3~10ms（PG 同机） |
+| 二：轻量 Re-ranker | internal/rag/rerank | Precision 大幅提升，减少幻觉 | 多 1040ms（CPU）或 515ms（GPU）；需批处理 | 新增服务/本地模型；Query 扩到 20~50 再精排 | ★★★ | +15~60ms（看 batch 与硬件） |
+| 三：Query Expansion / HyDE | internal/rag/expand | Recall 飙升，长尾问法效果好 | 带来额外 LLM/Embed 成本；有时引入噪声 | 需要 LLM 调用 & 二次 embedding；融合策略 | ★★★☆ | +50~300ms（看 LLM） |
+| 四：MMR + 压缩 | Service.Query 或 askai | 上下文多样性↑、窗口利用率翻倍、答案更聚焦 | 需要额外上下文处理步骤 | 需实现 MMR 算法、摘要或句子级过滤 | ★★★☆ | 依实现而定 |

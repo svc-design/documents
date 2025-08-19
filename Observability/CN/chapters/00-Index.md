@@ -252,3 +252,6 @@
 ### **5.4 生产级监控配置方案（Linux 裸机）**
 #### **05-production-monitoring-linux-bare-metal.md**
 - 系统与进程指标采集、历史保底以及安全加固实践
+### **5.5 Vector 统一采集架构与 DeepFlow 对比**
+#### **05-vector-unified-collector-architecture.md**
+- Vector 汇聚多类 exporter，比较 DeepFlow 与 Vector 的功能与部署策略，并给出后端存储选型建议

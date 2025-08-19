@@ -255,3 +255,7 @@
 ### **5.5 Vector 统一采集架构与 DeepFlow 对比**
 #### **05-vector-unified-collector-architecture.md**
 - Vector 汇聚多类 exporter，比较 DeepFlow 与 Vector 的功能与部署策略，并给出后端存储选型建议
+
+### **5.6 PostgreSQL + ClickHouse 分层写入架构**
+#### **05-postgres-clickhouse-layered-architecture.md**
+- 使用 TimescaleDB + ClickHouse 构建热写冷存的可观测性存储，实现高并发写入与 OLAP 聚合

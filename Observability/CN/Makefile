@@ -37,7 +37,8 @@ CHAPTERS = chapters/01-overview.md                       \
            chapters/04-3-network-key-metrics-analysis.md \
            chapters/04-4-log-analysis-and-fault-location.md \
            chapters/04-5-typical-fault-scenarios-and-case-studies.md \
-           chapters/05-production-monitoring-linux-bare-metal.md
+           chapters/05-production-monitoring-linux-bare-metal.md \
+           chapters/05-vector-unified-collector-architecture.md
 
 all: Observability-Guide.html Observability-Guide.pdf Observability-Guide.docx
 

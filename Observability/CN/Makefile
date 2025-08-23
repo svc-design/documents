@@ -39,7 +39,13 @@ CHAPTERS = chapters/01-overview.md                       \
            chapters/04-5-typical-fault-scenarios-and-case-studies.md \
            chapters/05-production-monitoring-linux-bare-metal.md \
            chapters/05-vector-unified-collector-architecture.md \
-           chapters/05-postgres-clickhouse-layered-architecture.md
+           chapters/05-postgres-clickhouse-layered-architecture.md \
+           chapters/06-technical-selection-comparison.md \
+           chapters/07-overall-architecture-design.md \
+           chapters/08-multi-region-architecture-topology.md \
+           chapters/09-end-to-end-reliable-transmission-design.md \
+           chapters/10-postgresql-secondary-analysis-domain.md \
+           chapters/11-multi-region-disaster-recovery.md
 
 all: Observability-Guide.html Observability-Guide.pdf Observability-Guide.docx
 

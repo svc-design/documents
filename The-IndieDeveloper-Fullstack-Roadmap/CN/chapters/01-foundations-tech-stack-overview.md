@@ -1,3 +1,13 @@
+# 目标
+
+- 目标：熟悉 Rust、Go、JavaScript/Node.js 基础，了解各技术在全栈架构中的角色。
+- Rust：所有权/借用、Cargo、基础 CLI 程序
+- Go：goroutine/channel、Go Modules、Web 基础
+- JS/Node.js：ES6+、NPM、简单 API 脚本
+- 实践：Rust/Go 各写一个简单 HTTP 服务，Node.js 写小型脚本
+
+软技能：任务管理、Git 基础、学习日志
+
 # 第1月：基础导论与技术栈导览
 
 | 月份 | 周次 | 技能目标 | 核心内容 | 实践任务 | 软技能 |

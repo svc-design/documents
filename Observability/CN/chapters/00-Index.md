@@ -259,3 +259,47 @@
 ### **5.6 PostgreSQL + ClickHouse 分层写入架构**
 #### **05-postgres-clickhouse-layered-architecture.md**
 - 使用 TimescaleDB + ClickHouse 构建热写冷存的可观测性存储，实现高并发写入与 OLAP 聚合
+
+---
+
+## **架构设计与容灾**
+
+### **6.1 技术选型对比（Technology Selection Comparison）**
+#### **06-technical-selection-comparison.md**
+- 边缘采集对比
+- 网关对比
+- 存储对比
+- 分析层对比
+
+### **6.2 总体架构设计**
+#### **07-overall-architecture-design.md**
+- 边缘采集与缓冲
+- 区域网关与扇出
+- 存储与分析层
+- 双链路（近线检索 + Kafka 回放）
+
+### **6.3 多区域架构与区域内拓扑**
+#### **08-multi-region-architecture-topology.md**
+- 区域内拓扑（单区示例）
+- 多区域部署模式（主区 + 从区）
+- 联邦查询与统一入口
+
+### **6.4 端到端可靠传输设计（At-least-once 语义）**
+#### **09-end-to-end-reliable-transmission-design.md**
+- 多级持久化链（Vector → OTel → Kafka → OpenObserve）
+- 扇出与去重策略（event_id + UPSERT）
+- SRE 可观测与演练方法
+
+### **6.5 PostgreSQL 二级分析域**
+#### **10-postgresql-secondary-analysis-domain.md**
+- 时序分析（TimescaleDB 连续聚合）
+- 向量检索（pgvector）
+- 图查询（Apache AGE）
+- 高基数与 TopK 分析（HLL/Toolkit）
+
+### **6.6 多区域与容灾（Disaster Recovery, DR）**
+#### **11-multi-region-disaster-recovery.md**
+- 接入与路由（Anycast/GeoDNS）
+- 跨区复制与镜像（Kafka MirrorMaker2）
+- 阈值控制与降级策略
+- 历史回放与灰度演练

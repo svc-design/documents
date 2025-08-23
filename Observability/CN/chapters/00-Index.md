@@ -29,43 +29,10 @@
 
 ## **eBPF 技术与应用**
 
-### **3.1 eBPF 介绍（BPF Introduction）**
-
-#### **03-1-bpf-introduction.md**
-- **3.1.1 cBPF 和 eBPF 的历史**
-- **3.1.2 eBPF 的基本原理**
-
----
-
-### **3.2 eBPF 内核钩子（BPF Kernel Hooks）**
-
-#### **03-2-bpf-kernel-hooks.md**
-- **3.2.1 内核挂钩点**
-- **3.2.2 eBPF 程序的加载与执行**
-
----
-
-### **3.3 eBPF 网络协议（BPF Network Protocols）**
-
-#### **03-3-bpf-network-protocols.md**
-- **3.3.1 eBPF 在网络中的应用**
-- **3.3.2 XDP 和 TC**
-
----
-
-### **3.4 eBPF 系统调用分析（BPF Syscall Analysis）**
-
-#### **03-4-bpf-syscall-analysis.md**
-- **3.4.1 系统调用追踪**
-- **3.4.2 安全监控**
-
----
-
-### **3.5 eBPF Agent 数据采集（BPF Agent Data Collection）**
-
-#### **03-5-bpf-agent-data-collection.md**
-- **3.5.1 基于 eBPF 的 APM 和 Trace**
-- **3.5.2 开源软件与工具**
+### **03-bpf-overview.md**
+- **3.1 概述**
+- **3.2 对比**
+- **3.3 场景**
 
 ---
 

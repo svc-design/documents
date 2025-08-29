@@ -1,0 +1,651 @@
+<h1 id="目标">目标</h1>
+<ul>
+<li>目标：熟悉 Rust、Go、JavaScript/Node.js
+基础，了解各技术在全栈架构中的角色。</li>
+<li>Rust：所有权/借用、Cargo、基础 CLI 程序</li>
+<li>Go：goroutine/channel、Go Modules、Web 基础</li>
+<li>JS/Node.js：ES6+、NPM、简单 API 脚本</li>
+<li>实践：Rust/Go 各写一个简单 HTTP 服务，Node.js 写小型脚本</li>
+</ul>
+<p>软技能：任务管理、Git 基础、学习日志</p>
+<h1 id="第1月基础导论与技术栈导览">第1月：基础导论与技术栈导览</h1>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>月份</th>
+<th>周次</th>
+<th>技能目标</th>
+<th>核心内容</th>
+<th>实践任务</th>
+<th>软技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1月 基础导论</td>
+<td>第1周</td>
+<td>熟悉环境与工具链</td>
+<td>安装 Rust/Go/Node.js，配置 VSCode，熟悉 Git</td>
+<td>写“Hello World”服务（Rust &amp; Go 各1个）</td>
+<td>学会用 Git 建仓，写每日学习日志</td>
+</tr>
+<tr>
+<td>第1月 基础导论</td>
+<td>第2周</td>
+<td>基础语法理解</td>
+<td>Rust 所有权/借用，Go goroutine，JS ES6</td>
+<td>Rust：CLI 程序；Go：并发小程序</td>
+<td>用 Kanban 规划任务</td>
+</tr>
+<tr>
+<td>第1月 基础导论</td>
+<td>第3周</td>
+<td>初识 Web 编程</td>
+<td>Rust hyper/actix，Go net/http，Node.js 脚本</td>
+<td>分别写最小化 HTTP API</td>
+<td>练习代码评审（自我 review）</td>
+</tr>
+<tr>
+<td>第1月 基础导论</td>
+<td>第4周</td>
+<td>综合练习</td>
+<td>整理 Rust/Go/JS 对比笔记</td>
+<td>小结：写博客《三种语言写同一个 API》</td>
+<td>分享学习体会，培养输出习惯</td>
+</tr>
+</tbody>
+</table>
+<h2 id="技能目标">技能目标</h2>
+<p>熟悉开发环境与工具链，了解 Rust 与 Go 基础语法和各自优势，掌握
+Node.js
+基础，初步建立前后端技术栈全貌，为后续选择合适的后端语言打下基础。</p>
+<h2 id="核心理论内容">核心理论内容</h2>
+<ul>
+<li><strong>Rust 基础</strong>：语法习惯、所有权与借用机制，Cargo
+包管理，简单命令行程序编写。</li>
+<li><strong>Go 基础</strong>：语法规则、goroutine 与 channel
+并发模型，Go Modules 包管理，基础程序结构。</li>
+<li><strong>JavaScript &amp; Node.js 概览</strong>：现代 JavaScript 特性
+(ES6+)、Node.js 运行环境及 NPM 工具，用于构建前端开发环境。</li>
+<li><strong>比较与选型</strong>：对比 Rust 和 Go
+在后端开发的特点（性能、安全性、开发效率等），了解各自适用场景，帮助学员确定后端技术栈选择。</li>
+</ul>
+<h2 id="实践项目">实践项目</h2>
+<ul>
+<li><strong>环境搭建</strong>：安装配置 Rust、Go 和 Node.js
+开发环境，熟悉 VS Code/IDE 使用，配置 Git 版本控制仓库。</li>
+<li><strong>Hello World 实验</strong>：分别使用 Rust 和 Go 编写简易 Web
+服务器（如输出 “Hello World” 的 HTTP 服务），体验异步编程模型（Rust 的
+async/await、Go 的 goroutine）以及基本路由处理。</li>
+<li><strong>小型脚本练习</strong>：使用 Node.js
+编写简单脚本或开发工具，如读取文件、调用 API 等，练习 JavaScript
+异步编程和调试。</li>
+<li><strong>工具链</strong>：Git 及 GitHub 基本操作，VS Code/IDE
+调试，Rust Cargo、Go Compiler，Node.js + NPM，浏览器开发者工具。</li>
+</ul>
+<h2 id="软技能练习">软技能练习</h2>
+<ul>
+<li><strong>任务管理</strong>：使用看板（Kanban）或任务清单规划本月学习任务，将环境搭建、语言练习等分解为小任务，培养时间管理和规划能力。</li>
+<li><strong>学习笔记</strong>：建立技术博客或日志，记录每天学习收获和遇到的问题，培养持续学习和反思习惯。</li>
+<li><strong>交流协作</strong>：加入技术社区或小组（GitHub、论坛等），分享心得并获取反馈，练习远程沟通与知识分享。</li>
+<li><strong>选择决策</strong>：月末根据练习体验和理解，对比 Rust 与
+Go，选择后续深入的后端主力语言，并撰写一份选择理由分析，培养技术选型和产品思维。</li>
+</ul>
+<h1 id="目标-1">目标</h1>
+<ul>
+<li>目标：掌握后端服务开发能力（任选 Rust 或 Go 深入）。</li>
+<li>Web 框架：Actix/Axum (Rust) 或 Gin/Echo (Go)</li>
+<li>数据库：PostgreSQL/MySQL，ORM (Diesel/SQLx、GORM)</li>
+<li>鉴权：JWT / Session</li>
+<li>异步：Tokio (Rust) / goroutine (Go)</li>
+<li>实践：开发 REST API（影片、用户、评论），实现 JWT 登录鉴权</li>
+<li>软技能：API 文档撰写、代码评审</li>
+</ul>
+<h1 id="第2月后端开发深度实践rust-或-go">第2月：后端开发深度实践（Rust
+或 Go）</h1>
+<h2 id="周计划">周计划</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>月份</th>
+<th>周次</th>
+<th>技能目标</th>
+<th>核心内容</th>
+<th>实践任务</th>
+<th>软技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第2月 后端开发</td>
+<td>第5周</td>
+<td>Web 框架入门</td>
+<td>Actix/Axum 或 Gin/Echo 基础</td>
+<td>实现 /movies 列表 API</td>
+<td>写 API 文档（Swagger/YAML）</td>
+</tr>
+<tr>
+<td>第2月 后端开发</td>
+<td>第6周</td>
+<td>数据存储</td>
+<td>PostgreSQL + ORM（Diesel/SQLx 或 GORM）</td>
+<td>设计“影片表/用户表”，实现 CRUD</td>
+<td>练习 SQL 迁移脚本</td>
+</tr>
+<tr>
+<td>第2月 后端开发</td>
+<td>第7周</td>
+<td>用户认证</td>
+<td>JWT/OAuth，Session</td>
+<td>实现用户注册登录、鉴权保护接口</td>
+<td>结对编程，练习协作</td>
+</tr>
+<tr>
+<td>第2月 后端开发</td>
+<td>第8周</td>
+<td>综合测试</td>
+<td>接口错误处理，单元测试</td>
+<td>覆盖登录/评论 API 测试</td>
+<td>练习 Pull Request 流程</td>
+</tr>
+</tbody>
+</table>
+<h2 id="技能目标-1">技能目标</h2>
+<p>深入掌握所选后端语言的 Web 开发能力，搭建后端服务架构。学会构建
+RESTful
+API、数据库交互和基本鉴权机制，初步实现“影片仿真系统”的后台功能。</p>
+<h2 id="核心理论内容-1">核心理论内容</h2>
+<ul>
+<li><strong>Web 框架与路由</strong>：学习使用所选语言的主流 Web
+框架（Rust 可选 Actix Web 或 Axum，Go 可选 Gin 或 Echo）构建 HTTP
+接口，设计 RESTful API 架构与路由规范（如
+<code>/api/movies</code>、<code>/api/movies/{id}</code>）。</li>
+<li><strong>数据库与
+ORM</strong>：关系型数据库基础（MySQL/PostgreSQL），使用 ORM
+或查询库（Rust: Diesel/SQLx、Go: GORM/原生
+SQL）进行数据模型定义和读写操作。</li>
+<li><strong>异步编程</strong>：理解异步处理模型：Rust 的 Tokio
+运行时如何处理并发请求；Go 的 goroutine
+调度原理，避免共享内存引发竞态。</li>
+<li><strong>认证与鉴权</strong>：Web 安全基础，JWT 或 OAuth
+等认证机制介绍，理解 Session vs Token 的区别；权限控制基本方法，在 API
+层面实施简单鉴权策略。</li>
+<li><strong>缓存策略</strong>：初识缓存概念，了解在后端引入缓存（如内存缓存或
+Redis）提高读取性能的原理（具体实现留待后续）。</li>
+</ul>
+<h2 id="实践项目-1">实践项目</h2>
+<ul>
+<li><strong>数据库建模</strong>：设计影片系统的基础数据库表结构（影片、用户、评论、订阅等），编写迁移脚本或
+SQL 建表语句，并实际创建数据库。</li>
+<li><strong>核心 API
+实现</strong>：开发后端主要接口：影片列表查询、影片详情获取、用户注册登录、发表评论等。确保遵循
+RESTful 风格，返回标准的 HTTP 状态码和 JSON 数据格式。</li>
+<li><strong>鉴权机制实现</strong>：实现用户登录认证（如基于 JWT
+的登录流程），保护需要认证的接口（如评论发布、订阅操作），在后端验证用户身份与权限。</li>
+<li><strong>错误处理与日志</strong>：完善接口错误处理（返回友好错误信息），集成日志库记录请求和错误日志，为调试和后续监控打基础。</li>
+<li><strong>单元测试</strong>：为关键函数和业务逻辑编写单元测试（如验证用户密码哈希函数、影片列表检索逻辑等），养成测试驱动开发习惯。</li>
+<li><strong>工具链</strong>：Rust 常用框架与库（Actix Web、Diesel/SQLx
+等）或 Go 常用库（Gin、GORM 等），PostgreSQL/MySQL
+数据库，Postman/Insomnia 等 API 调试工具，Git 分支管理（Git
+Flow），初步尝试 GitHub Actions 配置自动测试。</li>
+</ul>
+<h2 id="软技能练习-1">软技能练习</h2>
+<ul>
+<li><strong>项目管理</strong>：利用看板细分本月开发任务（如“完成用户模型”“实现登录接口”“编写测试”），模拟敏捷开发的迭代管理，提升任务拆解与进度把控能力。</li>
+<li><strong>代码审查</strong>：每完成一个功能模块，进行自我代码审查或与同学结对审阅，通过
+Pull Request 模拟团队协作的 Code Review
+流程，学习阅读他人代码和接收改进意见。</li>
+<li><strong>文档撰写</strong>：为已实现的 API
+编写简要文档或注释说明（定义 API
+文档，描述请求/响应格式），培养编写技术文档的习惯，方便他人和后续前端对接。</li>
+<li><strong>问题定位与调试</strong>：训练使用调试器和日志定位问题的能力，遇到
+bug 主动分析根因并记录解决过程，提升解决问题的信心与技巧。</li>
+<li><strong>反思与展望</strong>：月末总结后端开发经验，反思代码设计和架构是否合理，考虑如何在后续加入更多后端高级特性（如微服务、缓存等），为下阶段架构优化做准备。</li>
+</ul>
+<h1 id="第3月前端开发基础react-next.js-入门">第3月：前端开发基础（React
++ Next.js 入门）</h1>
+<h2 id="目标-2">目标</h2>
+<p>掌握 React 基础与 Next.js
+核心概念，能够使用前端工具链构建电影系统的前台界面，并与后端 API
+对接。</p>
+<h2 id="周计划-1">周计划</h2>
+<ul>
+<li><strong>第9周：React 基础</strong><br />
+了解 JSX、函数式组件与
+Hooks；管理组件状态；动手实现登录页与电影列表页，练习 Git
+分支管理。</li>
+<li><strong>第10周：Next.js 入门</strong><br />
+掌握 pages 路由，理解 SSR 与 CSR 的差异；完成电影详情页并以 SSR
+渲染；撰写前端笔记总结。</li>
+<li><strong>第11周：API 调用</strong><br />
+使用 Fetch/Axios 调用后端
+API，处理跨域与错误；渲染后端数据并演练接口契约沟通。</li>
+<li><strong>第12周：UI 优化</strong><br />
+应用 CSS/响应式设计美化界面；邀请朋友体验并收集反馈。</li>
+</ul>
+<h2 id="核心理论内容-2">核心理论内容</h2>
+<ul>
+<li>前端基础：HTML5/CSS3 回顾，浏览器与 DOM 基础，响应式设计。</li>
+<li>JavaScript 进阶：ES6+ 语法、DOM 操作、Promise/async‑await、Fetch
+API。</li>
+<li>Node.js 在前端中的角色：开发服务器、包管理器，了解
+Webpack/Babel/Vite 的打包流程。</li>
+<li>React 核心：组件化、JSX、Hooks（useState/useEffect
+等）、组件状态与单向数据流。</li>
+<li>接口对接：前后端分离、异步与错误处理、跨域 CORS 设置。</li>
+</ul>
+<h2 id="实践项目-2">实践项目</h2>
+<ol type="1">
+<li><strong>React 项目初始化</strong>：使用 Create React App 或 Vite
+搭建开发环境。</li>
+<li><strong>页面开发</strong>：实现影片列表页、详情页、登录/注册页等组件化界面。</li>
+<li><strong>状态管理</strong>：利用 Hooks 管理组件状态；通过 React
+Context 维护全局用户信息。</li>
+<li><strong>API 集成</strong>：使用 Fetch/Axios 调用后端
+API，处理加载中与错误提示。</li>
+<li><strong>样式与交互</strong>：编写
+CSS/SCSS，美化布局并添加交互动效。</li>
+<li><strong>前端单元测试</strong>：用 Jest + React Testing Library
+为关键组件编写测试。</li>
+<li><strong>工具链</strong>：熟悉
+Node.js、NPM/Yarn、构建工具、Axios/Fetch、浏览器开发者工具等。</li>
+</ol>
+<h2 id="软技能练习-2">软技能练习</h2>
+<ul>
+<li><strong>用户体验与产品思维</strong>：从用户视角审视界面，收集体验反馈。</li>
+<li><strong>前后端协作</strong>：模拟接口契约沟通，熟悉接口文档（如
+Swagger）。</li>
+<li><strong>版本控制实践</strong>：使用 Git
+分支开发并解决合并冲突。</li>
+<li><strong>远程开发环境</strong>：体验 Live Share 或 Codespaces
+等远程协作工具。</li>
+</ul>
+<h2 id="阶段回顾">阶段回顾</h2>
+<p>整理前三个月所学的前后端知识，制作脑图或总结文档，评估进展并规划下一阶段学习目标。</p>
+<h1
+id="第4月前端框架进阶与全栈扩展next.jsreact-高级前端">第4月：前端框架进阶与全栈扩展（Next.js/React
+&amp; 高级前端）</h1>
+<ul>
+<li>第13周：Next.js 高级特性（SSR/SSG/API Routes）</li>
+<li>第14周：全局状态管理（Redux/Zustand/React Query）</li>
+<li>第15周：复杂功能开发（订阅/支付/权限控制）</li>
+<li>第16周：前端测试与性能优化</li>
+</ul>
+<h2 id="技能目标-2">技能目标</h2>
+<ul>
+<li>深入掌握 Next.js/React 的进阶用法，理解 SSR/SSG/ISR
+等渲染模式及其适用场景。</li>
+<li>在 Next.js 中实践 BFF（Backend For Frontend）模式，使用 API Routes
+编写轻量后端逻辑。</li>
+<li>引入全局状态管理（Redux Toolkit/Zustand），结合 SWR/React Query
+进行数据获取与缓存。</li>
+<li>设计复杂前端功能，包括动态路由、权限控制、订阅支付流程和后台管理界面。</li>
+<li>通过 Cypress、Lighthouse 等工具进行端到端测试与性能优化。</li>
+</ul>
+<h2 id="核心理论内容-3">核心理论内容</h2>
+<ul>
+<li><strong>Next.js 框架进阶</strong>：
+<ul>
+<li>SSR、SSG、ISR 的原理与实现方式。</li>
+<li>API Routes 构建 BFF 层，处理评论等轻量后端逻辑。</li>
+<li>动态与嵌套路由，权限跳转与参数传递。</li>
+</ul></li>
+<li><strong>组件设计与复用</strong>：
+<ul>
+<li>高阶组件、Render Props、自定义 Hooks。</li>
+<li>动态组件与懒加载，提高复用性和性能。</li>
+<li>页面级组件与 UI 组件分层。</li>
+</ul></li>
+<li><strong>全局状态管理</strong>：
+<ul>
+<li>Redux Toolkit、Zustand、Recoil 等方案的比较与应用。</li>
+<li>React Query/SWR 的数据获取与缓存，SSR 数据注水与 Hydration。</li>
+</ul></li>
+<li><strong>前端路由与导航</strong>：
+<ul>
+<li>Next.js Router 与 React Router 的差异。</li>
+<li>登录状态与权限控制（未登录跳转登录页、管理员后台等）。</li>
+</ul></li>
+<li><strong>前端性能优化</strong>：
+<ul>
+<li>Next.js Image、Script 优化。</li>
+<li>浏览器性能分析、虚拟滚动、大列表分页。</li>
+<li>使用 Lighthouse 和 Webpack Bundle Analyzer 评估与优化。</li>
+</ul></li>
+</ul>
+<h2 id="实践项目-3">实践项目</h2>
+<ul>
+<li><strong>后台管理面板</strong>：
+<ul>
+<li>管理员登录后增删改查影片和用户数据，审核评论。</li>
+<li>使用 Next.js API Routes 构建
+<code>/api/movies</code>、<code>/api/comments</code> 等接口，练习 BFF
+模式。</li>
+</ul></li>
+<li><strong>主项目功能扩展</strong>：
+<ul>
+<li>引入 Redux Toolkit 或 Zustand 实现全局用户登录态与订阅状态。</li>
+<li>实现订阅购买流程（可模拟支付），为订阅用户展示额外内容或权限标识。</li>
+<li>评论功能增强：编辑、删除、点赞。</li>
+<li>集成管理员后台页面，区分普通用户与管理员权限。</li>
+</ul></li>
+</ul>
+<h2 id="前端测试与质量">前端测试与质量</h2>
+<ul>
+<li>使用 Cypress 编写端到端测试（登录 → 评论 → 订阅流程）。</li>
+<li>使用 Jest/React Testing Library 测试核心组件。</li>
+<li>运行 Lighthouse、Webpack Bundle Analyzer 进行性能分析和优化。</li>
+</ul>
+<h2 id="软技能练习-3">软技能练习</h2>
+<ul>
+<li>通过项目迁移总结学习新框架的思路，形成系统设计文档和架构图。</li>
+<li>小组协作模拟：角色分工（API、UI 等），练习接口对齐与团队沟通。</li>
+<li>根据反馈快速迭代产品需求，如调整订阅逻辑或后台权限。</li>
+<li>撰写阶段报告，记录技术挑战与收获。</li>
+</ul>
+<h2 id="学习计划">学习计划</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>月份</th>
+<th>周次</th>
+<th>技能目标</th>
+<th>核心内容</th>
+<th>实践任务</th>
+<th>软技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第4月 前端进阶</td>
+<td>第13周</td>
+<td>Next.js 进阶</td>
+<td>动态路由、API Routes</td>
+<td>增加 <code>/api/comments</code> API</td>
+<td>画架构图，梳理模块关系</td>
+</tr>
+<tr>
+<td>第4月 前端进阶</td>
+<td>第14周</td>
+<td>状态管理</td>
+<td>Redux Toolkit/Zustand + SWR/React Query</td>
+<td>实现全局用户登录态</td>
+<td>小组协作模拟（角色分工）</td>
+</tr>
+<tr>
+<td>第4月 前端进阶</td>
+<td>第15周</td>
+<td>复杂功能</td>
+<td>订阅/支付流程、权限控制</td>
+<td>实现订阅购买页面</td>
+<td>产品经理模拟：新增需求迭代</td>
+</tr>
+<tr>
+<td>第4月 前端进阶</td>
+<td>第16周</td>
+<td>测试与优化</td>
+<td>Cypress、Lighthouse、性能分析</td>
+<td>E2E 测试 + 性能分析</td>
+<td>写阶段报告：技术挑战与收获</td>
+</tr>
+</tbody>
+</table>
+<h1
+id="第5月后端架构优化与工程化实践">第5月：后端架构优化与工程化实践</h1>
+<ul>
+<li>第17周：微服务设计与 API 网关</li>
+<li>第18周：缓存与性能优化（Redis/查询优化）</li>
+<li>第19周：持续集成与部署（CI/CD）</li>
+<li>第20周：安全测试与加固</li>
+</ul>
+<h2 id="技能目标-3">技能目标</h2>
+<p>提升项目的后端架构与工程质量，引入专业工程实践。掌握微服务架构基础、性能调优、安全加固等知识点，将项目提升到可维护、高可靠的工程水平。</p>
+<h2 id="核心理论内容-4">核心理论内容</h2>
+<ul>
+<li><strong>微服务架构设计</strong>：理解微服务的思想和优缺点，将单体应用按业务边界拆分的原则（例如将用户管理、影片内容、评论等服务拆分）。学习服务间通信基础（HTTP/RPC、消息队列概念），以及
+API 网关的作用。</li>
+<li><strong>配置与环境管理</strong>：掌握多环境配置管理方法（开发/测试/生产配置分离），敏感信息管理（如使用环境变量或配置文件，不将秘钥硬编码），确保应用在不同部署环境下可灵活配置。</li>
+<li><strong>持续集成/持续部署 (CI/CD)</strong>：学习 CI/CD
+流水线的原理和流程（代码构建、自动测试、镜像构建与部署）。了解常用 CI
+工具（GitHub Actions、Jenkins
+等）的使用，确保代码变更可以自动化测试和部署，提高发布效率与可靠性。</li>
+<li><strong>测试策略</strong>：深入软件测试金字塔概念：单元测试、集成测试、端到端测试的区别和侧重点。学习编写集成测试（模拟多个模块或服务交互）和性能测试（负载测试工具如
+JMeter、k6 的基本使用），保障系统质量和性能。</li>
+<li><strong>安全与加固</strong>：系统性讲解 Web 安全策略：防御常见攻击如
+CSRF（了解并应用跨站请求伪造防护机制，如 SameSite
+Cookie、防伪令牌）、XSS（输出编码及内容安全策略 CSP）、SQL
+注入（使用参数化查询/ORM
+防范）。审视当前项目中可能存在的安全漏洞并探讨改进措施。</li>
+<li><strong>性能优化</strong>：掌握后端性能优化方法：数据库索引优化、查询性能分析（解释执行计划）、利用缓存减轻数据库压力（如引入
+Redis
+做热点数据缓存）、后端异步任务处理（使用消息队列或后台任务执行长耗时操作）等。学会使用性能分析工具和监控指标（CPU、内存、响应时间）来定位瓶颈。</li>
+</ul>
+<h2 id="实践项目-4">实践项目</h2>
+<ul>
+<li><strong>服务拆分与集成</strong>：尝试将项目部分功能提取为独立服务。例如，将评论系统拆分为单独的微服务（可选用另一种语言实现以作对比练习，如主服务用
+Rust，则评论服务用 Go），实现基础的服务间通信（通过 REST API
+调用或消息队列模拟）。调整原有架构，使前端通过 API
+网关或聚合接口访问各服务的数据。</li>
+<li><strong>引入缓存</strong>：在后端加入缓存层：安装并配置
+Redis，在热点接口（如影片列表/热门影片）中增加缓存逻辑。实践缓存失效策略，确保数据一致性的同时显著提高响应速度。</li>
+<li><strong>配置管理</strong>：将项目的配置（数据库连接串、第三方 API
+密钥等）抽取到配置文件或环境变量中。实践在本地、测试环境、生产环境使用不同配置的方法，编写配置读写模块，确保应用对配置变化敏感。</li>
+<li><strong>CI/CD
+Pipeline</strong>：为项目设置持续集成流水线：编写配置文件（如 GitHub
+Actions YAML）使代码在每次推送时自动运行测试套件；配置 Docker
+打包后端服务镜像，并使用 Docker Compose
+编排多个服务运行。在持续部署方面，可模拟部署到云服务器或容器服务平台的流程，实现一键部署更新。</li>
+<li><strong>测试与质量保障</strong>：扩充测试覆盖率：编写集成测试场景，例如模拟用户完整流程（登录
+-&gt; 查看影片 -&gt;
+发表评论），验证各模块协作是否正常。使用压力测试工具对主要接口进行压测，分析系统在高并发下的性能，记录
+QPS、响应时间等指标并进行优化。</li>
+<li><strong>安全检查</strong>：对现有应用进行安全审计：使用自动化工具（如静态代码扫描、依赖漏洞扫描）检查安全隐患。手动测试常见漏洞，如尝试在输入框输入脚本标签测试
+XSS，在 API
+请求中篡改参数测试权限校验是否严格。针对发现的问题，修复代码或增加安全配置。例如，引入
+CSRF 防护中间件、严格内容安全策略头设置等，并再次测试验证防护效果。</li>
+<li><strong>工具链</strong>：Docker 容器及 Docker Compose，Redis
+缓存数据库，消息队列（可选，如 RabbitMQ/Kafka
+模拟练习或用本地内存队列模拟），GitHub Actions/Jenkins 等 CI
+工具，测试工具（JUnit/Go testing 库用于集成测试，k6/JMeter
+用于压力测试），安全扫描工具（Dependabot、SonarQube 等）。</li>
+</ul>
+<h2 id="软技能练习-4">软技能练习</h2>
+<ul>
+<li><strong>DevOps 思维</strong>：通过设置 CI/CD
+和容器化部署，学员切实体会开发运维一体化流程。练习撰写部署说明和运维文档，就如向运维团队移交项目一样，培养对部署上线环节的重视和责任心。</li>
+<li><strong>团队角色转换</strong>：本阶段鼓励学员轮流扮演不同团队角色。例如今天作为“DevOps
+工程师”检查 CI
+配置，明天作为“DBA”优化数据库索引，后天是“安全工程师”审计代码。通过角色转换体会各岗位关注点，提升与不同团队协作沟通的能力。</li>
+<li><strong>任务协调</strong>：面对第五月繁多的优化任务，学员需练习优先级管理：使用任务管理工具对各项工作排优先顺序（安全高于新功能，修
+bug
+优于微优化等），模拟真实项目中多任务并行推进的情形，锻炼统筹协调能力。</li>
+<li><strong>远程协作</strong>：如果可能，将项目部署到云端测试环境，组织一次线上演示或测试活动。学员需通过远程会议向他人演示项目功能、讲解架构设计，并收集改进建议。通过这种模拟远程工作的方式，提升异地协作和线上表达能力。</li>
+<li><strong>总结与分享</strong>：月末对工程化改进进行总结，整理一份“架构优化报告”，阐述系统当前架构、优化措施及效果数据。将报告分享至技术社区或博客平台，练习向公众清晰表述技术方案的能力，为个人技术影响力打基础。</li>
+</ul>
+<h2 id="学习计划-1">学习计划</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>月份</th>
+<th>周次</th>
+<th>技能目标</th>
+<th>核心内容</th>
+<th>实践任务</th>
+<th>软技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第5月 工程化</td>
+<td>第17周</td>
+<td>微服务设计</td>
+<td>API Gateway，服务拆分</td>
+<td>拆分评论服务（Go/Rust）</td>
+<td>扮演不同团队角色（Dev/DBA）</td>
+</tr>
+<tr>
+<td>第5月 工程化</td>
+<td>第18周</td>
+<td>缓存优化</td>
+<td>Redis 引入</td>
+<td>热点电影列表缓存</td>
+<td>练习任务优先级管理</td>
+</tr>
+<tr>
+<td>第5月 工程化</td>
+<td>第19周</td>
+<td>CI/CD</td>
+<td>GitHub Actions / Gitlab CI 自动化测试 + Docker 镜像</td>
+<td>配置流水线并构建镜像</td>
+<td>编写部署说明文档</td>
+</tr>
+<tr>
+<td>第5月 工程化</td>
+<td>第20周</td>
+<td>安全测试</td>
+<td>CSRF/XSS/SQL 注入</td>
+<td>安全扫描并修复漏洞</td>
+<td>安全审计演练</td>
+</tr>
+</tbody>
+</table>
+<h1 id="第6月项目部署与综合提升">第6月：项目部署与综合提升</h1>
+<h2 id="目标-3">目标</h2>
+<ul>
+<li>完成项目上线与总结，具备独立交付产品能力。</li>
+<li>部署：云服务器、Linux、Nginx、HTTPS。</li>
+<li>容器编排：Docker Compose，初识 Kubernetes。</li>
+<li>监控：日志收集、性能监控、报警。</li>
+<li>运营：依赖更新、备份策略、用户分析。</li>
+</ul>
+<h2 id="实践">实践</h2>
+<ul>
+<li>将完整项目部署上线。</li>
+<li>功能、安全、性能全链路测试。</li>
+<li>编写上线文档与用户手册。</li>
+<li>项目答辩展示。</li>
+</ul>
+<h2 id="工具">工具</h2>
+<ul>
+<li>AWS/阿里云</li>
+<li>Prometheus/Grafana</li>
+<li>Docsify/MkDocs</li>
+</ul>
+<h2 id="软技能">软技能</h2>
+<ul>
+<li>演示与表达</li>
+<li>团队协作</li>
+<li>简历/作品集准备</li>
+<li>自我反思</li>
+</ul>
+<h2 id="输出成果">✅ 输出成果</h2>
+<ul>
+<li>一个可在线访问的 Next.js/React + Rust/Go 全栈应用。</li>
+<li>完整的 API 文档、测试用例、CI/CD pipeline。</li>
+<li>部署上线演练与监控配置。</li>
+<li>阶段总结报告与 Capstone 项目展示。</li>
+</ul>
+<h2 id="周度计划">周度计划</h2>
+<ul>
+<li><strong>第21周：部署</strong> —— 云服务器 + Docker
+Compose，部署完整项目到云端，学习 Nginx 配置。</li>
+<li><strong>第22周：监控</strong> —— 日志收集 +
+Grafana，接入基础监控面板，远程协作演练（线上调试）。</li>
+<li><strong>第23周：验收测试</strong> —— 压测、Bug
+修复，压测主要接口并优化瓶颈，模拟发布流程，准备回滚预案。</li>
+<li><strong>第24周：项目答辩</strong> ——
+项目总结与展示，完整展示应用功能，准备简历/作品集，撰写学习心得。</li>
+</ul>
+<hr />
+<h2 id="技能目标-4">技能目标</h2>
+<p>完成项目的部署上线，并对整个全栈开发过程进行总结提升。掌握应用部署、线上监控与维护的方法，培养独立开发、部署、运营一条龙的能力。通过最终项目验收和回顾，巩固所学知识点，做好继续成长的计划。</p>
+<h2 id="核心理论内容-5">核心理论内容</h2>
+<h3 id="部署与发布">部署与发布</h3>
+<p>学习主流部署方案：云服务器部署（如使用 Linux 云主机手动部署应用或
+Docker 容器）、PaaS 部署（如
+Heroku、Vercel）等。了解部署过程中域名配置、HTTPS
+证书、负载均衡的基础知识。</p>
+<h3 id="容器编排与集群">容器编排与集群</h3>
+<p>初步了解容器编排工具（Docker Swarm 或
+Kubernetes）的概念，认识如何在集群环境下部署扩缩容应用，但不深究细节，仅作为未来扩展方向。</p>
+<h3 id="日志与监控">日志与监控</h3>
+<p>学习应用上线后的监控策略：收集日志（可使用 otel
+栈思路，或简单第三方服务）、性能监控指标（CPU、内存、响应时间），用户行为分析等。了解设置报警规则，在应用出现异常时及时通知维护人员的方法。</p>
+<h3 id="运营与维护">运营与维护</h3>
+<p>介绍应用上线后的运营工作，如持续的安全更新（依赖升级、漏洞修复）、数据库备份与迁移策略、性能调优的持续进行。强调“上线不是结束，而是新的开始”的理念，培养学员对软件生命周期的全面认识。</p>
+<h3 id="职业发展与展望">职业发展与展望</h3>
+<p>结合学员已掌握的 Rust/Go/JS
+全栈技能，讨论在实际职场中的应用方向和前景。介绍一些进阶主题供后续自学（如深入
+Rust 并发高级用法、Go
+底层原理、前端框架演进、移动端开发等），引导学员制定长期学习规划。</p>
+<h2 id="实践项目-5">实践项目</h2>
+<h3 id="正式部署上线">正式部署上线</h3>
+<p>选择一个部署方案将完整项目上线运行。例：购买云服务器部署后端服务和数据库，Nginx
+反向代理设置域名和 HTTPS，前端打包后部署为静态站点；或使用 Docker
+Compose 在云主机上一键启动所有服务；或者使用 Kubernetes
+将服务部署到集群。确保应用可以通过互联网访问，并进行基础的压力和可靠性验证。</p>
+<h3 id="最后测试与验证">最后测试与验证</h3>
+<p>在真实线上环境对系统进行全面测试。包括功能测试（按照用户使用场景全流程测试）、安全测试（如再次进行
+XSS/SQL
+注入尝试）、性能测试（监控上线后的响应时间与服务器资源）。根据测试结果进行最后的
+Bug 修复和性能优化，确保系统稳定。</p>
+<h3 id="上线演练">上线演练</h3>
+<p>模拟真实发布流程：先将应用部署到“预生产环境”进行验证，再正式切换到生产环境，体会渐进发布、回滚预案等发布策略。在此过程中编写上线文档和操作步骤清单，以备出现问题时快速响应。</p>
+<h3 id="文档完善">文档完善</h3>
+<p>整理项目的所有文档和资料：包括用户使用指南、API
+文档、架构设计说明、测试报告等，制作项目的完整文档库。确保即使新的开发者接手，也能通过文档快速理解和上手项目。</p>
+<h3 id="项目展示与答辩">项目展示与答辩</h3>
+<p>准备项目演示材料（幻灯片、演示视频等），向导师或公开技术社区演示最终作品。展示开发的功能、架构亮点，分享开发过程中遇到的挑战和解决方案。通过答辩问答，检验对全栈知识的融会贯通程度。</p>
+<h2 id="工具链">工具链</h2>
+<p>云服务平台（如 AWS EC2、Alibaba Cloud 或 DigitalOcean 等），Linux
+运维工具（ssh、Nginx 配置）、域名与证书管理，Docker 容器仓库（Docker Hub
+部署镜像），日志监控服务（如 Grafana+Prometheus 简单搭建或第三方监控
+SaaS），项目文档网站生成工具（如 MkDocs 或 Docsify 用于整理文档）。</p>
+<h2 id="软技能练习-5">软技能练习</h2>
+<h3 id="演示与表达">演示与表达</h3>
+<p>强化公众演讲和技术表达能力。通过项目展示、答辩的形式，练习如何有条理地介绍技术项目、回答他人提问。学习用数据和事实说话（如演示性能提升数据、安全漏洞修复情况），提升说服力。</p>
+<h3 id="团队合作与领导">团队合作与领导</h3>
+<p>如果作为小组项目收尾，可推选团队负责人组织最终发布和展示，锻炼领导力和团队协作精神。学员也应展现对自己模块的负责态度，互相配合完成最终目标，体会项目经理和开发成员不同的视角。</p>
+<h3 id="求职准备">求职准备</h3>
+<p>指导学员将本次项目经验整合进个人简历和作品集中。练习面试中如何讲述项目——突出使用的技术栈、遇到的难题和解决方案、项目成果。提高职业沟通和表达自信，为将来的职业发展做好准备。</p>
+<h3 id="持续学习计划">持续学习计划</h3>
+<p>课程结束不意味着学习停止。引导学员制定下一步成长计划：例如每月阅读一本技术书或源代码，参与开源项目积累实战，或深入特定领域研究。在软技能上，鼓励保持社区参与和知识分享（写博客、参与技术沙龙），将持续学习融入习惯。</p>
+<h3 id="自我反思">自我反思</h3>
+<p>对整个 6
+个月的学习历程进行深度反思。评估自身在技术硬技能与团队软实力方面的成长，梳理仍然薄弱的环节和改进措施。书面撰写“学习心得与体会”报告，为自己的全栈开发者之路留下宝贵记录，并作为日后回顾的重要参考。</p>
+<h2 id="总结">总结</h2>
+<p>经过 3-6 个月循序渐进的系统学习，学员将全面掌握 Rust/Go 后端和
+JavaScript
+前端开发技能，完成从基础编码到架构设计、从单体应用到微服务、从开发到部署运维的全流程实践。通过“电影代码实践”项目的锻炼，学员不仅收获了一个完整的作品，也在实践中内化了工程化思维和软技能，提高了独立解决问题和协作交付产品的能力。此课程体系为学员日后适应真实工作场景、成长为成熟的全栈独立开发者打下坚实基础。</p>

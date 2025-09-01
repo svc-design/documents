@@ -208,3 +208,45 @@
 - 跨区复制与镜像（Kafka MirrorMaker2）
 - 阈值控制与降级策略
 - 历史回放与灰度演练
+
+## **监控简史（Monitoring History）**
+
+### **7.1 漫谈监控简史到全栈可观测数据选型**
+#### **12-1-monitoring-history-to-full-stack-observable-data-selection.md**
+
+### **7.2 典型运维工作场景**
+#### **12-2-typical-operations-scenarios.md**
+
+## **可观测系统设计篇（Observability System Design）**
+
+### **8.1 边缘采集与网关的抉择**
+#### **13-1-edge-collection-vs-gateway.md**
+
+### **8.2 OTel Gateway 的设计与思考**
+#### **13-2-otel-gateway-design-considerations.md**
+
+### **8.3 数据采集多级持久化与可重放**
+#### **13-3-data-ingestion-multi-level-persistence-and-replay.md**
+
+### **8.4 全栈可观测数据库设计**
+#### **13-4-full-stack-observability-database-design.md**
+
+### **8.5 全栈可观测数据库 ETL 设计**
+#### **13-5-full-stack-observability-database-etl-design.md**
+
+### **8.6 监控系统的多区域与容灾**
+#### **13-6-monitoring-system-multi-region-and-dr.md**
+
+## **LLM OPS Agent 设计篇（LLM OPS Agent Design）**
+
+### **9.1 从 SSH/SCP 到 AI 驱动的 OPS Agent：落地前的思考**
+#### **14-1-from-ssh-scp-to-ai-ops-agent-pre-deployment-considerations.md**
+
+### **9.2 从 SSH/SCP 到 AI 驱动的 OPS Agent：能力清单**
+#### **14-2-from-ssh-scp-to-ai-ops-agent-capability-checklist.md**
+
+### **9.3 PostgreSQL 扩展驱动的复杂分析（向量 / 图 / 趋势）**
+#### **14-3-postgresql-extension-driven-complex-analysis-vector-graph-trend.md**
+
+### **9.4 AI-OPS Agent MVP 架构方案**
+#### **14-4-ai-ops-agent-mvp-architecture.md**

@@ -19,33 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/01-overview.md                       \
-           chapters/02-1-metrics-overview.md             \
-           chapters/02-2-logs-overview.md                \
-           chapters/02-3-traces-overview.md              \
-           chapters/02-4-events-overview.md              \
-           chapters/02-5-profiles-overview.md            \
-           chapters/02-6-network-tuple-analysis.md       \
-           chapters/02-7-sla-slo-sli-overview.md         \
-           chapters/03-1-bpf-introduction.md             \
-           chapters/03-2-bpf-kernel-hooks.md             \
-           chapters/03-3-bpf-network-protocols.md        \
-           chapters/03-4-bpf-syscall-analysis.md         \
-           chapters/03-5-bpf-agent-data-collection.md    \
-           chapters/04-1-overall-troubleshooting-process.md \
-           chapters/04-2-application-request-indicators-analysis.md \
-           chapters/04-3-network-key-metrics-analysis.md \
-           chapters/04-4-log-analysis-and-fault-location.md \
-           chapters/04-5-typical-fault-scenarios-and-case-studies.md \
-           chapters/05-production-monitoring-linux-bare-metal.md \
-           chapters/05-vector-unified-collector-architecture.md \
-           chapters/05-postgres-clickhouse-layered-architecture.md \
-           chapters/06-technical-selection-comparison.md \
-           chapters/07-overall-architecture-design.md \
-           chapters/08-multi-region-architecture-topology.md \
-           chapters/09-end-to-end-reliable-transmission-design.md \
-           chapters/10-postgresql-secondary-analysis-domain.md \
-           chapters/11-multi-region-disaster-recovery.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 all: Observability-Guide.html Observability-Guide.pdf Observability-Guide.docx
 

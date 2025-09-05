@@ -32,13 +32,14 @@
 | 2011.5 ~ 2013.4       | 中国标准软件有限公司                       | 软件工程师                     |
 
 # 项目经历概述
-| 时间范围           | 客户            | 项目                  | 角色         | 技术栈                                           |
-| ------------------ | --------------- | --------------------- | ------------ | ----------------------------------------------   |
-| 2024.01-2024.04    | Tesla（上海）   | Tesla 上海内部项目   | SRE（站点可靠性工程师）| GitHub Actions、GitOps (ArgoCD)、Ansible、Helm、Jenkins / HashiCorp / Linux Server |
-| 2022.06-2023.09    | 罗氏（Roche）   | Roche MSP 服务       | 解决方案架构师         | 云平台自动化管理 IAC（Terraform）、Gitlab CI、GitOPS (FluxCD)、Datadog、Linux Server|
-| 2020.07-2021.11    | UCloud          | UCloud 客户项目      | 解决方案架构师         | 云迁移、Kubernetes、混合云、分布式存储、网络安全、日志监控、CI/CD           |
-| 2019.06-2020.06    | 光大银行        | 光大银行 CPaaS 项目  | 现场实施工程师         | Alauda 容器平台/VMware CNI NSX-T/DevOPS/ES/Prometheus                       |
-| 2015.5-2018.8      | 统信软件有限公司 | Deepin Server 服务器产品开发  | 软件工程师   | Linux(Debian/CentOS)、Shell 脚本、Docker、Jenkins                           |
+| 时间范围            | 客户               | 项目                   | 角色         | 技术栈                                           |
+| ------------------ | ----------------- | --------------------- | ------------ | ----------------------------------------------   |
+| 2024.11-2025.9     | 云杉科技 客户项目   | 高级技术支持工程师       | Linux / Kubernetes / NPM & APM / eBPF / 混合云 |
+| 2024.01-2024.04    | Tesla（上海）      | Tesla 上海内部项目     | SRE（站点可靠性工程师）| GitHub Actions、GitOps (ArgoCD)、Ansible、Helm、Jenkins / HashiCorp / Linux Server |
+| 2022.06-2023.09    | 罗氏（Roche）      | Roche MSP 服务       | 解决方案架构师         | 云平台自动化管理 IAC（Terraform）、Gitlab CI、GitOPS (FluxCD)、Datadog、Linux Server|
+| 2020.07-2021.11    | UCloud            | UCloud 客户项目      | 解决方案架构师         | 云迁移、Kubernetes、混合云、分布式存储、网络安全、日志监控、CI/CD           |
+| 2019.06-2020.06    | 光大银行           |  光大银行 CPaaS 项目  | 现场实施工程师         | Alauda 容器平台/VMware CNI NSX-T/DevOPS/ES/Prometheus                       |
+| 2015.5-2018.8      | 统信软件有限公司    | Deepin Server 服务器产品开发  | 软件工程师   | Linux(Debian/CentOS)、Shell 脚本、Docker、Jenkins                           |
 | 2013.11-2015.4     | 知道创宇科技有限公司 | 基础设施与运维管理   | 运维工程师        | Linux、Shell、Python、Saltstack、Nginx、Nagios、CDN 技术                    |
 | 2013.5-2013.10     | 浪潮电子信息产业股份有限公司 | KUX-OS Server 版本维护     | 系统软件工程师       | Linux、Apache、Bash 脚本、监控工具                         |
 | 2011.05-2013.04    | 中国标准软件有限公司         | Linux 系统移植及 RPM 构建自动化 | 软件工程师         | Linux、RPM 打包、Koji 构建系统、Shell 脚本              |

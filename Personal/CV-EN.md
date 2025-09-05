@@ -22,7 +22,7 @@
 
 | **Duration**          | **Company**                               | **Job Title**                     |
 |-----------------------|-------------------------------------------|-----------------------------------|
-| 2024.11 ～ Present    | Deepflow Technology Co., Ltd.             | Senior Technical Support Engineer |
+| 2024.11 ～ 2025.9     | Deepflow Technology Co., Ltd.             | Senior Technical Support Engineer |
 | 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer          |
 | 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect    |
 | 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect          |
@@ -35,12 +35,12 @@
 
 # Project Summary
 
-| Time Range         | Client           | Project Name              | Role                     | Tech Stack                                         |
-| ------------------ | ---------------- | ------------------------- | ------------------------ | -------------------------------------------------- |
-| 2024.11 ～ Present | Deepflow Technology Co., Ltd.                |  Deepflow Customer Projects|  Senior Technical Support Engineer | Linux / Kubernetes / NPM & APM / eBPF / Hybrid Cloud  |
-| 2024.01-2024.04    | Tesla (Shanghai) | Internal Project at Tesla | SRE (Site Reliability Engineer) | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins / HashiCorp / Linux Server |
-| 2022.06-2023.09    | Roche            | Roche MSP Services        | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
-| 2020.07-2021.11    | UCloud           | UCloud Client Projects    | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
+| Time Range         | Client             | Project Name              | Role                              | Tech Stack                                         |
+| ------------------ | -------------------| ------------------------- | --------------------------------- | -------------------------------------------------- |
+| 2024.11-2025.9     | Deepflow Technology| Deepflow Customer Projects| Senior Technical Support Engineer | Linux / Kubernetes / NPM & APM / eBPF / Hybrid Cloud  |
+| 2024.01-2024.04    | Tesla (Shanghai)   | Internal Project at Tesla | SRE (Site Reliability Engineer)   | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins / HashiCorp / Linux Server |
+| 2022.06-2023.09    | Roche              | Roche MSP Services        | Solution Architect        | Cloud Platform Automation IAC (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
+| 2020.07-2021.11    | UCloud             | UCloud Client Projects    | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging & Monitoring, CI/CD |
 | 2019.06-2020.06    | Everbright Bank  | Everbright Bank CPaaS Project | On-site Implementation Engineer | Alauda Container Platform/VMware CNI NSX-T/DevOps/ES/Prometheus |
 | 2015.5-2018.8      | Tongxin Software Co., Ltd. | Deepin Server Product Development | Software Engineer  | Linux (Debian/CentOS), Shell Scripting, Docker, Jenkins |
 | 2013.11-2015.4     | KnowSec Technology Co., Ltd. | Infrastructure and Operations Management | Operations Engineer | Linux, Shell, Python, Saltstack, Nginx, Nagios, CDN Technology |
@@ -52,7 +52,7 @@
 
 ## Project 1: Deepflow Customer Projects
 
-2024.11 ～ Present        Deepflow Technology Co., Ltd.        Senior Technical Support Engineer 
+2024.11 ～ 2025.9        Deepflow Technology Co., Ltd.        Senior Technical Support Engineer 
 
 - Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
 - Tech Stack:    Linux, Kubernetes, APM，Network traffic/performance monitoring

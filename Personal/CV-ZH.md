@@ -41,7 +41,7 @@
 # 项目经历概述
 | 时间范围            | 客户               | 项目                   | 角色         | 技术栈                                           |
 | ------------------ | ----------------- | --------------------- | ------------ | ----------------------------------------------   |
-| 2024.11-2025.9     | 云杉科技           | 客户项目                | 高级技术支持工程师       | Linux / Kubernetes / NPM & APM / eBPF / 混合云 |
+| 2024.11-2025.9     | 云杉科技授权客户     | 客户项目                | 高级技术支持工程师       | Linux / Kubernetes / NPM & APM / eBPF / 混合云 |
 | 2024.01-2024.04    | Tesla（上海）      | Tesla 上海内部项目     | SRE（站点可靠性工程师）| GitHub Actions、GitOps (ArgoCD)、Ansible、Helm、Jenkins / HashiCorp / Linux Server |
 | 2022.06-2023.09    | 罗氏（Roche）      | Roche MSP 服务       | 解决方案架构师         | 云平台自动化管理 IAC（Terraform）、Gitlab CI、GitOPS (FluxCD)、Datadog、Linux Server|
 | 2020.07-2021.11    | UCloud            | UCloud 客户项目      | 解决方案架构师         | 云迁移、Kubernetes、混合云、分布式存储、网络安全、日志监控、CI/CD           |

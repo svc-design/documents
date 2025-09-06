@@ -7,10 +7,16 @@
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **语言**: 中文（母语），英语（会话）
 
+
 # 关键经验与专长
-- **IT行业工作年限**：13年
-- **技术专长**：Linux / Python / Ansible / Docker / Kubernetes / IAC / DevOPS
-- **行业领域**：制造业、金融、互联网
+
+- 14 年 IT 从业经验（制造业 / 金融 / 运营商 / 互联网）
+- 技术栈：Linux、Python、Ansible、Docker、Kubernetes、IaC（Terraform/Ansible）、DevOps
+- 架构设计：分布式系统、混合云、容器化、微服务、CI/CD、多云管理
+- 可观测性：NPM & APM、eBPF、日志/指标/链路统一观测、性能优化
+- 运维平台化：配置管理、自动化运维、平台化工具链
+- AI 运维探索：AI Agent、RAG、智能化运维与知识自动化
+- 项目交付与协作：客户支持、跨团队沟通、问题闭环
 
 # 教育背景
 | 时间范围          | 最高学历       | 学校             | 专业              |
@@ -72,7 +78,7 @@
 
 ### 项目 1：甜橙金融南北流量采集系统维保
 **时间**：2024.11 – 2025.07  
-**公司**：甜橙金融  
+**公司**：甜橙金融（云杉科技客户项目）
 **角色**：网络可观测性工程师  
 **技术栈**：DeepFlow、Linux、Pcap、流日志、性能优化、系统迁移、信创改造  
 
@@ -92,7 +98,7 @@
 
 ### 项目 2：中远海运 AI Agent POC
 **时间**：2025.07 – 2025.09  
-**公司**：中远海运  
+**公司**：中远海运(云杉科技客户项目）)  
 **角色**：AI 运维支持工程师  
 **技术栈**：AI Agent、Docker、Kubernetes、CI/CD、对话式 Agent、QA 测试  
 

@@ -50,19 +50,47 @@
 
 # PROJECT/ CONSULTANCY SERVICES EXPERIENCE 
 
-## Project 1: Deepflow Customer Projects
+### Project 1: DeepFlow North-South Traffic Collection System Maintenance – China Telecom Finance  
+**Duration**: Nov 2024 – Jul 2025  
+**Company**: China Telecom Finance  
+**Role**: Network Observability Engineer  
+**Tech Stack**: DeepFlow, Linux, Pcap, Flow Logs, Performance Optimization, System Migration, Information Security Compliance  
 
-2024.11 ～ 2025.9        Deepflow Technology Co., Ltd.        Senior Technical Support Engineer 
+**Project Description**  
+Supported the performance and stability assurance of the DeepFlow north-south traffic collectors, ensuring reliability under high-concurrency scenarios, and facilitated hardware upgrades and compliance-driven infrastructure transformation.  
 
-- Major Clients: Zhejiang Mobile, Hubei Telecom, Shanghai Electric Power, and other enterprise clients
-- Tech Stack:    Linux, Kubernetes, APM，Network traffic/performance monitoring
-- Main Responsibilities:
-    1. Provided post-sales technical support for DeepFlow, ensuring system stability and efficiency.
-    2. Performed system upgrades to optimize performance and scalability.
-    3. Troubleshot and resolved network monitoring issues to ensure continuous service availability.
-    4. Offered technical consulting to help clients understand and effectively use DeepFlow for monitoring, traffic analysis, and fault localization.
+**Responsibilities**  
+- Tuned collector performance and maintained stability, resolving bottlenecks and packet loss issues under heavy traffic.  
+- Assisted in hardware capacity planning and optimized DF Server storage/query performance to support migration and scaling.  
+- Drove issue tracking and closure across three project phases, establishing a standardized maintenance and feedback mechanism.  
+- Delivered fault reports, upgrade plans, optimization strategies, and implementation documents to ensure knowledge transfer.  
 
-## Project 2: Tesla Shanghai Internal Project
+**Achievements**  
+- Resolved multiple performance bottlenecks, improving traffic collection and analysis stability.  
+- Completed DF Server performance optimization and scaling migration in the Nanjing region, enabling business expansion.  
+- Assisted in completing collector compliance-driven transformation, improving compatibility and regulatory adherence.  
+
+
+### Project 2: AI Agent Proof-of-Concept – COSCO Shipping  
+**Duration**: Jul 2025 – Sep 2025  
+**Company**: COSCO Shipping  
+**Role**: AI Operations Support Engineer  
+**Tech Stack**: AI Agent, Docker, Kubernetes, CI/CD, Conversational Agent, QA Testing  
+
+**Project Description**  
+Contributed to the deployment and validation of an AI Agent proof-of-concept (POC), supporting model integration, containerized environment setup, and conversational workflow testing to assist the IT department’s technology evaluation.  
+
+**Responsibilities**  
+- Built the POC environment, enabling model integration, containerization, and CI/CD workflows.  
+- Collaborated with R&D to test conversational Agent workflows, including task decomposition, tool invocation, and knowledge base Q&A.  
+- Designed and executed QA testing plans to validate response latency, accuracy, and system stability.  
+- Provided deployment documentation and test checklists to support client evaluation and decision-making.  
+
+**Achievements**  
+- Delivered successful AI Agent POC deployment and demo, gaining recognition from client leadership.  
+- Produced reusable environment setup and validation documents, accelerating internal technology adoption.  
+
+## Project 3: Tesla Shanghai Internal Project
 
 2024.01-2024.04 	Tesla Shanghai Internal Project 	Site Reliability Engineering
 
@@ -80,7 +108,7 @@ Implemented monitoring and alerting mechanisms to quickly detect and address iss
     2. Developed Jenkins pipelines to automate edge software deployment, Ignition deployment, and upgrades, significantly improving deployment efficiency.
 
 
-## Project 3: Roche MSP service with AWS/AliCloud
+## Project 4: Roche MSP service with AWS/AliCloud
 
    2022.06-2023.09	Roche MSP service with AWS/AliCloud	Solution Architect
 
@@ -96,7 +124,7 @@ Implemented monitoring and alerting mechanisms to quickly detect and address iss
 - Achievements:
     Delivered ongoing consulting and development services for Roche Pharma China, including designing GitLab IAC automation solutions, implementing GitOps tools with FluxCD, and optimizing EKS IAC code.
 
-## Project 4: Ucloud cutomer project
+## Project 5: Ucloud cutomer project
 
 2020.07-2021.11	Ucloud cutomer project	        Solution Architect
 
@@ -111,7 +139,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully migrated 106 hosts and 3 Kubernetes (K8S) clusters from Tencent Cloud to UCloud
     2. Guided Walnut Education Company to deploy 10 K8S clusters (over 200 nodes) on UCloud, providing comprehensive logging, monitoring, and CICD services
 
-## Project 5: Everbright Bank PaaS project	 
+## Project 6: Everbright Bank PaaS project	 
 
 2019.06-2020.06	Everbright Bank PaaS project	        On-site implementation engineer
 
@@ -129,7 +157,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully completed platform upgrades 6 times with 8 k8s clusters, for Everbright Bank Container Platform
     1. Successfully fulfilled a year-long on-site operation and maintenance assignment, ensuring platform stability and providing valuable product improvement feedback.
 
-## Project 6: Deepin Server Product Development	
+## Project 7: Deepin Server Product Development	
 
 2015.05-2018.04 Deepin Server Product Development	        Software Engineer
 
@@ -145,7 +173,7 @@ Gathered customers' business needs and provided technical consulting services to
     1. Successfully released multiple stable versions of the Deepin Server product.
     2. Improved system performance and reduced deployment time through automation. 
 
-## Project 7: Infrastructure and Operations Management
+## Project 8: Infrastructure and Operations Management
 
 2013.11-2015.4   Infrastructure and Operations Management	Operations Engineer
 
@@ -160,7 +188,7 @@ Gathered customers' business needs and provided technical consulting services to
     5. Improved infrastructure stability and performance through proactive maintenance and optimization.
     6. Reduced downtime and enhanced service reliability through effective fault management.
 
-## Project 8: Linux Server Maintenance
+## Project 9: Linux Server Maintenance
 
 2013.5-2013.10	 Linux Server Maintenance	System Software Engineer	
 
@@ -172,7 +200,7 @@ Gathered customers' business needs and provided technical consulting services to
     2. Performed regular updates and patches to keep the servers secure and up-to-date.
 
 
-## Project 9: Linux Server Maintenance
+## Project 10: Linux Server Maintenance
 
 2011.5-2013.4	 	Linux Server Maintenance	System Software Engineer
 

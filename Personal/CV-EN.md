@@ -67,7 +67,7 @@
   Observability suite integrating **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)** for nearline ETL, IaC/Ansible topology, and active call graph analytics.  
 - **Xstream** ([GitHub](https://github.com/svc-design/Xstream))  
   Dart-based GUI client for cross-border service acceleration and connection management, enhancing reliability and speed
-- **Navi**  
+- **Navi**  ([GitHub](https://github.com/svc-design/Navi)) 
   A desktop AI assistant designed to guide tasks and boost productivity, helping users accomplish work more efficiently.  
 
 **Focus Areas**  

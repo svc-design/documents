@@ -6,6 +6,7 @@
 - **邮箱**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **语言**: 中文（母语），英语（会话）
+- **个人主页**: https://www.svc.plus
 
 
 # 关键经验与专长

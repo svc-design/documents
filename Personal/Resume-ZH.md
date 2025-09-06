@@ -30,6 +30,12 @@
 - **可观察性与监控**: Prometheus, Grafana, Elasticsearch,Deepflow (APM), Datadog
 - **自动化工具**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
 
+## 探索方向
+
+- 热衷于开源工具研究与贡献（如 Rust / Go 生态、云原生 DevOps 工具链）。
+- 关注 混合云/多云自动化 与 可观测性平台化建设。
+- 持续探索 AI + 运维结合（RAG、AgentOps、智能监控），并在实际项目中应用 eBPF、向量数据库、GitOps 工具链等新兴技术，总结最佳实践。
+
 ## 教育背景
 
 | 时间               | 学位      | 学校                      | 专业                            |

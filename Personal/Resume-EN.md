@@ -1,6 +1,6 @@
 # RESUME
 
-### Personal Information
+## Personal Information
 
 - **Name**: Haitao Pan
 - **Location**: Shanghai, China
@@ -10,23 +10,34 @@
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **LANGUAGES**: Chinese(native), English(conversational)
 
-### Desired Positions
+## Desired Positions
 
 - Cloud Engineer
 - DevOps Engineer
 - Solution Architect
 
-### Professional Summary
+## Professional Summary
 
-A cloud engineer and site reliability engineer with 13 years of experience in cloud technology, IT infrastructure, and DevOps practices. Skilled in using Kubernetes, Docker, and CI/CD automation tools like GitHub Actions, Jenkins, and Ansible to deliver scalable solutions. Extensive experience leading cloud migration projects, developing hybrid cloud solutions, and implementing monitoring and observability systems.
+- 14 years of IT experience across manufacturing, finance, telecom, and internet industries.
+- Proficient in Linux, Kubernetes, Docker, Ansible, CI/CD, and IaC (Terraform/Ansible).
+- Extensive experience in distributed system architecture, hybrid cloud, automation, and observability (NPM, APM, eBPF, unified logging/metrics/tracing).
+- Recently focused on AI-driven operations (AI Agents, RAG, intelligent automation).
 
-### Skills Overview
-- **Cloud Platforms**: AWS, GCP, Azure, AliCloud
-- **Containerization & Orchestration**: Linux, Docker, Kubernetes
-- **Programming Languages**: Proficient in Python and Shell; familiar with Go, Rust, JavaScript
-- **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch (ES), DeepFlow(APM)
-- **Infrastructure as Code (IaC)**: Terraform, Pulumi, GitLab CI, GitOps (ArgoCD, FluxCD)
-- **Automation Tools**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
+## Skills
+
+- Cloud Platforms: AWS, GCP, Azure, AliCloud
+- Containerization & Orchestration: Docker, Kubernetes
+- Infrastructure as Code (IaC): Terraform, Pulumi
+- Programming Languages: Proficient in Python and Shell; familiar with Go, Rust, JavaScript
+- Observability & Monitoring: Prometheus, Grafana, Elasticsearch, DeepFlow (APM), Datadog
+- Automation Tools: Ansible, Jenkins, Helm, GitHub Actions, GitLab CI, GitOps (ArgoCD, FluxCD)
+
+## Areas of Interest
+
+- Passionate about open-source contributions and research (Rust/Go ecosystem, cloud-native DevOps toolchains).
+- Focused on hybrid/multi-cloud automation and platform-level observability.
+- Continuously exploring the integration of AI and IT operations (RAG, AgentOps, intelligent monitoring), applying emerging technologies such as eBPF, vector databases, and GitOps toolchains in real projects, and summarizing best practices.
+
 
 ### Education Background
 

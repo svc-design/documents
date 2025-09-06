@@ -46,28 +46,29 @@
 
 # 项目/咨询服务经验
 
-### Personal Open-Source Projects
+## 个人开源项目
 
-🌐 Website: [www.svc.plus](http://www.svc.plus)  
+🌐 主页: [www.svc.plus](http://www.svc.plus)  
 
 - **XControl**  
-  Web-based control panel integrating **XConfig, XCloudFlow, XScopeHub, Xstream**, and other modules. Provides a unified management interface for DevOps, observability, and AI Agent workflows.  
+  基于 Web 的控制端，集成 **XConfig、XCloudFlow、XScopeHub、Xstream** 等模块，提供统一的 DevOps、可观测性和 AI Agent 工作流管理界面。  
 - **XConfig** ([GitHub](https://github.com/svc-design/XConfig))  
-  Flexible DevOps orchestrator with Rust Agent, enabling modular deployment and configuration automation.  
+  灵活的 DevOps 编排器，基于 Rust Agent，实现模块化部署与配置自动化。  
 - **XCloudFlow** ([GitHub](https://github.com/svc-design/XCloudFlow))  
-  Multi-cloud management and automation framework for continuous infrastructure setup and cross-cloud orchestration.  
+  多云管理与自动化框架，支持持续的基础设施部署与跨云编排。  
 - **XScopeHub** ([GitHub](https://github.com/svc-design/XScopeHub))  
-  Observability suite integrating **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)** for nearline ETL, IaC/Ansible topology, and active call graph analytics.  
+  可观测性套件，集成 **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)**，支持近线 ETL、IaC/Ansible 拓扑和活跃调用链分析。  
 - **Xstream** ([GitHub](https://github.com/svc-design/Xstream))  
-  Dart-based GUI client for **Xray-core** configuration management, improving connection reliability and network performance.  
+  基于 Dart 的 GUI 客户端，用于管理 **Xray-core** 配置，提升连接可靠性和网络性能。  
 - **Navi**  
-  C++ productivity agent guiding and accelerating task execution.  
+  基于 C++ 的效率助手，加速并指导任务执行。  
 
-**Focus Areas**  
-- Web-based orchestration & observability platform (XControl).  
-- Cloud-native observability (metrics, logs, traces) and AI Agent + RAG architectures.  
-- Multi-cloud automation, DevOps toolchains, and hybrid infrastructure optimization.  
+**关注方向**  
+- 基于 Web 的编排与可观测性平台（XControl）。  
+- 云原生可观测性（指标、日志、链路）与 AI Agent + RAG 架构。  
+- 多云自动化、DevOps 工具链与混合云基础设施优化。  
 
+## 企业项目
 
 ### 项目 1：甜橙金融南北流量采集系统维保
 **时间**：2024.11 – 2025.07  

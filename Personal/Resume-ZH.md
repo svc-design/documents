@@ -38,7 +38,7 @@
 
 ## 个人开源项目
 
-- XControl：Web 控制端，集成 XConfig / XCloudFlow / XScopeHub / Xstream，统一管理 DevOps、可观测性与 AI Agent 流程
+- XControl：主页与 Web 控制端，集成 XConfig / XCloudFlow / XScopeHub / Xstream，统一管理
 - XConfig (GitHub)：Rust Agent 驱动的 DevOps 编排器，模块化部署与配置自动化
 - XCloudFlow (GitHub)：多云管理与自动化框架，支持持续基础设施部署与跨云编排
 - XScopeHub (GitHub)：可观测性套件（Vector / OpenTelemetry / PostgreSQL），支持近线 ETL 与活跃调用链分析，AI OPS Agent

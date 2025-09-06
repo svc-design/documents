@@ -54,6 +54,29 @@
 
 # PROJECT/ CONSULTANCY SERVICES EXPERIENCE 
 
+## Personal Open-Source Projects
+
+🌐 Website: [www.svc.plus](http://www.svc.plus)  
+
+- **XControl**  
+  Web-based control panel integrating **XConfig, XCloudFlow, XScopeHub, Xstream**, and other modules. Provides a unified management interface for DevOps, observability, and AI Agent workflows.  
+- **XConfig** ([GitHub](https://github.com/svc-design/XConfig))  
+  Flexible DevOps orchestrator with Rust Agent, enabling modular deployment and configuration automation.  
+- **XCloudFlow** ([GitHub](https://github.com/svc-design/XCloudFlow))  
+  Multi-cloud management and automation framework for continuous infrastructure setup and cross-cloud orchestration.  
+- **XScopeHub** ([GitHub](https://github.com/svc-design/XScopeHub))  
+  Observability suite integrating **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)** for nearline ETL, IaC/Ansible topology, and active call graph analytics.  
+- **Xstream** ([GitHub](https://github.com/svc-design/Xstream))  
+  Dart-based GUI client for **Xray-core** configuration management, improving connection reliability and network performance.  
+- **Navi**  
+  C++ productivity agent guiding and accelerating task execution.  
+
+**Focus Areas**  
+- Web-based orchestration & observability platform (XControl).  
+- Cloud-native observability (metrics, logs, traces) and AI Agent + RAG architectures.  
+- Multi-cloud automation, DevOps toolchains, and hybrid infrastructure optimization.  
+
+
 ### Project 1: DeepFlow North-South Traffic Collection System Maintenance – China Telecom Finance  
 **Duration**: Nov 2024 – Jul 2025  
 **Company**: China Telecom Finance  

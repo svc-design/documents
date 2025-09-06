@@ -9,9 +9,13 @@
 
 ## Key Experience and Expertise
 
-- **Years of  Experience in IT**: 14 years
-- **Technical Expertise**: Linux / Kubernetes / Ansible / IaC(Terraform/Pulumi) /NPM /DevOps( Gitlab CICD / Github Actions ) / Python / Shell /GPT-assisted Go & Rust
-- **Industry  Fields**:    Manufacturing, Finance, Internet
+- 13+ years of IT experience (Manufacturing / Finance / Internet)
+- Tech Stack: Linux, Python, Ansible, Docker, Kubernetes, IaC (Terraform/Ansible), DevOps toolchains
+- Architecture Design: Distributed systems, hybrid cloud, containerization, microservices, CI/CD pipelines, multi-cloud management
+- Observability & Performance: NPM & APM, eBPF, unified metrics/logs/traces, performance tuning & stability optimization
+- Automation & Platformization: Configuration management, automated operations, platform-based DevOps solutions
+- AI-Driven Operations: AI Agent, RAG, intelligent operations and knowledge automation
+- Project Delivery & Collaboration: Customer support, cross-team coordination, issue resolution and closure
 
 # Education Background
 | Time Range        | Highest Degree | School           | Major             |

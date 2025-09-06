@@ -76,7 +76,6 @@
 - Cloud-native observability (metrics, logs, traces) and AI Agent + RAG architectures.  
 - Multi-cloud automation, DevOps toolchains, and hybrid infrastructure optimization.  
 
-
 ### Project 1: DeepFlow North-South Traffic Collection System Maintenance – China Telecom Finance  
 **Duration**: Nov 2024 – Jul 2025  
 **Company**: China Telecom Finance  

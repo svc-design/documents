@@ -17,7 +17,10 @@
 
 ## 职业概述
 
-拥有13年IT服务经验，熟练掌握云技术、IT基础设施和DevOps实践，精通Kubernetes、Docker、CI/CD自动化工具（如GitHub Actions、Jenkins和Ansible），并在云迁移项目、混合云解决方案、监控与可观察性系统方面拥有丰富的经验。
+- 拥有 14 年 IT 从业经验，跨制造业、金融、运营商与互联网领域。
+- 精通 Linux、Kubernetes、Docker、Ansible、CI/CD、IaC（Terraform/Ansible），
+- 在分布式系统架构、混合云、自动化运维与可观测性（NPM、APM、eBPF、日志/指标/链路统一监控）方面有丰富经验
+- 近期专注于 AI 运维探索（AI Agent、RAG、智能化运维）。
 
 ## 技能概述
 - **云平台**: AWS, GCP, Azure，AliCloud
@@ -33,7 +36,29 @@
 | ------------------ | --------- | ------------------------- | ------------------------------- |
 | 2006.9 - 2010.6    | 本科      | 长春工程学院              | 电气工程与自动化                 |
 
+## 个人开源项目
+
+- XControl：Web 控制端，集成 XConfig / XCloudFlow / XScopeHub / Xstream，统一管理 DevOps、可观测性与 AI Agent 流程
+- XConfig (GitHub)：Rust Agent 驱动的 DevOps 编排器，模块化部署与配置自动化
+- XCloudFlow (GitHub)：多云管理与自动化框架，支持持续基础设施部署与跨云编排
+- XScopeHub (GitHub)：可观测性套件（Vector / OpenTelemetry / PostgreSQL），支持近线 ETL 与活跃调用链分析，AI OPS Agent
+- Xstream (GitHub)：基于 Dart 的跨境加速与连接管理客户端
+- Navi (GitHub)：桌面级 AI 助手，支持任务引导、工具编排与知识问答
+
 ## 工作经历
+
+### 北京云杉世纪网络科技有限公司 高级售后服务工程师 2024.11–2025.09
+
+- **技术栈**：Linux、Kubernetes、DeepFlow、NPM & APM、eBPF、混合云
+- **职责**:
+  - 负责客户现场网络可观测性系统的部署、调优与运维
+  - 跟进采集器、DF Server 与存储查询集群的优化与迁移
+  - 协助客户完成新技术 PoC（AI Agent、混合云环境观测）
+- **重点项目成就**:
+  - 甜橙金融项目：优化采集器性能，解决高并发丢包，支撑南京区域 DF Server 迁移与扩容，
+    信创改造，完成硬件兼容性调优与标准化维保手册输出
+  - 中远海运 AI Agent POC：完成模型接入、容器化部署与 QA 测试方案，交付复用文档
+  - 其他客户项目，上海电力，浙江移动，江苏电信，麦糖（互联网客户）
 
 ### 特斯拉（上海）有限公司 站点可靠性工程师 2024.01-2024.05
 
@@ -176,3 +201,6 @@
   2. 使用 Koji 构建系统，实现软件包的自动化构建和发布。
 - **成就**:
   1. 实施 Koji 自动化系统，提高构建效率
+
+
+

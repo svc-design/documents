@@ -1,10 +1,11 @@
 # Personal Information
 
 - Name: Pan Haitao
-- Location: Shanghai, China
 - Phone: +86 13691175694
+- Location: Shanghai, China
 - Email: manbuzhe2008@gmail.com
 - LinkedIn: www.linkedin.com/in/haitaopan
+- Website: [www.svc.plus](http://www.svc.plus)
 - Languages: Chinese (Native), English (Conversational)
 
 ## Key Experience and Expertise
@@ -56,8 +57,6 @@
 
 ## Personal Open-Source Projects
 
-🌐 Website: [www.svc.plus](http://www.svc.plus)  
-
 - **XControl**  
   Web-based control panel integrating **XConfig, XCloudFlow, XScopeHub, Xstream**, and other modules. Provides a unified management interface for DevOps, observability, and AI Agent workflows.  
 - **XConfig** ([GitHub](https://github.com/svc-design/XConfig))  
@@ -67,9 +66,9 @@
 - **XScopeHub** ([GitHub](https://github.com/svc-design/XScopeHub))  
   Observability suite integrating **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)** for nearline ETL, IaC/Ansible topology, and active call graph analytics.  
 - **Xstream** ([GitHub](https://github.com/svc-design/Xstream))  
-  Dart-based GUI client for **Xray-core** configuration management, improving connection reliability and network performance.  
+  Dart-based GUI client for cross-border service acceleration and connection management, enhancing reliability and speed
 - **Navi**  
-  C++ productivity agent guiding and accelerating task execution.  
+  A desktop AI assistant designed to guide tasks and boost productivity, helping users accomplish work more efficiently.  
 
 **Focus Areas**  
 - Web-based orchestration & observability platform (XControl).  

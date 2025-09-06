@@ -1,73 +1,168 @@
-# RESUME
+# Resume
 
 ## Personal Information
+- **Name**: Pan Haitao  
+- **Location**: Shanghai, China  
+- **Current Status**: Open to opportunities  
+- **Phone**: +86 13691175694  
+- **Email**: manbuzhe2009@qq.com  
+- **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)  
+- **Languages**: Chinese (Native), English (Conversational)  
 
-- **Name**: Haitao Pan
-- **Location**: Shanghai, China
-- **Current Status**: Unemployed
-- **Phone**: +86 13691175694
-- **Email**: manbuzhe2008@gmail.com
-- **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
-- **LANGUAGES**: Chinese(native), English(conversational)
-
-## Desired Positions
-
-- Cloud Engineer
-- DevOps Engineer
-- Solution Architect
+## Desired Roles
+- Cloud Engineer  
+- DevOps Engineer  
+- Solutions Architect  
 
 ## Professional Summary
+- 14 years of IT experience spanning manufacturing, finance, telecom, and internet industries.  
+- Proficient in Linux, Kubernetes, Docker, Ansible, CI/CD, and IaC (Terraform/Ansible).  
+- Extensive experience in distributed system architecture, hybrid cloud, automation, and observability (NPM, APM, eBPF, unified logs/metrics/traces).  
+- Recently focused on AI-driven operations (AI Agents, RAG, intelligent operations).  
 
-- 14 years of IT experience across manufacturing, finance, telecom, and internet industries.
-- Proficient in Linux, Kubernetes, Docker, Ansible, CI/CD, and IaC (Terraform/Ansible).
-- Extensive experience in distributed system architecture, hybrid cloud, automation, and observability (NPM, APM, eBPF, unified logging/metrics/tracing).
-- Recently focused on AI-driven operations (AI Agents, RAG, intelligent automation).
+## Skills Overview
+- **Cloud Platforms**: AWS, GCP, Azure, AliCloud  
+- **Containerization & Orchestration**: Docker, Kubernetes  
+- **Infrastructure as Code (IaC)**: Terraform, Pulumi  
+- **Programming Languages**: Proficient in Python and Shell; working knowledge of Go, Rust, JavaScript  
+- **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch, DeepFlow (APM), Datadog  
+- **Automation Tools**: Ansible, Jenkins, Helm, GitHub Actions, GitLab CI, GitOps (ArgoCD, FluxCD)  
 
-## Skills
+## Areas of Exploration
+- Passionate about open-source contributions (Rust / Go ecosystem, cloud-native DevOps toolchain).  
+- Focused on hybrid/multi-cloud automation and observability platform design.  
+- Actively exploring AI + Operations (RAG, AgentOps, intelligent monitoring), applying emerging technologies such as eBPF, vector databases, and GitOps toolchains in real projects, and summarizing best practices.  
 
-- Cloud Platforms: AWS, GCP, Azure, AliCloud
-- Containerization & Orchestration: Docker, Kubernetes
-- Infrastructure as Code (IaC): Terraform, Pulumi
-- Programming Languages: Proficient in Python and Shell; familiar with Go, Rust, JavaScript
-- Observability & Monitoring: Prometheus, Grafana, Elasticsearch, DeepFlow (APM), Datadog
-- Automation Tools: Ansible, Jenkins, Helm, GitHub Actions, GitLab CI, GitOps (ArgoCD, FluxCD)
+## Education
 
-## Areas of Interest
+| Period          | Degree   | Institution                  | Major                           |
+| --------------- | -------- | ---------------------------- | ------------------------------- |
+| 2006.09 – 2010.06 | Bachelor | Changchun Institute of Technology | Electrical Engineering & Automation |
 
-- Passionate about open-source contributions and research (Rust/Go ecosystem, cloud-native DevOps toolchains).
-- Focused on hybrid/multi-cloud automation and platform-level observability.
-- Continuously exploring the integration of AI and IT operations (RAG, AgentOps, intelligent monitoring), applying emerging technologies such as eBPF, vector databases, and GitOps toolchains in real projects, and summarizing best practices.
+## Open-Source Projects
+- **XControl**: Web portal and control panel integrating XConfig / XCloudFlow / XScopeHub / Xstream for unified management.  
+- **XConfig (GitHub)**: Rust Agent-based DevOps orchestrator for modular deployment and automation.  
+- **XCloudFlow (GitHub)**: Multi-cloud management and automation framework supporting continuous infrastructure setup and orchestration.  
+- **XScopeHub (GitHub)**: Observability suite (Vector / OpenTelemetry / PostgreSQL) enabling nearline ETL, active call-graph analytics, and AI Ops Agent integration.  
+- **Xstream (GitHub)**: Dart-based cross-border acceleration and connection management client.  
+- **Navi (GitHub)**: Desktop AI assistant supporting guided tasks, tool orchestration, and knowledge Q&A.  
 
+## Work Experience
 
-### Education Background
+### Senior Post-Sales Service Engineer  
+**Beijing Yunshan Century Network Technology Co., Ltd.**  
+*Nov 2024 – Sep 2025*  
 
-| Duration           | Degree    | Institution        | Major                        |
-| ------------------ | --------- | ------------------ | --------------------------- |
-| 2006.9 - 2010.6    | Bachelor's| Changchun Institute of Technology | Electrical Engineering & Automation |
+- **Stack**: Linux, Kubernetes, DeepFlow, NPM & APM, eBPF, Hybrid Cloud  
+- **Responsibilities**:  
+  - Deployed, tuned, and maintained customer observability systems.  
+  - Optimized and migrated collectors, DF Servers, and storage/query clusters.  
+  - Assisted clients with new technology PoCs (AI Agents, hybrid cloud observability).  
+- **Key Achievements**:  
+  - **Tiantong Finance**: Optimized collector performance, resolved high-concurrency packet loss, supported DF Server migration/expansion in Nanjing, delivered hardware compatibility tuning and standardized O&M manuals.  
+  - **COSCO AI Agent PoC**: Integrated AI models, containerized deployment, QA testing solution, delivered reusable documentation.  
+  - Additional projects: Shanghai Electric Power, Zhejiang Mobile, Jiangsu Telecom, Maitang (Internet client).  
 
-### Work Experience
+---
 
-| **Duration**          | **Company**                               | **Job Title**                   |
-|-----------------------|-------------------------------------------|---------------------------------|
-| 2024.1 ~ 2024.5       | Tesla (Shanghai) Co., Ltd.               | Site Reliability Engineer       |
-| 2022.3 ~ 2023.10      | Eccom Network System Co., Ltd.           | Senior Cloud Solution Architect |
-| 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect       |
-| 2020.7 ~ 2021.11      | UCloud Technology Co., Ltd.              | Senior Solution Architect       |
-| 2018.5 ~ 2020.6       | Alauda Cloud Technology Co., Ltd.        | Delivery Engineer               |
-| 2015.5 ~ 2018.4       | Tongxin Software Co., Ltd.               | Software Engineer               |
-| 2013.11 ~ 2015.4      | KnowSec Technology Co., Ltd.             | Operations Engineer             |
-| 2013.5 ~ 2013.10      | Inspur Electronic Information Co., Ltd.  | System Software Engineer        |
-| 2011.5 ~ 2013.4       | China Standard Software Co., Ltd.        | Software Engineer               |
+### Site Reliability Engineer  
+**Tesla (Shanghai) Co., Ltd.**  
+*Jan 2024 – May 2024*  
 
-### Project Summary
+- **Stack**: Linux, Kubernetes, GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins  
+- **Responsibilities**:  
+  - Maintained industrial control hosts, VMs, and Kubernetes clusters for production lines.  
+  - Responded to and resolved production infrastructure/software incidents.  
+  - Implemented monitoring/alerting systems for rapid issue detection.  
+  - Worked with development teams to optimize deployment pipelines using GitHub Actions & ArgoCD.  
+- **Key Contributions**:  
+  1. Built Jenkins pipelines for **Ignition software and edge system deployments**, accelerating updates and reducing errors.  
+  2. Deployed **ArgoCD Server** and created GitHub Actions + ArgoCD templates for ITSM DMP project, reducing deployment time.  
+  3. Automated **Grafana configuration** with Ansible Playbooks, codifying alerts and dashboards.  
+  4. Redesigned CI/CD workflows with GitHub Actions & ArgoCD, improving release reliability and speed.  
 
-| Duration           | Client          | Project Name              | Role                      | Tech Stack                                         |
-| ------------------ | --------------- | ------------------------- | ------------------------- | ------------------------------------------------- |
-| 2024.01 - 2024.04  | Tesla (Shanghai)| Tesla Internal Project    | SRE                       | GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins, HashiCorp, Linux Server |
-| 2022.06 - 2023.09  | Roche           | Roche MSP Service         | Solution Architect        | Cloud Platform Automation (Terraform), GitLab CI, GitOps (FluxCD), Datadog, Linux Server |
-| 2020.07 - 2021.11  | UCloud          | UCloud Customer Project   | Solution Architect        | Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, Logging, CI/CD |
-| 2019.06 - 2020.06  | Everbright Bank | Everbright Bank CPaaS     | On-site Implementation Engineer | Alauda Container Platform, VMware CNI NSX-T, DevOps, Elasticsearch (ES), Prometheus |
-| 2015.5 - 2018.8    | Tongxin Software| Deepin Server Development | Software Engineer         | Linux (Debian/CentOS), Shell scripting, Docker, Jenkins |
-| 2013.11 - 2015.4   | KnowSec         | Infrastructure & Operations| Operations Engineer       | Linux, Shell, Python, Saltstack, Nginx, Nagios, CDN |
-| 2013.5 - 2013.10   | Inspur          | KUX-OS Server Maintenance | System Software Engineer  | Linux, Apache, Bash, Monitoring tools              |
-| 2011.05 - 2013.04  | China Standard Software | Linux System Porting & RPM Automation | Software Engineer | Linux, RPM Packaging, Koji Build System, Shell scripting |
+---
+
+### Senior Cloud Solutions Architect  
+**Huaxun Network Systems Co., Ltd.**  
+*Mar 2022 – Oct 2023*  
+
+- **Stack**: AWS / AliCloud, Terraform, GitLab CI, GitOps (FluxCD)  
+- **Responsibilities**:  
+  - Designed/implemented cloud migration projects and hybrid cloud solutions.  
+  - Led DevOps and GitOps practices for continuous delivery.  
+  - Built/optimized Terraform & Pulumi IaC templates.  
+- **Key Achievements**:  
+  - Delivered multiple AWS/AliCloud migration projects.  
+  - Implemented GitOps (FluxCD), improving deployment efficiency.  
+- **Notable Projects**:  
+  - **Roche MSP**: FluxCD-managed EKS add-ons, automated ECS provisioning, Terraform module refactor, GitLab CI workflows.  
+  - **Syngenta Seeds DevOps Platform**: AWS EKS-based DevOps platform, monitoring stack with Prometheus/Grafana/DeepFlow APM, IaC pipelines, AWS Landing Zone modules.  
+  - **United Laboratories Cloud**: Multi-cloud network/IAM, observability, and automation with Ansible, Prometheus, Grafana, DeepFlow APM, WireGuard, Keycloak integration.  
+
+---
+
+### Senior Solutions Architect  
+**Jiangsu Boyun Technology Co., Ltd.**  
+*Dec 2021 – Jan 2022*  
+
+- Consulted on Kubernetes-based cloud infrastructure optimizations and DevOps-driven CI/CD solutions.  
+- Helped clients achieve scalability and stability through containerization.  
+
+---
+
+### Senior Solutions Architect  
+**UCloud Technology Co., Ltd.**  
+*Jul 2020 – Nov 2021*  
+
+- **Stack**: Cloud Migration, Kubernetes, Hybrid Cloud, Distributed Storage, Network Security, CI/CD, Ansible, Python  
+- **Projects**:  
+  - Migrated **Walnut Programming, Baiwang Cloud** workloads to UCloud Kubernetes.  
+  - **GrowingIO**: Load balancer migration and automation with Ansible for stress testing.  
+  - **Blockchain client**: Automated provisioning of 1000+ servers with Python + UCloud API, enabling elastic compute scaling.  
+
+---
+
+### Delivery Engineer  
+**Alauda (Lingque Cloud) Technology Co., Ltd.**  
+*May 2018 – Jun 2020*  
+
+- Supported container platform upgrades and DevOps processes for financial clients.  
+- Onsite operations support for clients like **PetroChina/OGP**, **State Grid Online**, and **Everbright Bank** (multiple PaaS upgrades, DevOps adoption).  
+
+---
+
+### Software Engineer  
+**Deepin Technology Co., Ltd.**  
+*May 2015 – Apr 2018*  
+
+- Developed and maintained **Deepin Server OS V15**.  
+- Automated build/deployment workflows with Python/Shell.  
+- Delivered stable server OS releases, reducing release cycle by 30%.  
+
+---
+
+### Operations Engineer  
+**Knownsec Technology Co., Ltd.**  
+*Nov 2013 – Apr 2015*  
+
+- Managed CDN deployments, Linux infrastructure, Nginx, and monitoring systems.  
+- Improved infrastructure stability and response times.  
+
+---
+
+### System Software Engineer  
+**Inspur Electronic Information Co., Ltd.**  
+*May 2013 – Oct 2013*  
+
+- Maintained Linux servers, automated monitoring with Bash scripts.  
+- Improved server availability and responsiveness.  
+
+---
+
+### Software Engineer  
+**China Standard Software Co., Ltd.**  
+*May 2011 – Apr 2013*  
+
+- Ported Linux OS to **Loongson hardware**.  
+- Built automated RPM/Koji packaging system, improving efficiency.  

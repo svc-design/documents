@@ -9,7 +9,7 @@ This guide aggregates interview materials across operations, DevOps, observabili
 1. 从中标软件做 Linux 移植与 RPM 自动化起步；
 2. 在浪潮、知道创宇做大规模运维与自动化；在深度/统信参与 Deepin Server 产品化；
 3. 进入云原生后，在灵雀云交付银行容器平台，在 UCloud负责上云与混合云方案；
-4. 随后在华讯为罗氏落地 Terraform+GitOps+Datadog；在特斯拉上海做 SRE 规范 CI/CD 与基础运维；
+4. 随后在华讯为罗氏落地 Terraform+GitOps+Datadog；在特斯拉上海做 SRE 规范 CI/CD 与应用运维；
 5. 近期在云杉面向客户做 NPM/APM、eBPF 与 K8s 性能与故障定位。
 我的职业路线是“从 Linux 基座 → 容器/公有云 → 企业级 IaC/DevOps → 全栈可观测”，当前聚焦 LLM-OPS：把观测数据与 RAG / AI Agent 结合，形成面向可靠性的自动化闭环，帮助团队更快、更稳地交付。
 

@@ -4,7 +4,7 @@
 - **姓名**: 潘海涛 (Pan Haitao)
 - **位置**: 中国上海
 - **当前状态**: 离职
-- **电话**: 13691175694
+- **电话**: 19286470192
 - **邮箱**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **语言**: 中文（母语），英语（会话）

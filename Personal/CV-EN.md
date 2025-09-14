@@ -1,7 +1,7 @@
 # Personal Information
 
 - Name: Pan Haitao
-- Phone: +86 13691175694
+- Phone: +86 19286470192
 - Location: Shanghai, China
 - Email: manbuzhe2008@gmail.com
 - Website: http://www.svc.plus

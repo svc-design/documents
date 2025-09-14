@@ -1,13 +1,13 @@
 # Resume
 
 ## Personal Information
-- **Name**: Pan Haitao  
-- **Location**: Shanghai, China  
-- **Current Status**: Open to opportunities  
-- **Phone**: +86 13691175694  
-- **Email**: manbuzhe2009@qq.com  
+- **Name**: Pan Haitao
+- **Location**: Shanghai, China
+- **Current Status**: Open to opportunities
+- **Phone**: +86 19286470192
+- **Email**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)  
-- **Languages**: Chinese (Native), English (Conversational)  
+- **Languages**: Chinese (Native), English (Conversational)
 
 ## Desired Roles
 - Cloud Engineer  

@@ -42,11 +42,17 @@ jobs:
       - name: Build documents using Makefile
         run: make -C "${{ matrix.project }}"
 
+      - name: Prepare artifact name
+        run: |
+          ARTIFACT_NAME="${PROJECT//\//-}-docs"
+          echo "ARTIFACT_NAME=$ARTIFACT_NAME" >> "$GITHUB_ENV"
+        env:
+          PROJECT: ${{ matrix.project }}
+
       - name: Upload PDFs and DOCX files to GitHub Artifacts
         uses: actions/upload-artifact@v4
         with:
-          # Replace slashes in project path to ensure a valid artifact name
-          name: ${{ replace(matrix.project, '/', '-') }}-docs
+          name: ${{ env.ARTIFACT_NAME }}
           path: |
             ${{ matrix.project }}/*.pdf
             ${{ matrix.project }}/*.docx

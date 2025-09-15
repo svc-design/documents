@@ -1,43 +1,94 @@
-OS := $(shell uname)
-ifeq ($(OS), Linux)
-    MAIN_FONT = DejaVu Serif
-    CJK_FONT = Noto Sans CJK SC
-    PANDOC_CMD = pandoc
-    RM_CMD = rm -rvf
-else ifeq ($(OS), Darwin)
-    MAIN_FONT = Times New Roman
-    CJK_FONT = PingFang SC
-    PANDOC_CMD = pandoc
-    RM_CMD = rm -rvf
-else ifeq ($(OS), Windows_NT)
-    MAIN_FONT = Times New Roman
-    CJK_FONT = Microsoft YaHei
-    PANDOC_CMD = pandoc.exe
-    RM_CMD = del /Q
+# -----------------------------
+# Auto-build all Markdown files
+# Unified CJK + Latin fonts for PDFs
+# -----------------------------
+
+# OS & tools
+OS := $(shell uname -s)
+ifeq ($(OS),Linux)
+    MAIN_FONT := DejaVu Serif
+    CJK_FONT  := Noto Sans CJK SC
+    PANDOC    := pandoc
+    RM_CMD    := rm -rvf
+else ifeq ($(OS),Darwin)
+    MAIN_FONT := Times New Roman
+    CJK_FONT  := PingFang SC
+    PANDOC    := pandoc
+    RM_CMD    := rm -rvf
+else ifeq ($(OS),Windows_NT)
+    MAIN_FONT := Times New Roman
+    CJK_FONT  := Microsoft YaHei
+    PANDOC    := pandoc.exe
+    RM_CMD    := del /Q
+else
+    # Fallback
+    MAIN_FONT := Times New Roman
+    CJK_FONT  := Noto Sans CJK SC
+    PANDOC    := pandoc
+    RM_CMD    := rm -rvf
 endif
+
+# Discover files
+MD_FILES := $(wildcard *.md)
+MD_BASES := $(MD_FILES:.md=)
+
+# Outputs
+PDFS  := $(MD_BASES:=.pdf)
+DOCXS := $(MD_BASES:=.docx)
+HTMLS := $(MD_BASES:=.html)
+
+# Pandoc common opts
+GEOMETRY := -V geometry:margin=1in
+FONTSIZE := -V fontsize=12pt
+
+.PHONY: all pdf docx html clean list help
 
 all: pdf docx html
 
-pdf:
-	$(PANDOC_CMD) CV-EN.md -o CV-EN.pdf --pdf-engine=xelatex -V CJKmainfont="$(CJK_FONT)" -V mainfont="$(MAIN_FONT)" -V geometry:margin=1in -V fontsize=12pt
-	$(PANDOC_CMD) CV-ZH.md -o CV-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="$(CJK_FONT)" -V mainfont="$(MAIN_FONT)" -V geometry:margin=1in -V fontsize=12pt
-	$(PANDOC_CMD) Resume-EN.md -o Resume-EN.pdf --pdf-engine=xelatex -V CJKmainfont="$(CJK_FONT)" -V mainfont="$(MAIN_FONT)" -V geometry:margin=1in -V fontsize=12pt
-	$(PANDOC_CMD) Resume-ZH.md -o Resume-ZH.pdf --pdf-engine=xelatex -V CJKmainfont="$(CJK_FONT)" -V mainfont="$(MAIN_FONT)" -V geometry:margin=1in -V fontsize=12pt
-	$(PANDOC_CMD) ActiveBalance-Plan.md -o ActiveBalance-Plan.pdf --pdf-engine=xelatex -V CJKmainfont="$(CJK_FONT)" -V mainfont="$(MAIN_FONT)" -V geometry:margin=1in -V fontsize=12pt
+help:
+	@echo "Usage:"
+	@echo "  make [all]   - build pdf, docx, html for all *.md"
+	@echo "  make pdf     - build PDFs only"
+	@echo "  make docx    - build DOCX only"
+	@echo "  make html    - build HTML only"
+	@echo "  make clean   - remove generated files"
+	@echo "  make list    - show detected files"
+	@echo ""
+	@echo "Detected markdown files: $(MD_FILES)"
 
-docx:
-	$(PANDOC_CMD) CV-EN.md -o CV-EN.docx --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) CV-ZH.md -o CV-ZH.docx --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) Resume-EN.md -o Resume-EN.docx --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) Resume-ZH.md -o Resume-ZH.docx --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) ActiveBalance-Plan.md -o ActiveBalance-Plan.docx --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
+list:
+	@echo "MD_FILES: $(MD_FILES)"
+	@echo "PDFS:     $(PDFS)"
+	@echo "DOCXS:    $(DOCXS)"
+	@echo "HTMLS:    $(HTMLS)"
 
-html:
-	$(PANDOC_CMD) CV-EN.md -o CV-EN.html --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) CV-ZH.md -o CV-ZH.html --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) Resume-EN.md -o Resume-EN.html --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) Resume-ZH.md -o Resume-ZH.html --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
-	$(PANDOC_CMD) ActiveBalance-Plan.md -o ActiveBalance-Plan.html --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
+# -----------------------------
+# Pattern rules
+# -----------------------------
+
+# PDF (unified: always set Latin + CJK fonts to avoid missing glyphs)
+%.pdf: %.md
+	$(PANDOC) $< -o $@ --pdf-engine=xelatex \
+	  -V mainfont="$(MAIN_FONT)" \
+	  -V CJKmainfont="$(CJK_FONT)" \
+	  -V sansfont="$(MAIN_FONT)" \
+	  -V monofont="$(MAIN_FONT)" \
+	  $(GEOMETRY) $(FONTSIZE)
+
+# DOCX
+%.docx: %.md
+	$(PANDOC) $< -o $@ --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
+
+# HTML
+%.html: %.md
+	$(PANDOC) $< -o $@ --variable mainfont="$(MAIN_FONT)" --variable fontsize=12pt
+
+# -----------------------------
+# Batch targets
+# -----------------------------
+pdf: $(PDFS)
+docx: $(DOCXS)
+html: $(HTMLS)
 
 clean:
-	$(RM_CMD) *.pdf *.docx *.html
+	$(RM_CMD) $(PDFS) $(DOCXS) $(HTMLS)

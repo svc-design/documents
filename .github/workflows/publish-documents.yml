@@ -1,0 +1,94 @@
+name: Build and Publish Documents
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project:
+          - Personal
+          - LandingZone
+          - Keycloak
+          - TechExploration
+          - Observability/CN
+          - Linux-K8S-OPS/CN
+          - interview-qa/CN
+          - The-IndieDeveloper-Fullstack-Roadmap/EN
+          - The-IndieDeveloper-Fullstack-Roadmap/CN
+    env:
+      TAG_NAME: ${{ matrix.project }}-v${{ github.run_number }}-${{ github.run_id }}
+      RSYNC_SSH_KEY: ${{ secrets.RSYNC_SSH_KEY }}
+      VPS_HOST: ${{ secrets.VPS_HOST }}
+      RSYNC_SSH_USER: ${{ secrets.RSYNC_SSH_USER }}
+      REMOTE_ROOT: ${{ secrets.REMOTE_ROOT }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up build environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-lang-chinese fonts-noto-cjk fonts-dejavu
+          sudo apt-get install -y pandoc make
+
+      - name: Build documents using Makefile
+        run: make -C "${{ matrix.project }}"
+
+      - name: Upload PDFs and DOCX files to GitHub Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.project }}-docs
+          path: |
+            ${{ matrix.project }}/*.pdf
+            ${{ matrix.project }}/*.docx
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: Release ${{ env.TAG_NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDFs and DOCX files to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          files: |
+            ${{ matrix.project }}/*.pdf
+            ${{ matrix.project }}/*.docx
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Ensure deps (rsync, ssh)
+        run: |
+          set -euo pipefail
+          sudo apt-get update -y
+          sudo apt-get install -y rsync openssh-client
+
+      - name: Init SSH
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          echo "$RSYNC_SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+
+      - name: Rsync release assets to remote
+        run: |
+          set -euo pipefail
+          REMOTE_DIR="${REMOTE_ROOT}/${TAG_NAME}"
+          ssh -i ~/.ssh/id_rsa "${RSYNC_SSH_USER}@${VPS_HOST}" "mkdir -p '${REMOTE_DIR}'"
+          echo "Rsync -> ${VPS_HOST}:${REMOTE_DIR}/"
+          rsync -av -e "ssh -i ~/.ssh/id_rsa" \
+            ${{ matrix.project }}/*.pdf \
+            ${{ matrix.project }}/*.docx \
+            "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_DIR}/"

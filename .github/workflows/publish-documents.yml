@@ -83,7 +83,7 @@ jobs:
           sudo apt-get install -y rsync openssh-client
 
       - name: Init SSH
-        if: env.RSYNC_SSH_KEY != ''
+        if: ${{ env.RSYNC_SSH_KEY != '' }}
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
@@ -92,7 +92,7 @@ jobs:
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
 
       - name: Rsync release assets to remote
-        if: env.RSYNC_SSH_KEY != ''
+        if: ${{ env.RSYNC_SSH_KEY != '' }}
         run: |
           set -euo pipefail
           REMOTE_DIR="${REMOTE_ROOT}/${TAG_NAME}"

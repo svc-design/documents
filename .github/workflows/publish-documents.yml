@@ -75,14 +75,16 @@ jobs:
           sudo apt-get install -y rsync openssh-client
 
       - name: Init SSH
+        if: env.RSYNC_SSH_KEY != ''
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          echo "$RSYNC_SSH_KEY" > ~/.ssh/id_rsa
+          printf '%s\n' "$RSYNC_SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
 
       - name: Rsync release assets to remote
+        if: env.RSYNC_SSH_KEY != ''
         run: |
           set -euo pipefail
           REMOTE_DIR="${REMOTE_ROOT}/${TAG_NAME}"

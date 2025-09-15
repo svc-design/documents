@@ -90,5 +90,5 @@ jobs:
           echo "Rsync -> ${VPS_HOST}:${REMOTE_DIR}/"
           rsync -av -e "ssh -i ~/.ssh/id_rsa" \
             ${{ matrix.project }}/*.pdf \
-            ${{ matrix.project }}/*.docx \
+            ${{ matrix.project }}/*.html \
             "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_DIR}/"

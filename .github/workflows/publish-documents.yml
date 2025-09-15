@@ -93,10 +93,16 @@ jobs:
       - name: Rsync release assets to remote
         run: |
           set -euo pipefail
+          shopt -s nullglob
           REMOTE_DIR="${REMOTE_ROOT}/${TAG_NAME}"
           ssh -i ~/.ssh/id_rsa "${RSYNC_SSH_USER}@${VPS_HOST}" "mkdir -p '${REMOTE_DIR}'"
           echo "Rsync -> ${VPS_HOST}:${REMOTE_DIR}/"
-          rsync -av -e "ssh -i ~/.ssh/id_rsa" \
-            ${{ matrix.project }}/*.pdf \
-            ${{ matrix.project }}/*.html \
-            "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_DIR}/"
+          PROJECT="${{ matrix.project }}"
+          files=( "$PROJECT"/*.pdf "$PROJECT"/*.html )
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No PDF or HTML artifacts to sync for ${PROJECT}"
+          else
+            rsync -av -e "ssh -i ~/.ssh/id_rsa" \
+              "${files[@]}" \
+              "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_DIR}/"
+          fi

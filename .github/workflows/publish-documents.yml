@@ -1,3 +1,4 @@
+---
 name: Build and Publish Documents
 
 on:
@@ -5,7 +6,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch: {}  # Manual trigger
 
 jobs:
   build:
@@ -44,7 +45,8 @@ jobs:
       - name: Upload PDFs and DOCX files to GitHub Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.project }}-docs
+          # Replace slashes in project path to ensure a valid artifact name
+          name: ${{ replace(matrix.project, '/', '-') }}-docs
           path: |
             ${{ matrix.project }}/*.pdf
             ${{ matrix.project }}/*.docx

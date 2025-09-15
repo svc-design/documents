@@ -26,6 +26,9 @@ CHAPTERS = chapters/01-foundations-tech-stack-overview.md \
            chapters/05-backend-architecture-optimization-engineering-practices.md \
            chapters/06-project-deployment-comprehensive-advancement.md
 
+# 默认目标：生成全部格式
+all: book.html book.pdf book.docx
+
 # 目标：生成 HTML 电子书
 book.html: $(CHAPTERS)
 	$(PANDOC_CMD) $(CHAPTERS) -o fullstack-roadmap-cn.html \
@@ -37,6 +40,7 @@ book.html: $(CHAPTERS)
 # 目标：生成 PDF 电子书
 book.pdf: $(CHAPTERS)
 	$(PANDOC_CMD) $(CHAPTERS) -o fullstack-roadmap-cn.pdf --pdf-engine=xelatex \
+	--toc --toc-depth=3 \
 	--variable mainfont="$(MAIN_FONT)" \
 	--variable CJKmainfont="$(CJK_FONT)" \
 	--variable geometry:margin=1in \
@@ -45,8 +49,11 @@ book.pdf: $(CHAPTERS)
 # 目标：生成 DOCX 电子书
 book.docx: $(CHAPTERS)
 	$(PANDOC_CMD) $(CHAPTERS) -o fullstack-roadmap-cn.docx \
+	--toc --toc-depth=3 \
 	--variable mainfont="$(MAIN_FONT)" \
 	--variable fontsize=12pt
+
+.PHONY: all clean book.html book.pdf book.docx
 
 # 清理中间文件
 clean:

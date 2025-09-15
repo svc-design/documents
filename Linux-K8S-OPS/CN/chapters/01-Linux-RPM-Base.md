@@ -49,6 +49,7 @@ DEFROUTE=yes
 应用配置：sudo systemctl restart network
 
 ---
+
 RHEL/CentOS 8 之后的网卡配置
   从 RHEL/CentOS 8 开始，网络管理工具变得更加现代化，开始默认使用 NetworkManager 或 nmcli 工具来管理网络，并且仍然兼容原有网络配置文件/etc/sysconfig/network-scripts/ifcfg-eth0 文件，可以通过以下命令重新加载修改后的网络配置：
 - 使用 nmcli 重新加载接口：sudo nmcli connection reload

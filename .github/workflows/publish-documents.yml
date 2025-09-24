@@ -90,13 +90,34 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
 
+      - name: Determine remote directories
+        run: |
+          set -euo pipefail
+          PROJECT="${{ matrix.project }}"
+          DOC_NAME="${PROJECT%%/*}"
+          if [[ "$PROJECT" == "$DOC_NAME" ]]; then
+            LANG_SEGMENT="EN"
+          else
+            LANG_SEGMENT="${PROJECT#*/}"
+            LANG_SEGMENT="${LANG_SEGMENT%%/*}"
+          fi
+          LANG_SEGMENT="${LANG_SEGMENT^^}"
+          VERSION_TAG="v${GITHUB_RUN_NUMBER}-${GITHUB_RUN_ID}"
+          REMOTE_DOC_DIR="${REMOTE_ROOT}/${DOC_NAME}"
+          REMOTE_VERSION_DIR="${REMOTE_DOC_DIR}/${LANG_SEGMENT}-${VERSION_TAG}"
+          {
+            echo "REMOTE_DOC_DIR=${REMOTE_DOC_DIR}"
+            echo "REMOTE_VERSION_DIR=${REMOTE_VERSION_DIR}"
+          } >> "$GITHUB_ENV"
+          echo "Document directory: ${REMOTE_DOC_DIR}"
+          echo "Version directory: ${REMOTE_VERSION_DIR}"
+
       - name: Rsync release assets to remote
         run: |
           set -euo pipefail
           shopt -s nullglob
-          REMOTE_DIR="${REMOTE_ROOT}/${TAG_NAME}"
-          ssh -i ~/.ssh/id_rsa "${RSYNC_SSH_USER}@${VPS_HOST}" "mkdir -p '${REMOTE_DIR}'"
-          echo "Rsync -> ${VPS_HOST}:${REMOTE_DIR}/"
+          ssh -i ~/.ssh/id_rsa "${RSYNC_SSH_USER}@${VPS_HOST}" "mkdir -p '${REMOTE_VERSION_DIR}'"
+          echo "Rsync -> ${VPS_HOST}:${REMOTE_VERSION_DIR}/"
           PROJECT="${{ matrix.project }}"
           files=( "$PROJECT"/*.pdf "$PROJECT"/*.html )
           if [ ${#files[@]} -eq 0 ]; then
@@ -104,5 +125,5 @@ jobs:
           else
             rsync -av -e "ssh -i ~/.ssh/id_rsa" \
               "${files[@]}" \
-              "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_DIR}/"
+              "${RSYNC_SSH_USER}@${VPS_HOST}:${REMOTE_VERSION_DIR}/"
           fi

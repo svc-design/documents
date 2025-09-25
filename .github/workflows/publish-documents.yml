@@ -20,9 +20,8 @@ jobs:
           - TechExploration
           - Observability/CN
           - Linux-K8S-OPS/CN
-          - interview-qa/CN
+          - interview-qa/EN
           - The-IndieDeveloper-Fullstack-Roadmap/EN
-          - The-IndieDeveloper-Fullstack-Roadmap/CN
     env:
       TAG_NAME: ${{ matrix.project }}-v${{ github.run_number }}-${{ github.run_id }}
       RSYNC_SSH_KEY: ${{ secrets.RSYNC_SSH_KEY }}

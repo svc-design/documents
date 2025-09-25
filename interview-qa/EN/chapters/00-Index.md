@@ -2,26 +2,28 @@
 
 This guide aggregates interview materials across operations, DevOps, observability, and AI Ops domains.
 
-# 自我介绍环境
+# Self-Introduction Context
 
-大家好，我是潘海涛，14 年 IT 从业，服务过制造、金融、运营商和互联网。技术上以 Linux / Kubernetes、Terraform/Ansible、Docker 与 DevOps 为主，长期做可观测与性能优化。
-我的履历：
-1. 从中标软件做 Linux 移植与 RPM 自动化起步；
-2. 在浪潮、知道创宇做大规模运维与自动化；在深度/统信参与 Deepin Server 产品化；
-3. 进入云原生后，在灵雀云交付银行容器平台，在 UCloud负责上云与混合云方案；
-4. 随后在华讯为罗氏落地 Terraform+GitOps+Datadog；在特斯拉上海做 SRE 规范 CI/CD 与应用运维；
-5. 近期在云杉面向客户做 NPM/APM、eBPF 与 K8s 性能与故障定位。
-我的职业路线是“从 Linux 基座 → 容器/公有云 → 企业级 IaC/DevOps → 全栈可观测”，当前聚焦 LLM-OPS：把观测数据与 RAG / AI Agent 结合，形成面向可靠性的自动化闭环，帮助团队更快、更稳地交付。
+Hello, I'm Haitao Pan. I have 14 years of experience in IT, having supported organizations in manufacturing, finance, telecommunications, and the internet sector. My core skills center on Linux/Kubernetes, Terraform/Ansible, Docker, and DevOps, with long-term focus on observability and performance tuning.
 
-（备选 20 秒极简版）
-14 年 IT：Linux/K8s/IaC/DevOps → 可观测。经历横跨 Deepin、Alauda、UCloud、罗氏项目、特斯拉 SRE、云杉技术支持。现在专注 LLM-OPS，把 RAG/Agent 接到可观测体系，做“更快更稳”的自动化运维闭环。
+My background:
+1. Started at CS2C, working on Linux porting and RPM automation.
+2. Scaled operations and automation at Inspur and Knownsec; contributed to Deepin/UnionTech on productizing Deepin Server.
+3. After moving into cloud-native, delivered a banking container platform at Alauda and led cloud and hybrid-cloud solutions at UCloud.
+4. Implemented Terraform + GitOps + Datadog for Roche at HighSun; at Tesla Shanghai, standardized SRE practices around CI/CD and application operations.
+5. Most recently at Yunshan Networks, focused on NPM/APM, eBPF, and Kubernetes performance troubleshooting for customers.
 
-# 面对最近裁员的回答
+My career path follows "Linux foundations → Containers/Public Cloud → Enterprise IaC/DevOps → Full-stack Observability." I currently concentrate on LLM-Ops: blending observability data with RAG and AI Agents to build reliability-focused automation loops that help teams deliver faster and more reliably.
 
-近几段变动都是组织优化、项目收缩导致的平台岗合并/裁撤，和绩效无关。我每次都把交付与交接闭环，现在更关注贵司的 K8s/IaC/可观测平台能让我立刻创造的价值。这个话题我已完整回答，且与绩效无关。若没有其他关于岗位匹配的问题，我建议进入个人项目经历，看看与贵司需求的贴合度。
+(Alternative 20-second elevator pitch)
+14 years in IT: Linux/K8s/IaC/DevOps leading into observability. Experience spans Deepin, Alauda, UCloud, Roche projects, Tesla SRE, and Yunshan customer support. Now focused on LLM-Ops, connecting RAG/Agents with observability systems to create faster, more stable automated operations.
 
-英文快挡（外企/海归面）
+# Responding to Recent Layoffs
 
-Polite-firm:
+My recent role changes stemmed from organizational optimization and project downsizing that led to platform roles being merged or eliminated; they were unrelated to performance. I consistently closed out delivery and handover work. Now I’m focused on the value I can bring immediately to your Kubernetes/IaC/observability platform. I’ve already fully answered this topic, and it had nothing to do with performance. If there are no other questions about role fit, I suggest we move on to my project experience to assess alignment with your needs.
 
-I’ve fully addressed the reason—it was org restructuring and platform consolidation, not performance. If there are no further fit-related questions, I suggest we move to my project track record and see how it maps to your needs.
+English quick response (for multinational or returnee interviews)
+
+Polite and firm:
+
+I’ve fully addressed the reason—it was organizational restructuring and platform consolidation, not performance. If there are no further fit-related questions, I suggest we move to my project track record and see how it maps to your needs.

@@ -1,166 +1,93 @@
 AWS 面试速查表（中英文对照）
 
-| 类别 (Category) | 服务 (Services) | 关键要点 (Key Points) |
+| Category | Services | Key Points |
 |:----|:----|:----|
-| 计算 (Compute) | EC2 | 弹性计算实例，支持按需/预留/SpotElastic Compute Cloud, supports On-Demand/Reserved/Spot |
-| ​ | Lambda | 无服务器函数，事件驱动Serverless function, event-driven |
-| ​ | ECS / EKS | 容器编排，EKS = Kubernetes 托管服务Container orchestration, EKS = Managed Kubernetes |
-| ​ | Elastic Beanstalk | PaaS，快速部署应用（了解即可）PaaS for quick deployment (basic knowledge) |
-| 存储 (Storage) | S3 | 对象存储，存储类型（Standard, IA, Glacier），生命周期策略Object storage, storage classes (Standard, IA, Glacier), lifecycle policy |
-| ​ | EBS | 块存储，挂载到 EC2Block storage, attachable to EC2 |
-| ​ | EFS | 跨实例共享文件系统Shared file system across instances |
-| 网络 (Networking) | VPC | 虚拟私有云，子网、公有/私有网络、路由表Virtual Private Cloud, subnets, public/private, route table |
-| ​ | ELB (ALB/NLB/CLB) | 负载均衡，7层/4层Load balancing, L7/L4 |
-| ​ | CloudFront | 全球 CDN 加速Global CDN |
-| ​ | Direct Connect / VPN | 混合云连接Hybrid cloud connectivity |
-| 数据库 (Database) | RDS | 托管关系型数据库，支持 MySQL/Postgres/AuroraManaged relational DB, MySQL/Postgres/Aurora |
-| ​ | DynamoDB | NoSQL，高可用低延迟NoSQL, highly available & low latency |
-| ​ | Aurora | AWS 自研数据库，兼容 MySQL/PostgresAWS-managed DB, MySQL/Postgres-compatible |
-| ​ | ElastiCache | Redis / Memcached 缓存Redis/Memcached cache |
-| 安全 (Identity & Security) | IAM | 用户、角色、策略，最小权限原则Users, roles, policies, least privilege |
-| ​ | KMS | 密钥管理，加密Key Management Service, encryption |
-| ​ | Cognito | 应用用户认证User identity and authentication |
-| ​ | GuardDuty / WAF / Shield | 威胁检测与防护Threat detection and protection |
-| 监控与运维 (Monitoring & Ops) | CloudWatch | 指标、日志、告警Metrics, logs, alerts |
-| ​ | CloudTrail | 审计 API 调用Audit API calls |
-| ​ | Config | 合规检查，追踪资源变化Compliance check, resource change tracking |
-| ​ | Systems Manager (SSM) | 批量运维、参数存储Ops automation, parameter store |
-| DevOps / IaC | CloudFormation | AWS 原生 IaCAWS-native IaC |
-| ​ | Terraform | 第三方 IaC，多云支持3rd-party IaC, multi-cloud support |
-| ​ | CodePipeline / CodeBuild / CodeDeploy | AWS CI/CD 工具链AWS CI/CD toolchain |
-| ​ | GitHub Actions + ArgoCD | 常用组合：CI 在 GitHub，CD 用 GitOpsCommon setup: CI in GitHub, CD with GitOps (ArgoCD) |
+| Compute | EC2 | Elastic compute instances with On-Demand/Reserved/Spot pricing |
+|  | Lambda | Serverless, event-driven functions |
+|  | ECS / EKS | Container orchestration; EKS is managed Kubernetes |
+|  | Elastic Beanstalk | PaaS for quick application deployment |
+| Storage | S3 | Object storage with classes (Standard, IA, Glacier) and lifecycle policies |
+|  | EBS | Block storage attachable to EC2 |
+|  | EFS | Shared file system across instances |
+| Networking | VPC | Virtual private cloud with subnets, route tables, and public/private zones |
+|  | ELB (ALB/NLB/CLB) | Layer 7/4 load balancing |
+|  | CloudFront | Global CDN |
+|  | Direct Connect / VPN | Hybrid connectivity |
+| Database | RDS | Managed relational databases (MySQL/Postgres/Aurora) |
+|  | DynamoDB | Highly available NoSQL |
+|  | Aurora | AWS-managed, MySQL/Postgres-compatible |
+|  | ElastiCache | Redis / Memcached caching |
+| Identity & Security | IAM | Users, roles, policies, least privilege |
+|  | KMS | Encryption key management |
+|  | Cognito | Application user authentication |
+|  | GuardDuty / WAF / Shield | Threat detection and protection |
+| Monitoring & Ops | CloudWatch | Metrics, logs, alerts |
+|  | CloudTrail | API call auditing |
+|  | Config | Compliance and drift tracking |
+|  | Systems Manager (SSM) | Operations automation and parameter store |
+| DevOps / IaC | CloudFormation | AWS-native infrastructure as code |
+|  | Terraform | Multi-cloud infrastructure as code |
+|  | CodePipeline / CodeBuild / CodeDeploy | AWS CI/CD toolchain |
+|  | GitHub Actions + ArgoCD | Common pattern: CI on GitHub, CD via GitOps |
 
+## 1. AWS Foundations and Architecture
 
-## 1. AWS 基础与架构设计
+**Q: Which AWS services do you use most often?**
+*What:* Core building blocks across compute, storage, database, identity, and monitoring.
+*How:* Combine EC2 or EKS for workloads, store assets in S3, manage data with RDS, protect access via IAM, and observe health through CloudWatch.
+*Example:* A production microservice stack ran on EKS with pods pulling configuration from S3, RDS for persistence, IAM roles for service accounts, and CloudWatch dashboards tracking latency.
 
-**Q:** 你最常用的 AWS 服务有哪些？
- **Q:** Which AWS services do you use most often?
+**Q: How would you design a highly available three-tier architecture on AWS?**
+*What:* A resilient web, application, and database topology across availability zones.
+*How:* Place web tier instances behind an ALB, run autoscaled containers on EKS/ECS, replicate databases with RDS Multi-AZ or Aurora read replicas, and front everything with CloudFront plus monitoring and security services.
+*Example:* For an e-commerce site we deployed ALB-backed EKS pods across three AZs, used Aurora with an async replica, cached static assets with CloudFront, and wired GuardDuty alerts into Slack.
 
-**A:**
- 我主要用 **EC2、S3、RDS、EKS、IAM 和 CloudWatch**。EC2 和 EKS 是计算核心，S3 用于存储，RDS 管理数据库，IAM 做访问控制，CloudWatch 用于监控和告警。
- I mostly use **EC2, S3, RDS, EKS, IAM, and CloudWatch**. EC2 and EKS for compute, S3 for storage, RDS for database management, IAM for access control, and CloudWatch for monitoring and alerting.
+## 2. Infrastructure as Code and Automation
 
-----
+**Q: How do you manage AWS resources with Terraform?**
+*What:* Declarative IaC to provision and version infrastructure.
+*How:* Break environments into reusable modules, store state in S3 with DynamoDB locking, and gate changes through PR-triggered `terraform plan` and `apply` workflows.
+*Example:* A network module built VPC, subnets, and security groups; GitHub Actions ran `plan` on pull requests and applied after approval, giving us auditable changes.
 
-**Q:** 你会如何在 AWS 上设计一个高可用的三层应用架构？
- **Q:** How would you design a highly available 3-tier application architecture on AWS?
-
-**A:**
-
--  Web 层：放在 ALB 背后，跨多个 AZ 的 EC2 或 EKS 节点。
-
--  应用层：EKS/ECS 托管容器，使用 Auto Scaling。
-
--  数据层：RDS Multi-AZ 或 Aurora，读写分离。
-
--  配合 CloudFront 加速，CloudWatch + GuardDuty 做监控与安全。
-
--  Web: Behind ALB, across multi-AZ EC2 or EKS nodes.
-
--  App: Managed containers on EKS/ECS with Auto Scaling.
-
--  DB: RDS Multi-AZ or Aurora with read replicas.
-
--  Plus CloudFront for acceleration, CloudWatch + GuardDuty for monitoring & security.
-
-
-----
-
-## 2. IaC 与自动化
-
-**Q:** 你如何用 Terraform 管理 AWS 资源？
- **Q:** How do you manage AWS resources with Terraform?
-
-**A:**
- 我会把 VPC、EKS、RDS 分别写成模块，状态存到 S3 + DynamoDB。代码走 GitHub PR，合并后用 GitHub Actions 触发 `terraform plan` 和 `apply`。
- I modularize VPC, EKS, and RDS, store state in S3 + DynamoDB. All changes go through GitHub PR, and GitHub Actions runs `terraform plan` and `apply` after merge.
-
-----
-
-**Q:** 你怎么比较 Terraform 和 CloudFormation？
- **Q:** How do you compare Terraform with CloudFormation?
-
-**A:**
- Terraform 跨云能力更强，社区资源多；CloudFormation 深度集成 AWS，适合纯 AWS 环境。
- Terraform is multi-cloud and has richer modules; CloudFormation is AWS-native and integrates better in AWS-only environments.
-
-----
+**Q: How do you compare Terraform with CloudFormation?**
+*What:* Two popular IaC solutions for AWS.
+*How:* Favor Terraform for multi-cloud flexibility and community modules, while choosing CloudFormation for AWS-native features and tighter service integration.
+*Example:* We used Terraform to manage shared services across AWS and GCP, but relied on CloudFormation StackSets to roll out GuardDuty organization-wide.
 
 ## 3. CI/CD
 
-**Q:** 你会如何用 GitHub Actions 做 CI？
- **Q:** How do you design CI pipelines with GitHub Actions?
+**Q: How do you design CI pipelines with GitHub Actions?**
+*What:* Automated checks that validate and package code.
+*How:* Define workflows that lint, run unit tests, build container images, leverage caching, and push to ECR with matrix testing where needed.
+*Example:* The main branch workflow linted Python code, executed pytest across Python versions 3.9 and 3.11, then built and pushed an image to ECR using cached dependencies to shorten runtime.
 
-**A:**
+**Q: How do you implement CD with ArgoCD?**
+*What:* GitOps-based continuous delivery to Kubernetes.
+*How:* Point ArgoCD at Helm charts or manifests in Git, enable auto-sync with health checks, and integrate Argo Rollouts for progressive delivery.
+*Example:* Updating a canary Service manifest triggered ArgoCD to sync, run analysis via Argo Rollouts, and automatically promote the release after success metrics passed.
 
--  步骤：代码检查 → 单元测试 → 构建镜像 → 推送到 ECR。
+## 4. Monitoring and Operations
 
--  用 cache 缓存依赖，加速构建。
+**Q: How do you monitor CI/CD pipelines?**
+*What:* Visibility into build and deploy health.
+*How:* Send GitHub Actions status to chat channels, expose ArgoCD sync metrics to Prometheus, alert via Alertmanager, and visualize latency/error budgets in Grafana.
+*Example:* A Slack webhook posted failed builds instantly, while Grafana panels highlighted ArgoCD sync errors that signaled drift in staging clusters.
 
--  Matrix build 支持多版本测试。
+**Q: Have you faced Terraform or CI/CD failures? How did you handle them?**
+*Situation:* `terraform apply` failed during a networking change.
+*Task:* Restore pipeline stability without risking production.
+*Action:* Ran `terraform plan` to inspect drift, isolated the misconfigured security group, and reverted via version control while notifying stakeholders.
+*Result:* The pipeline recovered on the next run, and we added a pre-merge validation step to catch similar errors earlier.
 
--  Steps: code lint → unit test → build Docker image → push to ECR.
+## 5. Behavioral
 
--  Use cache for dependencies to speed up builds.
+**Q: How would you handle conflicts between Dev and SRE teams?**
+*Situation:* Development pushed for rapid feature rollout while SRE flagged reliability risks.
+*Task:* Align both teams on a data-driven decision.
+*Action:* Facilitated a session to review SLOs, error rates, and cost implications, then proposed a phased canary rollout with extra monitoring.
+*Result:* Both teams agreed to the compromise, the rollout succeeded without incidents, and trust between teams improved.
 
--  Use matrix builds for multi-version testing.
-
-
-----
-
-**Q:** 你如何用 ArgoCD 做 CD？
- **Q:** How do you implement CD with ArgoCD?
-
-**A:**
-
--  采用 GitOps 模式，ArgoCD 监控 Git 仓库的 Helm/manifest 改动，自动同步到集群。
-
--  好处：自动回滚、漂移检测、UI 可视化。
-
--  我也结合 Argo Rollouts 做 Canary 部署。
-
--  Use GitOps: ArgoCD watches Git repo for Helm/manifests changes, syncs to cluster automatically.
-
--  Benefits: rollback, drift detection, UI visibility.
-
--  Combined with Argo Rollouts for Canary deployments.
-
-
-----
-
-## 4. 监控与运维
-
-**Q:** 你如何监控 CI/CD 流水线？
- **Q:** How do you monitor CI/CD pipelines?
-
-**A:**
- 我会用 GitHub Actions 的构建状态通知到 Slack，ArgoCD 的 sync 状态通过 Alertmanager 报警。Prometheus + Grafana 监控部署时的延迟和错误率。
- I send GitHub Actions build status to Slack, monitor ArgoCD sync status via Alertmanager. Prometheus + Grafana track latency and error rate during deployments.
-
-----
-
-**Q:** 你遇到过 Terraform 或 CI/CD 故障吗？怎么处理？
- **Q:** Have you faced Terraform or CI/CD failures? How did you handle them?
-
-**A:**
- Terraform apply 出错时，我会先跑 `terraform plan` 找差异；CI/CD 失败时，先检查日志，看是测试失败还是配置错误，再决定回滚或修复。
- When Terraform apply fails, I first run `terraform plan` to check diffs; for CI/CD failures, I check logs to see if it’s test failure or config issue, then decide rollback or fix.
-
-----
-
-## 5. 行为题
-
-**Q:** 遇到开发团队和 SRE 对方案有分歧，你会怎么做？
- **Q:** How would you handle conflicts between Dev and SRE teams?
-
-**A:**
- 先听取双方意见，把问题数据化，比如 SLO、性能指标、成本。用数据支撑讨论，找到折中方案，比如逐步灰度优化。
- I listen to both sides, translate issues into data like SLOs, performance metrics, or cost. Use data to guide discussion, and propose compromise, e.g., gradual canary rollout.
-
-----
-
-⚡ 建议：
-
--  技术题回答时用 **结构化思路 (What → How → Example)**。
--  行为题用 **STAR 法 (Situation, Task, Action, Result)**。
--  英文回答不求复杂，关键是 **清晰、简洁、自信**。
+⚡ Tips:
+- Use **What → How → Example** for technical answers.
+- Apply the **STAR method** for behavioral questions.
+- Keep English responses clear, concise, and confident.

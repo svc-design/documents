@@ -1,599 +1,158 @@
 # DevOPS
 
-## 1. **Optimizing GitLab Runner**
-
-- **Parallel Execution**: Configure multiple runners to run multiple jobs in parallel.
-- **Caching and Artifacts**: Use caching and artifacts to improve build speed by reducing repetitive downloads and computations.
-- **Resource Management**: Adjust the resource limits for runners to enhance performance.
-- **Distributed Deployment**: Use multiple runners to handle different types of jobs, optimizing resource usage.
-
-## 2. **Blue-Green Deployment, Gray Release, and Canary Release in Multi-Cluster Rollouts**
-
-- **Blue-Green Deployment**: Divide the system into two identical environments (blue and green). Run the current version in the blue environment and the new version in the green environment. After testing, switch traffic to the new version.
-- **Gray Release**: Gradually release the new version to a portion of the production environment, incrementally increasing the user base until a full release.
-- **Canary Release**: Similar to gray release, but typically releases the new version to a small group of users first, monitors behavior, and then gradually expands to more users.
-
-## 3. **Shift-Left Testing**
-
-- Shift-left testing is about integrating testing activities early in the development process to detect and fix defects sooner, reducing costs and time.4. **GitOps**
-- GitOps is an operational model that uses Git as a single source of truth. It involves managing infrastructure and application configuration through Git, automating deployment and operations. GitOps focuses more on using Git for operational and configuration management, while DevOps covers a broader range of development and operations practices.
-
-## 5. **Backing Up GitLab Repositories**
-
-- **Regular Exports**: Use GitLab's built-in backup feature.
-- **Mirror Repositories**: Push code to other Git repositories (e.g., GitHub or Bitbucket).
-- **Automated Scripts**: Write scripts to regularly back up GitLab databases and file systems.
-
-## 6. **Troubleshooting Jenkins Build Failures**
-
-- **Check Logs**: View Jenkins console output and build logs.
-- **Verify Configuration**: Ensure build and deployment configurations are correct.
-- **Dependency Check**: Confirm all dependencies and environment variables are properly configured.
-- **Reproduce Issue**: Try running build steps manually to reproduce the issue.
-
-## 7. **Jenkins User Permission Management**
-
-- **Role Management**: Use Role-based Access Control plugins to define different roles and their permissions.
-- **Global Permissions**: Configure global security settings to control access to Jenkins.
-- **Project Permissions**: Set permissions for specific projects to restrict who can view, build, or manage them.
-
-## 8. **Jenkins Pipeline Modes**
-
-- **Declarative Pipeline**: Defines pipelines using a declarative syntax, which is simpler and easier to understand.
-- **Scripted Pipeline**: Defines pipelines using scripted syntax, offering more flexibility but with a more complex syntax.
-
-## 9. **Jenkins High Availability Configuration**
-
-- **Master-Slave Architecture**: Use multiple Jenkins Master and Slave nodes to increase availability.
-- **Load Balancing**: Distribute requests through a load balancer.
-- **Backup and Recovery**: Regularly back up Jenkins configurations and data for recovery in case of failures.
-
-## 10. **Jenkins Master and Slave Coordination**
-
-- The Jenkins Master coordinates build tasks, manages jobs, and configurations, while Slave nodes (also called agents) execute the actual build tasks. Master and Slave communicate over the network, with the Master assigning tasks to suitable Slave nodes.
-
-## 11. **Jenkins Pipeline Multi-Stage Support**
-
-- By defining multiple stages in a Pipeline script, you can implement multi-stage builds, testing, and deployments. Common stages include compilation, testing, building, and deploying, each potentially containing multiple steps.
-
-## 12. **Argo Rollouts Blue-Green Deployment and Canary Release Principles**
-
-- **Blue-Green Deployment**: Achieved by creating two separate environments (blue and green) in Argo Rollouts. Define two different services for blue and green environments.
-- **Canary Release**: Gradually release the new version to a portion of instances in the production environment. Argo Rollouts uses step strategies to incrementally increase traffic to the new version.
-
-## 13. **Argo CD Application CRD**
-
-- Application CRD (Custom Resource Definition) in Argo CD represents an application, defining the source code location, target cluster, namespace, and other details.
-
-## 14. **Argo CD Auto-Sync vs. Manual Sync**
-
-- **Auto-Sync**: Argo CD automatically detects changes and synchronizes them, suitable for scenarios needing real-time updates.
-- **Manual Sync**: Requires user intervention to trigger synchronization, suitable for scenarios needing more control over the release process.
-
-## 15. **Troubleshooting Argo CD**
-
-- **Check Sync Logs**: Review synchronization logs and events.
-- **Verify Configuration**: Confirm application configuration and target cluster status.
-- **Manual Adjustments**: Adjust application configuration and synchronization strategies as needed.
-
-## 16. **Custom Health Check Rules in Argo CD**
-
-- Custom health check rules can be defined to extend Argo CD’s health check functionality. These rules are configured in Argo CD’s configuration files.
-
-## 17. **Handling Configuration and Actual State Discrepancies in Argo CD**
-
-- Argo CD automatically synchronizes discrepancies between configuration and actual state. If auto-sync is disabled, users can manually trigger synchronization or handle it through the Argo CD UI.
-
-## 18. **CI/CD Process Monitoring**
-
-- **Monitoring Tools**: Use tools like Prometheus and Grafana to monitor build and deployment metrics.
-- **Log Analysis**: Analyze CI/CD system logs to detect anomalies.
-- **Alert Configuration**: Set up alerts to notify when builds fail or anomalies occur.
-
-## 19. **Git Development Feature Branch Standard Workflow**
-
-- **Create Branch**: Create a feature branch from the main branch.
-- **Develop Feature**: Develop the feature on the feature branch.
-- **Commit Code**: Commit code to the feature branch.
-- **Create Pull Request (PR)**: Create a pull request to merge the feature branch into the main branch for code review.
-- **Merge Code**: Merge the feature branch into the main branch after code review approval.
-- **Delete Branch**: Delete the feature branch after merging.
-
-## 20. **Resolving Git Branch Conflicts**
-
-- **Pull Latest Code**: Ensure the local branch is in sync with the main branch.
-- **Resolve Conflicts**: Resolve conflicts locally and commit the changes.
-- **Push Code**: Push the resolved code to the remote branch.
-
-# **Python**
-
-## 1. **What is GIL in Python and how does it affect multithreading?**
-
-- **GIL (Global Interpreter Lock)** is a global lock in the Python interpreter that prevents multiple threads from executing Python bytecode simultaneously. This means that even on multi-core CPUs, Python’s multithreaded programs cannot truly execute CPU-bound tasks in parallel (though I/O-bound tasks are less affected). To address this, you can use multiprocessing or opt for asynchronous programming (asyncio).
-
-## 2. **Python Decorators**
-
-- Decorators are used to modify the behavior of functions or classes. They are higher-order functions that take a function and return another function. Common uses include logging, performance monitoring, and access control. For example:def my\_decorator(func):
-
-```python
-   def wrapper():
-
-        print("Something before the function.")
-
-        func()
-
-        print("Something after the function.")
-
-    return wrapper
-
-@my\_decorator
-
-def say\_hello():
-
-    print("Hello!")
-
-say\_hello()
-```
-
-## 3. **Difference between** **`is`** **and** **`==`**
-
-- **`is`** checks if two objects are the same (i.e., if they have the same memory address).
-- **`==`** checks if the values of two objects are equal.
-
-## 4. **Difference between Generators and Iterators in Python**
-
-- **Generators** are a special type of iterator created using the `yield` statement. They produce values one at a time and can only be iterated over once. They are characterized by lazy evaluation.
-- **Iterators** are objects that implement the `__iter__()` and `__next__()` methods. Generators are a type of iterator.
-
-## 5. **Python Garbage Collection Mechanism**
-
-- Python uses reference counting primarily, combined with mark-and-sweep and generational garbage collection to manage memory. When an object's reference count drops to zero, the memory is automatically freed. Circular references are handled by the mark-and-sweep algorithm.
-
-## 6. **Python Context Managers**
-
-- Context managers handle resources using the `with` statement, automatically managing resource acquisition and release. They are implemented by defining `__enter__()` and `__exit__()` methods, used for operations like file handling and database connections.
-
-```python
-with open('file.txt', 'r') as file:
-    content = file.read()
-```
-
-## 7. Internal Implementation of Python Dict
-
-Python dictionaries are implemented based on hash tables. They use the hash value of keys to quickly access values, with an average time complexity of O(1). To resolve hash collisions, Python dictionaries use either open addressing or chaining methods.
-
-## 8. **Shallow Copy vs. Deep Copy in Python**
-
-- **Shallow Copy**: Copies the object’s references but not the nested objects. Created using `copy.copy()`.
-- **Deep Copy**: Copies the entire object, including nested objects. Created using `copy.deepcopy()`.
-
-## 9. **Use Cases for Lambda Anonymous Functions**
-
-- Lambda functions are used for short-lived, one-time-use functions, commonly in sorting and custom filtering.
-python复制代码sorted\_list = sorted(items, key=lambda x: x.age)
-
-## 10. **Python Singleton Pattern**
-
-- The Singleton pattern ensures that a class has only one instance. A common implementation is:
-
-```python
-class Singleton:
-    _instance = None
-    def __new__(cls, *args, **kwargs):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-        return cls._instance
-```
-
-## 11. **Writing Asynchronous Code with** **`asyncio`**
-
-- asyncio is Python’s asynchronous programming library, supporting coroutines. Use the async and await keywords for asynchronous operations, particularly suitable for I/O-bound tasks.
-
-```python
-import asyncio
-
-async def fetch_data():
-
-    await asyncio.sleep(1)
-
-    return "data"
-
-async def main():
-
-    result = await fetch_data()
-
-    print(result)
-
-asyncio.run(main())
-```
-
-## 12. **JWT Authentication**
-
-- **JWT (JSON Web Token)** is a compact, URL-safe token used for authentication. It typically contains user information and a signature to ensure the token’s integrity. JWTs are commonly used for stateless REST API authentication.
-
-# Go
-
-## 1. **Concurrency Model in Go**
-
-Go uses Goroutines to achieve concurrency. Goroutines are lightweight threads managed by the Go runtime and scheduled across multiple threads by the Go scheduler. Go's concurrency model is based on CSP (Communicating Sequential Processes), with channels used for communication between Goroutines.
-
-```go
-   go func() {
-       fmt.Println("Hello, Goroutine!")
-   }()
-```
-
-## 2. Usage and Implementation of Channels
-
-Channels are a communication mechanism between Goroutines, allowing safe data transfer. They are thread-safe and support both synchronous and asynchronous communication.
-
-Usage Scenarios: Data synchronization, worker pool patterns, controlling execution order of concurrent tasks, etc.
-
-```go
-ch := make(chan int)
-
-go func() {
-    ch <- 42
-}()
-
-result := <-ch
-```
-
-## 3. Memory Management and Garbage Collection in Go
-
-Go uses an automatic garbage collection (GC) mechanism, employing a mark-and-sweep algorithm and a three-color marking method. It simplifies memory management by automatically handling heap memory allocation and reclamation. In large systems, GC pauses may impact performance. Go introduces the G1 garbage collector for optimization, and the GOGC environment variable can adjust the garbage collection frequency.
-
-## 4. Performance Tuning in Go
-
-Profiling Tools (pprof): Go provides the pprof package for analyzing CPU, memory, and Goroutine performance.
-
-Reduce Memory Allocation: Use object pools (sync.Pool) or reuse objects to reduce frequent memory allocations and GC pressure.
-
-Efficient Concurrency: Optimize the use of Goroutines and channels, avoiding frequent blocking operations.
-
-```go
-import "runtime/pprof"
-
-pprof.StartCPUProfile(file)
-defer pprof.StopCPUProfile()
-```
-
-## 5. Lock Mechanisms and sync Package
-
-in Go The sync.Mutex and sync.RWMutex are used to protect shared data from concurrent read and write access. sync.RWMutex provides separate read and write locks, suitable for read-heavy scenarios.
-
-```go
-var mu sync.Mutex
-
-mu.Lock()
-// critical section
-mu.Unlock()
-```
-
-## Worker Pool Pattern
-
-in Go The worker pool pattern efficiently controls the number of Goroutines, preventing excessive memory usage.
-
-```go
-func worker(id int, jobs <-chan int, results chan<- int) {
-    for j := range jobs {
-        results <- j * 2
-    }
-}
-```
-
-## Dependency Management
-
-in Go Go uses Go Modules to manage dependencies, defining dependency versions through the go.mod file to ensure reproducibility and consistency.
-
-```bash
-go mod init example.com/mymodule
-go get -u
-```
-
-## HTTP Package and RESTful API Development
-
-in Go The Go standard library provides the net/http package for building efficient web servers and clients, suitable for REST APIs, load balancing, reverse proxies, etc.
-
-```go
-http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "Hello, Go!")
-})
-
-http.ListenAndServe(":8080", nil)
-```
-
-## Context Management
-
-in Go The context package manages Goroutine lifecycles, commonly used for handling request timeouts and cancellation. Use context.WithTimeout or context.WithCancel to create cancellable contexts.
-
-```go
-ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-defer cancel()
-```
-
-## Error Handling Best Practices
-
-in Go Go uses explicit error handling, avoiding hidden errors, and encourages checking errors with if err != nil. Custom error types are often used to simplify repetitive error handling logic.
-
-```go
-if err != nil {
-    return fmt.Errorf("failed to process: %v", err)
-}
-```
-
-## Integration of Go with Docker
-
-Go's compiled binaries are highly portable and small in size, making them ideal for deployment with Docker. Use scratch or alpine images to minimize the image size.
-
-```dockerfile
-FROM golang:alpine AS builder
-WORKDIR /app
-COPY . .
-RUN go build -o app
-
-FROM scratch
-COPY --from=builder /app/app /app
-CMD "/app"
-```
-
-## Common Go Design Patterns
-
-- Singleton Pattern: Implemented using sync.Once to ensure thread safety.
-- Producer-Consumer Pattern: Easily implemented with channels for asynchronous data processing.
-
-## Unit Testing and Benchmarking
-
-in Go The Go standard library offers a robust testing framework (testing) for writing unit tests and performance benchmarks.
-
-```go
-func TestSum(t *testing.T) {
-    result := Sum(1, 2)
-    if result != 3 {
-        t.Errorf("Sum was incorrect, got: %d, want: %d.", result, 3)
-    }
-}
-
-func BenchmarkSum(b *testing.B) {
-    for i := 0; i < b.N; i++ {
-        Sum(1, 2)
-    }
-}
-```
-
-## Logging Libraries
-
-in Go and Their Application in Operations The standard log package in Go is simple, but third-party libraries like logrus and zap offer more complex features. Combining with ELK and Prometheus can facilitate efficient log analysis and monitoring.
-
-## Web UI
-
-## 1. **Vue Two-Way Data Binding** Vue.js achieves two-way data binding using the `v-model` directive, which automatically updates the UI and data by combining getters and setters.
-
-## 2. **Task Reliability and Monitoring in Celery**
-
-- **Reliability:** Ensure tasks do not get lost by storing task results in persistent storage like Redis or databases.
-- **Monitoring:** Use Celery’s event system or Flower to monitor task statuses. For troubleshooting blockages or delays, analyze logs and implement task retries.
-
-## 3. **Vue Two-Way Data Binding**
-
-Vue's two-way data binding is achieved using the `v-model` directive. It binds the `value` attribute of an HTML element to a Vue instance’s data and automatically updates the data through event listeners. This mechanism relies on data hijacking and the publish-subscribe pattern, allowing the DOM to automatically update when data changes and vice versa.
-
-## 4. **Vue Instance Lifecycle Hooks**
-
-Vue lifecycle hooks allow developers to execute code at different stages of a component’s life. Common hooks include:
-
-- `beforeCreate`: Called before the instance is created; `data` and `methods` are not yet available.
-- `created`: Called after the instance is created; `data` and `methods` can be used.
-- `beforeMount`: Called before the component is mounted to the DOM.
-- `mounted`: Called after the component is mounted to the DOM.
-- `beforeUpdate`: Called before data updates.
-- `updated`: Called after data updates.
-- `beforeDestroy`: Called before the instance is destroyed.
-- `destroyed`: Called after the instance is destroyed.
-
-## 5. **Difference Between** **`v-if`** **and** **`v-show`**
-
-- `v-if`: Conditional rendering; the DOM element is destroyed or re-created based on the condition, suitable for infrequently toggled content.
-- `v-show`: Controls visibility through the `display` style; the DOM element always exists, suitable for frequently shown/hidden content.
-
-## 6. **Difference Between Cookie and Session**
-
-- **Cookie:** Stored in the client’s browser with limited data storage, suitable for storing small and non-sensitive data like user preferences or session identifiers.
-- **Session:** Stored on the server-side, typically using cookies to store the session ID. Sessions are suitable for storing sensitive data.
-
-## 7. **Vue Parent-Child Component Communication**
-
-- **Parent to Child:** Pass data to child components using `props`.
-- **Child to Parent:** Trigger events from child components using the `$emit` method.
-- **Non-Parent-Child Communication:** Use EventBus or Vuex for global data passing.
-
-## 8. **`nextTick`** **Usage** `nextTick` is used to wait until after the DOM updates have been completed before executing some code. It is commonly used when needing to perform actions on the DOM after it has been updated.
-
-```javascript
-this.$nextTick(() => {
-    // DOM 更新完毕，执行操作
-
-});
-```
-
-## 9. **Difference Between** **`ref`** **and** **`reactive`**
-
-- **`ref`****\*\***:\*\* Used to wrap basic types (e.g., numbers, strings) or objects into reactive objects, suitable for single DOM element references and reactive data.
-- **`reactive`****\*\***:\*\* Used to turn objects into reactive, suitable for more complex data structures, returning a deeply reactive object.
-
-## 10. **Vue Custom Directives**
-
-Vue supports custom directives, allowing the creation of your own `v-xxx` directives. Common use cases include focusing input fields and drag operations.
-
-```javascript
-Vue.directive('focus', {
-    inserted: function (el) {
-        el.focus();
-    }
-});
-```
-
-1. **Vue3 Composition API vs. Options API**
-- **Composition API:** Introduced in Vue3, allows encapsulation of logic through functions, providing greater flexibility and reusability. The `setup` function is core, allowing direct access to component `props` and `context`.
-- **Options API:** Used in Vue2, defines components through options like `data`, `methods`, `computed`, etc., with a more straightforward structure but can lead to logic scattering in complex components.
-
-**Difference:** Composition API is better for logic reuse and code organization, while Options API is more suitable for smaller, simpler components.
-
-## 12. **Difference Between Proxy in Vue3 and Object.defineProperty in Vue2**
-
-- **Vue3 uses Proxy:** Proxies the entire object, allowing monitoring of property additions, deletions, and accesses, with better performance and coverage of Vue2 limitations.
-- **Vue2 uses Object.defineProperty:** Only intercepts existing property reads/writes, cannot listen to property additions or deletions, and is more complex with arrays.
-
-Proxy improves Vue3’s efficiency and flexibility in handling reactive data.
-
-## 13 **Difference Between React Hooks and Class Components**
-
-- **Hooks:** Introduced in React 16.8, allow using state and lifecycle features in functional components through functions like `useState` and `useEffect`, simplifying code structure and logic.
-- **Class Components:** Traditional React component definition using classes and lifecycle methods (e.g., `componentDidMount`, `shouldComponentUpdate`).
-
-**Difference:** Hooks provide a cleaner and more reusable approach, while Class components can be verbose and less modular for complex logic.
-
-## 14  **Difference Between** **`useEffect`** **and** **`useLayoutEffect`** **in React**
-
-- **`useEffect`****\*\***:\*\* Executes after the component renders, suitable for asynchronous operations, data fetching, and subscriptions. It does not block page rendering.
-- **`useLayoutEffect`****\*\***:\*\* Executes after DOM mutations but before painting, useful for reading layout information or synchronously modifying DOM. It may block rendering and is typically used for direct DOM manipulation.
-
-## 15 **Optimizing React and Vue Applications Performance**
-
-- **Component Splitting:** Break large components into smaller ones to avoid unnecessary re-renders.
-- **Lazy Loading:** Load components or resources on demand using React.lazy or Vue’s dynamic components.
-- **List Virtualization:** Use tools like react-window or Vue’s virtual-scroll component to handle large list rendering with reduced memory and rendering costs.
-- **Memoization:** Use React.memo or Vue’s computed to cache computed results and avoid unnecessary calculations.
-- **shouldComponentUpdate/PureComponent:** In React, use shouldComponentUpdate or PureComponent to reduce redundant component re-renders.
-
-## 16. **Performance Optimization Differences Between Vue3 and React**
-
-- **Vue3’s Proxy-based Reactivity System:** More efficient than Vue2’s system; React relies on setState to trigger renders, with differing performance mechanisms.
-- **Vue’s** **`v-if`****\*\***/\***\*****`v-show`** **vs. React’s Conditional Rendering:** Vue provides `v-if`/`v-show` for controlling visibility, React uses JavaScript expressions for rendering control.
-- **Reactivity:** Vue’s reactivity system automatically tracks dependencies, while React requires manual useState and useEffect to manage dependencies.
-
-## 17. **Common Tools and Techniques for Frontend Performance Monitoring**
-
-- **Lighthouse:** Google’s performance assessment tool for measuring page load speed, SEO, and best practices, with optimization suggestions.
-- **Web Vitals:** Google’s core metrics (e.g., LCP, FID, CLS) for measuring user experience and page performance.
-- **Sentry:** Monitors frontend errors and performance bottlenecks, providing detailed error logs and performance data.
-- **FCP, TTFB, LCP:** Common performance metrics for measuring first paint, server response time, and largest contentful paint.
-    - **Performance API:** Browser’s window.performance API for capturing page load times, resource loading, and other data for detailed monitoring.
-
-## 18. **Monitoring and Optimizing Frontend Application Performance in Operations**
-
-- **CDN Deployment:** Distribute static resources via CDN to global nodes, reducing latency.
-- **Frontend Resource Monitoring:** Use tools like Google Analytics or Web Vitals to monitor frontend performance.
-- **Log Monitoring and Analysis:** Combine tools like ELK or Prometheus to capture frontend logs, errors, and performance data.
-- **Resource Compression:** Use Webpack, Rollup, etc., for code compression and splitting to improve transmission efficiency.
-- **Caching Strategies:** Configure browser and server-side caching (e.g., Cache-Control) to speed up page loading.
-
-## 19. **Optimizing Frontend Build Performance with Webpack**
-
-- **Code Splitting:** Use Webpack’s splitChunks configuration to split code and reduce initial load size.
-- **Tree Shaking:** Remove unused code to reduce the bundle size.
-- **Gzip/Brotli Compression:** Enable compression in Webpack to reduce data transfer size.
-- **Caching:** Use output.filename with hash values to ensure files update correctly after modifications.
-
-## 20. **Capturing User Interaction Behavior in Frontend Monitoring**
-
-- **User Behavior Tracking Tools:** Use Hotjar, FullStory, etc., to record user clicks, scrolls, inputs, and generate heatmaps.
-- **Custom Event Tracking:** Use Google Analytics or Sentry to manually track specific events (e.g., button clicks, form submissions).
-- **Performance Metrics Collection:** Use Performance API or Web Vitals to capture page load, interaction response, and other performance data.
-
-## 21. **Performance Impact of** **`ref`** **vs.** **`reactive`** **in Vue3**
-
-- **`ref`****\*\***:\*\* Suitable for simple data types, with better performance as it tracks individual value changes.
-- **`reactive`****\*\***:\*\* Suitable for complex objects, with higher performance overhead due to deep property tracking.
-
-## 22. **React’s Reconciliation Mechanism**
-
-React uses a virtual DOM to achieve efficient updates by comparing new and old virtual DOM trees through the Diff algorithm, identifying the minimal changes needed to update the actual DOM.
-
-## 23. **Vue’s** **`v-model`** **Directive**
-
-`v-model` provides two-way data binding between form elements and Vue data. It simplifies synchronization between input elements and data properties.
-
-## 24. **Common Vue and React Performance Optimization Strategies**
-
-- **Component Optimization:** Use shouldComponentUpdate (React) or computed properties (Vue) to avoid unnecessary re-renders.
-- **Code Splitting:** Break down code into smaller chunks and lazy load components when needed.
-- **State Management:** Optimize state updates and management with efficient techniques (e.g., Vuex, Redux).
-
-## 25. **Event Delegation vs. Event Binding**
-
-- **Event Delegation:** Attach a single event listener to a parent element and handle events for child elements through event propagation. Reduces the number of listeners and improves performance for dynamic content.
-- **Event Binding:** Attach event listeners directly to individual elements, suitable for static content or specific requirements.
-
-## 26. **Vue and React Differences in Component State Management**
-
-- **Vue:** Utilizes Vuex for centralized state management with a more formalized approach and Vue’s reactivity system.
-- **React:** Uses Redux, Context API, or Hooks for state management with a more flexible and functional approach.
-
-## 27. **Error Boundaries in React vs. Error Handling in Vue**
-
-- **React:** Uses Error Boundaries to catch JavaScript errors in components and provide fallback UI.
-- **Vue:** Uses the `errorCaptured` lifecycle hook to catch errors in child components and perform error handling.
-
-## 28. **Optimizing Webpack Build Performance**
-
-- **Cache:** Enable caching for faster builds.
-- **Parallel Builds:** Use tools like `thread-loader` to build in parallel.
-- **Minification:** Minify and optimize code to reduce build size and improve loading performance.
-
-## 29. **Vue3 vs. React in Large-Scale Applications**
-
-- **Vue3:** Provides improved performance with Proxy-based reactivity and better TypeScript support.
-- **React:** Offers a mature ecosystem, extensive third-party libraries, and strong community support, with better performance optimizations in recent versions.
-
-## 30. **Frontend Security Best Practices**
-
-- **Input Validation:** Prevent XSS and injection attacks by validating and sanitizing user inputs.
-- **HTTPS:** Use HTTPS to secure data transmission and protect user privacy.
-- **Content Security Policy (CSP):** Implement CSP to control the sources of content and scripts loaded on the page.
-
-## 31. **Strategies for Handling Large-Scale State in Vue and React**
-
-- **Vue:** Use Vuex for centralized state management and modular stores.
-- **React:** Use Redux or Context API with Hooks for efficient state management.
-
-## 32. **Common Frontend Performance Bottlenecks**
-
-- **Slow Resource Loading:** Minimize and optimize asset sizes and load times.
-- **Inefficient Rendering:** Optimize rendering and re-rendering by minimizing unnecessary updates.
-- **Large Bundle Sizes:** Split bundles and use code splitting to reduce initial load times.
-
-## 33. **Effective Monitoring Tools for Frontend Performance**
-
-- **Lighthouse:** Assess performance, accessibility, and best practices.
-- **WebPageTest:** Analyze page load times from various locations and devices.
-- **Sentry:** Monitor frontend errors and performance bottlenecks with detailed logs.
-
-## 34. **Frontend and Backend Communication Optimization**
-
-- **API Caching:** Cache API responses to reduce server load and improve response times.
-- **Compression:** Use gzip or Brotli to compress API responses.
-- **Pagination:** Implement pagination to handle large data sets efficiently.
-
-## 35. **Common Frontend Performance Pitfalls**
-
-- **Unoptimized Images:** Use responsive images and compression techniques.
-- **Blocking Resources:** Minimize render-blocking resources like CSS and JavaScript.
-- **Inefficient JavaScript Execution:** Optimize JavaScript code and reduce execution time.
-
-## 36. **Optimizing API Performance in Frontend Applications**
-
-- **Batch Requests:** Combine multiple API requests into a single request when possible.
-- **Caching:** Cache API responses to improve load times.
-- **Asynchronous Requests:** Use asynchronous requests to avoid blocking the main thread.
-
-## 37. **Vue and React Performance Optimization Techniques**
-
-- **Vue:** Use computed properties and watchers for efficient data handling.
-- **React:** Use memoization techniques and React.memo to prevent unnecessary re-renders.
-
-## 38. **Common Frontend Build Tools and Techniques**
-
-- **Webpack:** Use for module bundling, code splitting, and optimization.
-- **Babel:** Transpile modern JavaScript for compatibility with older browsers.
-- **ESLint:** Enforce coding standards and catch errors early in development.
+## 1. Optimizing GitLab Runner
+*What:* Techniques to accelerate GitLab CI jobs.
+*How:* Scale runners horizontally for parallel jobs, enable dependency caching and artifacts, right-size compute resources, and dedicate runners per workload type.
+*Example:* Adding GPU-tagged runners for ML pipelines cut build time by 40% while caching Python wheels avoided repeated downloads.
+
+## 2. Blue-Green, Gray, and Canary Releases Across Clusters
+*What:* Progressive delivery strategies for multi-cluster deployments.
+*How:* Maintain blue/green environments for instant traffic switchovers, roll out gray releases by gradually expanding user cohorts, and run canary releases by routing a small traffic percentage before scaling up.
+*Example:* A payment service promoted updates cluster by cluster using canary weights in Istio, observing metrics before executing the global blue-to-green cutover.
+
+## 3. Shift-Left Testing
+*What:* Moving testing earlier in the development lifecycle.
+*How:* Embed unit, integration, and security tests in CI pipelines triggered on pull requests, and provide developers with local environments mirroring production.
+*Example:* Running API contract tests during pre-merge checks caught schema regressions before they reached staging, reducing rework.
+
+## 4. GitOps Fundamentals
+*What:* Operating model that stores desired infrastructure and application state in Git.
+*How:* Use Git repositories as the source of truth, reconcile actual state via agents like Argo CD or Flux, and manage changes through pull requests.
+*Example:* A cluster configuration repo triggered Argo CD auto-sync; merging a PR updated ConfigMaps and Deployments within minutes.
+
+## 5. Backing Up GitLab Repositories
+*What:* Ensuring source code durability.
+*How:* Schedule GitLab backups, mirror repositories to secondary remotes, and script database plus artifact snapshots.
+*Example:* Nightly `gitlab-backup create` jobs uploaded archives to S3, while mirroring to GitHub provided quick disaster recovery.
+
+## 6. Troubleshooting Jenkins Build Failures
+*What:* Systematic approach to restore failing pipelines.
+*How:* Review console logs, validate pipeline configuration, confirm dependency availability, and reproduce steps locally.
+*Example:* A failing Docker build was traced to an expired registry token after reproducing the `docker login` step on the agent.
+
+## 7. Jenkins User Permission Management
+*What:* Controlling access within Jenkins.
+*How:* Configure role-based access plugins, assign global vs. project-level permissions, and audit user actions regularly.
+*Example:* Creating a read-only viewer role let QA teams inspect pipeline status without risking job configuration changes.
+
+## 8. Jenkins Pipeline Modes
+*What:* Declarative and scripted pipeline syntaxes.
+*How:* Use declarative syntax for standardized stages and scripted pipelines for advanced logic when needed.
+*Example:* A declarative pipeline handled typical build/test steps, while a scripted block iterated through dynamic microservice lists.
+
+## 9. Jenkins High Availability
+*What:* Architecture to minimize downtime.
+*How:* Deploy redundant masters with shared state or operate an active/passive setup, distribute agents, load balance inbound requests, and back up `JENKINS_HOME`.
+*Example:* Placing Jenkins masters behind an HAProxy VIP enabled seamless failover during maintenance windows.
+
+## 10. Master-Agent Coordination
+*What:* Division of responsibilities between Jenkins controller and agents.
+*How:* Let the controller schedule jobs and manage configuration while agents execute builds over inbound/outbound connections.
+*Example:* Labeling Windows agents ensured .NET builds landed on compatible executors without manual routing.
+
+## 11. Multi-Stage Pipelines
+*What:* Structured sequences for CI/CD.
+*How:* Define stages for compile, test, security scan, package, and deploy, with parallelized steps and gated approvals.
+*Example:* A pipeline ran unit tests and SAST in parallel before requiring manual approval to deploy to production.
+
+## 12. Argo Rollouts Strategies
+*What:* Progressive delivery mechanisms within Kubernetes.
+*How:* Configure blue-green strategies with separate services, or define canary steps adjusting traffic weights and analysis templates.
+*Example:* Argo Rollouts gradually shifted 5%, 25%, 50%, then 100% of traffic to a new API while monitoring Prometheus metrics.
+
+## 13. Argo CD Application CRD
+*What:* Custom resource that defines a Git-tracked application target.
+*How:* Specify repo URL, revision, destination cluster, namespace, and sync policies in the Application manifest.
+*Example:* Updating the Application CRD to include a Helm value override deployed a new feature flag automatically.
+
+## 14. Auto-Sync vs. Manual Sync in Argo CD
+*What:* Deployment control modes.
+*How:* Enable auto-sync for rapid reconciliation or require manual sync to gate changes via UI/CLI approvals.
+*Example:* Production apps used manual sync with change windows, while dev clusters auto-synced on merge to main.
+
+## 15. Argo CD Troubleshooting
+*What:* Steps to diagnose sync issues.
+*How:* Inspect application events, review pod logs, compare live vs. desired manifests, and adjust sync options like pruning or self-heal.
+*Example:* Resolving a sync error involved fixing a missing namespace annotation that prevented resource creation.
+
+## 16. Custom Health Checks in Argo CD
+*What:* Extended health assessments beyond defaults.
+*How:* Add Lua-based health scripts in the repo to evaluate CRD status conditions and surface accurate health states.
+*Example:* A custom check read CRD `.status.phase` to mark Kafka topics as Healthy only when partitions were ready.
+
+## 17. Handling Drift in Argo CD
+*What:* Reconciling differences between cluster state and Git.
+*How:* Allow Argo CD to auto-correct drift or manually sync, and investigate unauthorized changes before reconciling.
+*Example:* Detecting manual ConfigMap edits prompted a conversation with the developer before reverting to the Git-defined version.
+
+## 18. Monitoring CI/CD Processes
+*What:* Observability for build and deploy pipelines.
+*How:* Export metrics to Prometheus, visualize in Grafana, analyze logs, and configure alerting on failure rates or queue latency.
+*Example:* Alertmanager notified on-call when deployment duration exceeded SLOs, revealing a throttled container registry.
+
+## 19. Git Feature Branch Workflow
+*What:* Standard branching strategy for new features.
+*How:* Branch off main, implement changes, commit frequently, open a pull request for review, merge after approval, and delete the branch.
+*Example:* Feature branches triggered preview environments via PR automation, enabling product managers to validate UI updates.
+
+## 20. Resolving Git Merge Conflicts
+*What:* Steps to reconcile divergent changes.
+*How:* Fetch latest main branch, rebase or merge into the feature branch, resolve conflicts in files, test, and push updates.
+*Example:* Using `git rebase main` exposed overlapping edits; we coordinated with another developer to split changes cleanly.
+
+# Python
+
+## 1. Global Interpreter Lock (GIL)
+*What:* A mutex in CPython that allows only one thread to execute Python bytecode at a time.
+*How:* Understand its impact on CPU-bound multi-threading and mitigate by using multiprocessing, native extensions, or async IO for I/O-bound tasks.
+*Example:* We moved an image processing workload from threads to the `multiprocessing` module to utilize all CPU cores effectively.
+
+## 2. Decorators
+*What:* Higher-order functions that wrap behavior around functions or classes.
+*How:* Define a decorator accepting a function, implement a wrapper, and apply it with `@decorator` syntax.
+*Example:* A `@measure_latency` decorator logged execution time for selected API handlers.
+
+## 3. `is` vs. `==`
+*What:* Identity versus equality comparison operators.
+*How:* Use `is` to check object identity (same memory address) and `==` to compare value equality.
+*Example:* Comparing `None` values with `is` prevented false positives that might occur with overloaded `__eq__` methods.
+
+## 4. Generators vs. Iterators
+*What:* Lazy evaluation constructs in Python.
+*How:* Implement generators with `yield` for single-pass iteration, and recognize that generators conform to the iterator protocol (`__iter__`, `__next__`).
+*Example:* A generator streamed log lines from S3 without loading entire files into memory.
+
+## 5. Garbage Collection
+*What:* Memory management via reference counting and cyclic garbage collector.
+*How:* Monitor reference counts, handle circular references, and tune GC thresholds when necessary.
+*Example:* Disabling cyclic GC during a tight loop reduced pauses, then re-enabling it prevented memory leaks afterwards.
+
+## 6. Context Managers
+*What:* Constructs managing resource acquisition and release using the `with` statement.
+*How:* Implement `__enter__` and `__exit__` or use `contextlib` to create context managers for files, locks, or transactions.
+*Example:* A custom context manager wrapped database sessions, committing on success and rolling back on exceptions.
+
+## 7. Dictionary Implementation
+*What:* Hash-table-based mapping structure in CPython.
+*How:* Understand key hashing, collision resolution via open addressing, and amortized O(1) operations.
+*Example:* Optimizing keys to be immutable tuples improved hash distribution and lookup speed.
+
+## 8. Shallow vs. Deep Copy
+*What:* Different cloning semantics for composite objects.
+*How:* Use `copy.copy` for shallow copies referencing original nested objects, and `copy.deepcopy` to recursively clone nested structures.
+*Example:* Applying `deepcopy` to a configuration template avoided accidental mutation of shared nested dictionaries.
+
+## 9. Lambda Functions
+*What:* Anonymous inline functions defined with `lambda`.
+*How:* Employ them for concise operations in sorting, filtering, or functional pipelines.
+*Example:* `sorted(users, key=lambda u: u.last_login)` ordered dashboard results by most recent access.
+
+## 10. Singleton Pattern
+*What:* Ensures only one instance of a class exists.
+*How:* Override `__new__` or use module-level singletons to control instantiation.
+*Example:* A singleton configuration loader cached environment settings across the application runtime.
+
+## 11. Asynchronous Programming with `asyncio`
+*What:* Event-driven concurrency framework in Python.
+*How:* Define coroutines with `async def`, await asynchronous operations, and run them via `asyncio.run` or event loops.
+*Example:* An async worker concurrently fetched API responses and wrote them to a database, reducing total processing time dramatically.

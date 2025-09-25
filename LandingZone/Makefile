@@ -19,17 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/01-introduction.md \
-           chapters/02-design-goals.md \
-           chapters/03-core-design.md \
-           chapters/04-identity-management.md \
-           chapters/05-cross-cloud-architecture.md \
-           chapters/06-security-compliance.md \
-           chapters/07-automation-cicd.md \
-           chapters/08-cost-management.md \
-           chapters/09-disaster-recovery.md \
-           chapters/10-open-source-code.md \
-           chapters/11-conclusion.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 # 目标：生成 PDF 电子书
 book.pdf: $(CHAPTERS)

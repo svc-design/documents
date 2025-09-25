@@ -17,11 +17,7 @@ else ifeq ($(OS), Windows_NT)
 	RM_CMD = del /Q
 endif
 
-CHAPTERS = chapters/00-Index.md \
-		   chapters/01-Operations-SRE.md \
-		   chapters/02-DevOps.md \
-		   chapters/03-Observability.md \
-		   chapters/04-AI-Ops-Agent-LLM-Ops.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 all: Interview-QA-Guide.html Interview-QA-Guide.pdf Interview-QA-Guide.docx
 

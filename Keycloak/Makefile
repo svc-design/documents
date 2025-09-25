@@ -19,20 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/01-overview.md                       \
-           chapters/02-installation.md                   \
-           chapters/03-configuration.md                  \
-           chapters/04-sso-integration-introduction.md   \
-           chapters/04-1-sso-integration-aws-cloud.md    \
-           chapters/04-2-sso-integration-gcp-cloud.md    \
-           chapters/04-3-sso-integration-azure-cloud.md  \
-           chapters/04-4-sso-integration-ali-cloud.md    \
-           chapters/04-10-sso-integration-gitlab.md      \
-           chapters/04-11-sso-integration-harbor.md      \
-           chapters/04-12-sso-integration-grafana.md     \
-           chapters/05-best-practices.md                 \
-           chapters/06-troubleshooting.md                \
-           chapters/07-conclusion.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 # 目标：生成 HTML 电子书
 book.html: $(CHAPTERS)

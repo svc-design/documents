@@ -1,4 +1,4 @@
-Infrastructure as Code (IaC) Interview Guide
+## Infrastructure as Code (IaC) Interview Guide
 
 1. Definition of Infrastructure as Code
 *What:* IaC treats infrastructure configuration as version-controlled source code.

@@ -1,4 +1,4 @@
-Open-ended questions
+## Open-ended questions
 
 1. Understanding SRE Principles
 *What:* SRE applies software engineering to operations to deliver reliable services via SLOs, SLIs, and error budgets.

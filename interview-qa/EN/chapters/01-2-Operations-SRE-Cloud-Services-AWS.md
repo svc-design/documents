@@ -1,4 +1,4 @@
-AWS 面试速查表（中英文对照）
+## AWS Foundations and Architecture
 
 | Category | Services | Key Points |
 |:----|:----|:----|
@@ -30,7 +30,6 @@ AWS 面试速查表（中英文对照）
 |  | CodePipeline / CodeBuild / CodeDeploy | AWS CI/CD toolchain |
 |  | GitHub Actions + ArgoCD | Common pattern: CI on GitHub, CD via GitOps |
 
-## 1. AWS Foundations and Architecture
 
 **Q: Which AWS services do you use most often?**
 *What:* Core building blocks across compute, storage, database, identity, and monitoring.
@@ -42,7 +41,7 @@ AWS 面试速查表（中英文对照）
 *How:* Place web tier instances behind an ALB, run autoscaled containers on EKS/ECS, replicate databases with RDS Multi-AZ or Aurora read replicas, and front everything with CloudFront plus monitoring and security services.
 *Example:* For an e-commerce site we deployed ALB-backed EKS pods across three AZs, used Aurora with an async replica, cached static assets with CloudFront, and wired GuardDuty alerts into Slack.
 
-## 2. Infrastructure as Code and Automation
+### Infrastructure as Code and Automation
 
 **Q: How do you manage AWS resources with Terraform?**
 *What:* Declarative IaC to provision and version infrastructure.
@@ -54,7 +53,7 @@ AWS 面试速查表（中英文对照）
 *How:* Favor Terraform for multi-cloud flexibility and community modules, while choosing CloudFormation for AWS-native features and tighter service integration.
 *Example:* We used Terraform to manage shared services across AWS and GCP, but relied on CloudFormation StackSets to roll out GuardDuty organization-wide.
 
-## 3. CI/CD
+### CI/CD
 
 **Q: How do you design CI pipelines with GitHub Actions?**
 *What:* Automated checks that validate and package code.
@@ -66,7 +65,7 @@ AWS 面试速查表（中英文对照）
 *How:* Point ArgoCD at Helm charts or manifests in Git, enable auto-sync with health checks, and integrate Argo Rollouts for progressive delivery.
 *Example:* Updating a canary Service manifest triggered ArgoCD to sync, run analysis via Argo Rollouts, and automatically promote the release after success metrics passed.
 
-## 4. Monitoring and Operations
+### Monitoring and Operations
 
 **Q: How do you monitor CI/CD pipelines?**
 *What:* Visibility into build and deploy health.
@@ -79,7 +78,7 @@ AWS 面试速查表（中英文对照）
 *Action:* Ran `terraform plan` to inspect drift, isolated the misconfigured security group, and reverted via version control while notifying stakeholders.
 *Result:* The pipeline recovered on the next run, and we added a pre-merge validation step to catch similar errors earlier.
 
-## 5. Behavioral
+### Behavioral
 
 **Q: How would you handle conflicts between Dev and SRE teams?**
 *Situation:* Development pushed for rapid feature rollout while SRE flagged reliability risks.

@@ -1,6 +1,6 @@
-K8s troubleshooting, Linux commands
+## Linux commands && K8s troubleshooting
 
-Linux System topic
+### Linux System topic
 
 1. Combining grep, sed, awk, and cut
 *What:* Classic Linux text-processing utilities that parse and transform structured or semi-structured data.
@@ -157,7 +157,7 @@ Linux System topic
 *How:* Structure roles with tasks, handlers, defaults, and templates, then compose them in playbooks.
 *Example:* A Kubernetes bootstrap playbook reused roles for installing container runtime, kubeadm init, and worker joins across dozens of nodes.
 
-Kubernetes
+### Kubernetes
 
 1. Understanding of Kubernetes
 *What:* Kubernetes is an open-source orchestration platform that automates deployment, scaling, and management of containerized workloads.

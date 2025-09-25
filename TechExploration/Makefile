@@ -19,16 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/01-evolution-of-software-development-paradigms.md \
-   chapters/02-evolution-of-data-storage-and-databases.md \
-   chapters/03-evolution-of-middleware.md \
-   chapters/04-evolution-from-traditional-monitoring-to-full-stack-observability.md \
-   chapters/05-software-and-data-flow.md \
-   chapters/06-history-of-cloud-technology-from-virtualization-to-openstack-to-public-cloud.md \
-   chapters/07-blockchain-technology-timeline-overview.md \
-   chapters/08-operating-system-architecture-and-evolution-analysis.md \
-   chapters/09-east-west-technology-development-comparison.md \
-   chapters/10-comparison-of-eastern-and-western-religions.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 OUTPUT_BASENAME = Tech-Exploration
 PDF_OUTPUT = $(OUTPUT_BASENAME).pdf

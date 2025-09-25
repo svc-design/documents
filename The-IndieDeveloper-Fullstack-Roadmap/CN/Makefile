@@ -19,12 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/01-foundations-tech-stack-overview.md \
-           chapters/02-backend-development-deep-dive.md \
-           chapters/03-frontend-fundamentals.md \
-           chapters/04-frontend-framework-advanced-fullstack-expansion.md \
-           chapters/05-backend-architecture-optimization-engineering-practices.md \
-           chapters/06-project-deployment-comprehensive-advancement.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 # 默认目标：生成全部格式
 all: book.html book.pdf book.docx

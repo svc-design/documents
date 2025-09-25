@@ -19,11 +19,7 @@ else ifeq ($(OS), Windows_NT)
 endif
 
 # 章节文件列表
-CHAPTERS = chapters/00-Index.md          \
-           chapters/01-Linux-RPM-Base.md \
-           chapters/02-Linux-Deb-Base.md \
-           chapters/03-K8S.md            \
-           chapters/04-Etcd.md
+CHAPTERS := $(sort $(wildcard chapters/*.md))
 
 all: Linux-K8S-OPS-Guide.html Linux-K8S-OPS-Guide.pdf Linux-K8S-OPS-Guide.docx
 

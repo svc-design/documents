@@ -23,6 +23,7 @@ argocd login argocd.onwalk.net --insecure
 
 在 K3s 集群中运行以下内容创建服务账号和角色绑定：
 
+```bash
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
@@ -43,6 +44,8 @@ subjects:
   name: argocd-manager
   namespace: kube-system
 EOF
+```
+
 ✅ 4. 自动生成 kubeconfig 文件供 ArgoCD 注册使用
 以下命令需在 K3s 节点上创建脚本generate-argocd-kubeconfig.sh 并执行
 

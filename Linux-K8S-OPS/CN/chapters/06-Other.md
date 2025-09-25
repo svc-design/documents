@@ -103,7 +103,9 @@
 
 	1.	进入 Windows，使用管理员权限打开 CMD：
 
+```cmd
 bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi
+```
 
 .	重启，GRUB 应该可以正常显示。
 

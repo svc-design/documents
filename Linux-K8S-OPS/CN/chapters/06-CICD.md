@@ -145,9 +145,8 @@ https://10.253.254.1:6443     global-hub-k3s-context  v1.28.x   Successful
 将该 K3s 集群注册到远程 ArgoCD Server
 
 ✅ register-k3s-to-argocd.sh
-bash
-复制
-编辑
+
+```bash
 #!/bin/bash
 
 # === 参数设置 ===
@@ -182,7 +181,7 @@ EOF
 # === 获取 token ===
 echo "🔑 获取 ServiceAccount token..."
 SECRET_NAME=$(kubectl -n kube-system get sa argocd-manager -o jsonpath="{.secrets[0].name}")
-TOKEN=$(kubectl -n kube-system get secret $SECRET_NAME -o jsonpath="{.data.token}" | base64 -d)
+TOKEN=$(kubectl -n kube-system get secret "$SECRET_NAME" -o jsonpath="{.data.token}" | base64 -d)
 
 # === 获取 CA 并 base64 编码（兼容 macOS/Linux）===
 echo "📜 编码 CA 证书..."
@@ -227,10 +226,13 @@ argocd cluster add --kubeconfig "${KUBECONFIG_OUTPUT}" "${CLUSTER_NAME}-context"
 
 # === 结束 ===
 echo "✅ 集群 $CLUSTER_NAME 已成功注册到 ArgoCD ($ARGOCD_SERVER)"
+```
+
 📦 用法
 将脚本保存为 register-k3s-to-argocd.sh，赋予可执行权限并运行：
 
-bash
+```bash
 chmod +x register-k3s-to-argocd.sh
 ./register-k3s-to-argocd.sh
+```
 如果你在多个集群执行此脚本，只需调整 CLUSTER_NAME 和 API_SERVER 即可。

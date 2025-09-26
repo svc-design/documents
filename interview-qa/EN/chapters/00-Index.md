@@ -4,7 +4,10 @@ This guide aggregates interview materials across operations, DevOps, observabili
 
 ## Self-Introduction Context
 
-Hello, I'm Haitao Pan. I have 14 years of experience in IT, I’ve supported different types of enterprise clients. My core skills are in Linux, containers, cloud and automation, with a strong focus on observability.
+Hello, I'm Haitao Pan.
+I graduated with a Bachelor’s degree in Electrical Engineering and Automation from Changchun Institute of Technology.
+I have 14 years of experience in IT, and supported different types of enterprise clients. 
+My core skills are in Linux, containers, cloud and automation, with a strong focus on observability.
 
 My background:
 

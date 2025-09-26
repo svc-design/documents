@@ -41,6 +41,51 @@
 *How:* Place web tier instances behind an ALB, run autoscaled containers on EKS/ECS, replicate databases with RDS Multi-AZ or Aurora read replicas, and front everything with CloudFront plus monitoring and security services.
 *Example:* For an e-commerce site we deployed ALB-backed EKS pods across three AZs, used Aurora with an async replica, cached static assets with CloudFront, and wired GuardDuty alerts into Slack.
 
+AWS 负载均衡
+
+Q: What’s the difference between CLB, ALB, and NLB?
+
+CLB → “That’s mainly for legacy /ˈleɡəsi/ systems. I wouldn’t use it for new projects.”
+ALB → “That’s the go-to for cloud-native apps — APIs, web apps, or as the Ingress for Kubernetes.”
+NLB → “That’s for high-performance TCP or UDP traffic — really low latency and it can handle millions of connections.”
+
+AWS Compute
+
+Q: When do you choose EC2 vs Lambda?
+
+EC2 → “When I need full control of the OS and long-running workloads.”
+Lambda → “When it’s event-driven, short-lived, and I want to scale automatically without managing servers.”
+
+AWS Storage
+
+Q: How do you compare S3, EBS, and EFS?
+S3 → “Object storage, great for static files, backups, and data lakes.”
+EBS → “Block storage, attach it to a single EC2 instance like a disk.”
+EFS → “Shared file system, multiple EC2s can mount it at the same time.”
+
+AWS Database
+
+Q: RDS vs DynamoDB?
+
+RDS → “Relational, great when I need SQL and transactions.”
+DynamoDB → “NoSQL, great for huge scale, key-value, and ultra-low latency.”
+
+AWS Networking
+
+Q: VPC basics?
+“It’s your private network in AWS — you define subnets, route tables, security groups, and control inbound/outbound traffic.”
+
+AWS Monitoring
+
+Q: How do you monitor workloads on AWS?
+“Use CloudWatch for metrics and logs, X-Ray for tracing, and integrate alarms with SNS or PagerDuty.”
+
+AWS CI/CD
+
+Q: What tools does AWS provide for CI/CD?
+
+“CodePipeline for orchestration, CodeBuild for builds, CodeDeploy for deployment. But many teams use GitHub Actions or GitLab CI instead.”
+
 ### Infrastructure as Code and Automation
 
 **Q: How do you manage AWS resources with Terraform?**
@@ -52,6 +97,7 @@
 *What:* Two popular IaC solutions for AWS.
 *How:* Favor Terraform for multi-cloud flexibility and community modules, while choosing CloudFormation for AWS-native features and tighter service integration.
 *Example:* We used Terraform to manage shared services across AWS and GCP, but relied on CloudFormation StackSets to roll out GuardDuty organization-wide.
+
 
 ### CI/CD
 

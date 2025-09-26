@@ -4,6 +4,7 @@ GitLab CI（模板 + 环境/分支 + 受保护变量）
 
 .gitlab-ci.yml（顶层）：
 
+```yaml
 stages: [validate, plan, apply]
 
 variables:
@@ -67,6 +68,7 @@ apply:
       variables: { ENV: "prod", STACK: "network" }
       when: manual
       allow_failure: false
+```
 
 
 GitLab 敏感信息
@@ -138,6 +140,8 @@ SOPS/Vault：解密到 stacks/<stack>/secret.auto.tfvars，执行后删除。
 覆盖：可复用模板、环境映射（dev→dit / main→uat / tag→prod）、受保护变量、Plan/Apply 分离、SOPS/Vault 解密、OIDC 临时凭证、并行多 Stack、子流水线等。
 
 目录建议
+
+```text
 pipeline/gitlab/
 ├─ _tf_base.yml                # 基础锚点/通用 job 片段（被其它模板 extends）
 ├─ tf_stack.yml                # 单 Stack 的可复用模板（plan/apply 两阶段）
@@ -146,11 +150,14 @@ pipeline/gitlab/
 ├─ fragments/_sops.yml         # SOPS/Vault 解密片段（可选）
 ├─ fragments/_oidc.yml         # OIDC AssumeRole 片段（可选，AWS/阿里云）
 └─ README.md
+```
 
 
 你的业务仓库 .gitlab-ci.yml 只需 include 这些模板，然后用 rules/变量映射环境即可。
 
 1) _tf_base.yml（基础片段与锚点）
+
+```yaml
 # pipeline/gitlab/_tf_base.yml
 stages: [validate, plan, apply]
 
@@ -191,8 +198,11 @@ stages: [validate, plan, apply]
     <<: *default_vars
   <<: *cache_tf
   <<: *before_essentials
+```
 
 2) fragments/_oidc.yml（可选，示例 AWS）
+
+```yaml
 # pipeline/gitlab/fragments/_oidc.yml
 # 结合 GitLab 的 OpenID Connect，把ID Token换成云端临时凭证
 # 需要在 GitLab 项目：Settings → CI/CD → Token Access 打开 OpenID Connect
@@ -210,11 +220,14 @@ stages: [validate, plan, apply]
       # 然后这里使用 $CI_JOB_JWT_V2 或自定义变量名
       # 假设 assume_role.sh 内部已处理上面细节，这里引用你的脚本更稳妥
     fi
+```
 
 
 简化：你也可以直接在 _tf_base.yml 用 ./pipeline/assume_role.sh 解决，保持脚本私有。
 
 3) fragments/_sops.yml（可选：SOPS/Vault 解密）
+
+```yaml
 # pipeline/gitlab/fragments/_sops.yml
 .sops_fragment: &sops_fragment
   - |
@@ -226,8 +239,11 @@ stages: [validate, plan, apply]
       sops -d "stacks/$STACK/secret.auto.tfvars.enc" > "stacks/$STACK/secret.auto.tfvars"
       echo "[sops] decrypted secret.auto.tfvars"
     fi
+```
 
 4) tf_stack.yml（单 Stack 可复用模板）
+
+```yaml
 # pipeline/gitlab/tf_stack.yml
 include:
   - local: 'pipeline/gitlab/_tf_base.yml'
@@ -298,8 +314,11 @@ include:
       variables: { ENV: "prod" }
       when: manual
       allow_failure: false
+```
 
 5) tf_mr_plan.yml（Merge Request 专用：只做 plan 并附工件）
+
+```yaml
 # pipeline/gitlab/tf_mr_plan.yml
 include:
   - local: 'pipeline/gitlab/_tf_base.yml'
@@ -322,8 +341,11 @@ mr_plan:
     paths:
       - stacks/$STACK/tfplan
       - stacks/$STACK/tfplan.txt
+```
 
 6) tf_parent.yml（父流水线：并行矩阵/子流水线）
+
+```yaml
 # pipeline/gitlab/tf_parent.yml
 stages: [generate, validate, plan, apply]
 
@@ -364,11 +386,14 @@ child_tf:
         STACK: "app"
   rules:
     - if: '$CI_COMMIT_BRANCH == "dev"'
+```
 
 
 也可以把 parallel.matrix 用 MATRIX_JSON 动态生成（需要用 rules:exists 或 needs:artifacts 拉取 matrix，再用 yaml 模板渲染）。
 
 7) 业务仓库的 .gitlab-ci.yml（消费模板）
+
+```yaml
 # .gitlab-ci.yml (在你的业务仓库)
 include:
   - local: 'pipeline/gitlab/tf_stack.yml'
@@ -399,6 +424,7 @@ plan:
 apply:
   extends: [".apply"]
   needs: ["plan"]
+```
 
 8) 变量与安全（实践要点）
 

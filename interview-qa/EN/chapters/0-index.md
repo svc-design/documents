@@ -1,36 +1,100 @@
-# Interview QA Guide
+# Interview QA Chapters Index
 
-This guide aggregates interview materials across operations, DevOps, observability, and AI Ops domains.
+This index summarizes the first three heading levels for each chapter in this directory.
 
-## Self-Introduction Context
+- [1-operations-linux-kubernetes](./1-operations-linux-kubernetes.md)
+  - Linux commands && K8s troubleshooting
+    - Linux System topic
+    - Kubernetes
 
-Hello, I'm Haitao Pan.
-I graduated with a Bachelor’s degree in Electrical Engineering and Automation from Changchun Institute of Technology.
-I have 14 years of experience in IT, and supported different types of enterprise clients. 
-My core skills are in Linux, containers, cloud and automation, with a strong focus on observability.
+- [2-observability-Monitoring-logging](./2-observability-Monitoring-logging.md)
+  - Monitoring
+    - 1. Metrics, Events/Logs, Tracing, and Profiling
+    - 2. Metrics Fundamentals
+    - 3. Log Management
+    - 4. Event Handling
+    - 5. Distributed Tracing
+    - 6. Profiling
+    - 7. Application Performance Monitoring (APM)
+    - 8. eBPF Monitoring
+    - 9. Agents
+    - 10. OpenTelemetry
+    - 11. Prometheus Workflow
+    - 12. Prometheus Metric Types
+    - 13. Service Discovery Options
+    - 14. Prometheus Functions
+    - 15. Thanos Architecture
+    - 16. Thanos vs. VictoriaMetrics
+    - 17. Thanos Sidecar vs. Receive
+    - 18. Thanos Rule Component vs. Prometheus Rules
+    - 19. Prometheus Alert Behavior
+    - 20. Pod Memory Metrics
+    - 21. Monitoring Optimization
+    - 22. Automated Responses and Persistence
+    - 23. Data Compression and Persistence
+    - 24. `kubectl top` vs. `free`
+    - 25. Exporters and Troubleshooting
+    - 26. Target Down Investigation
+    - 27. Pull vs. Push Models
+    - 28. Prometheus Operator
+    - 29. Monitoring External Targets
+    - 30. APM and eBPF Agents Together
+    - 31. OpenTelemetry Recap
+    - 32. Building an Observability Platform
+  - ELK
+    - 1. Elasticsearch Indexing Principle
+    - 2. Elasticsearch Storage Principle
+    - 3. Elasticsearch Performance Optimization
+    - 4. Elasticsearch Architecture Design
 
-My background:
+- [3-cloud-services-aws-account-best-practices](./3-cloud-services-aws-account-best-practices.md)
 
-1. Started at CS2C, working on Linux porting and RPM automation.
-2. At Inspur and Knownsec, I focused on scaling ops and automation, and at Deepin Linux I worked on productizing Deepin Server
-3. At Alauda, UCloud, and Eccom, I worked on enterprise projects around containers, cloud, and DevOps automation.
-4. At Tesla Shanghai, standardized SRE practices around CI/CD and application operations.
-5. Most recently at Yunshan Networks, focused on NPM/APM, eBPF, and Kubernetes performance troubleshooting for customers.
+- [3-cloud-services-aws-landing-zone](./3-cloud-services-aws-landing-zone.md)
 
-My career path follows "Linux Server → Containers/Public Cloud → Enterprise IaC/DevOps → Full-stack Observability." 
+- [3-cloud-services-aws](./3-cloud-services-aws.md)
+  - AWS Foundations and Architecture
+    - Infrastructure as Code and Automation
+    - CI/CD
+    - Monitoring and Operations
+    - Behavioral
 
-I currently concentrate on LLM-Ops: blending observability data with RAG and AI Agents to build reliability-focused automation loops that help teams deliver faster and more reliably.
+- [4-1-cicd-and-gitops](./4-1-cicd-and-gitops.md)
+  - DevOPS
 
-## Self-Introduction 20-second Pitch
+- [4-infrastructure-as-code](./4-infrastructure-as-code.md)
+  - Infrastructure as Code (IaC) Interview Guide
 
-14 years in IT: Linux/K8s/IaC/DevOps leading into observability. Experience spans Deepin, Alauda, UCloud, Roche projects, Tesla SRE, and Yunshan customer support. Now focused on LLM-Ops, connecting RAG/Agents with observability systems to create faster, more stable automated operations.
+- [5-internal-developer-platform](./5-internal-developer-platform.md)
+  - Internal Developer Platform (IDP) Interview Guide
+  - Python
 
-## Responding to Recent Layoffs
+- [5-ops-system-dev-go](./5-ops-system-dev-go.md)
+  - Go Interview Q&A
 
-I was impacted by layoffs in my recent positions, but my performance was not an issue.
+- [5-ops-system-dev-python](./5-ops-system-dev-python.md)
+  - Python
 
-# Knowledge Map
+- [5-ops-system-dev-webui-frontend](./5-ops-system-dev-webui-frontend.md)
+  - Frontend Web UI Interview Q&A Guide
 
-## Overview
+- [6-interview-quick-answer-3-step-skill-pitch](./6-interview-quick-answer-3-step-skill-pitch.md)
+  - 3-Step Skill Pitch
 
-This series focuses on the core technical areas of Site Reliability Engineering (SRE), with emphasis on cloud-native infrastructure, automation, and DevOps practices. It covers open-ended problem-solving skills, Infrastructure as Code (IaC) with Terraform/Ansible/Helm, modern CI/CD and GitOps workflows (GitHub Actions + ArgoCD), observability stack (Prometheus, Grafana, ELK), and troubleshooting in Linux, Kubernetes, and public cloud platforms (AWS/Azure).
+- [6-interview-quick-answer-aws-iac-container-release](./6-interview-quick-answer-aws-iac-container-release.md)
+  - AWS / IaC / Container Release – Interview Quick Answers
+  - 面试口语速答版（3–4 句/题）
+
+- [6-interview-simulated-script-ops-devops-leader](./6-interview-simulated-script-ops-devops-leader.md)
+
+- [7-1-soft-skill-daily-communication-scenario-cards](./7-1-soft-skill-daily-communication-scenario-cards.md)
+
+- [7-2-soft-skill-technical-communication-playbook-cards](./7-2-soft-skill-technical-communication-playbook-cards.md)
+
+- [7-3-open-ended-questions](./7-3-open-ended-questions.md)
+  - Open-ended questions
+
+- [8-ai-ops-agent-llm-ops](./8-ai-ops-agent-llm-ops.md)
+  - AI Ops & Agent LLM Ops
+
+- [9-suse-suite-research-notes](./9-suse-suite-research-notes.md)
+  - SUSE 四大套件 调研

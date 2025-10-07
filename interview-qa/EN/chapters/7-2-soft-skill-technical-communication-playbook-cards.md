@@ -1,46 +1,72 @@
-二、技术沟通“场景卡片”
+# A. Daily Standup — 日常站会汇报
 
-A. 站会汇报（Daily Standup）
+Structure: Yesterday → Today → Blockers
+Template: Yesterday I … Today I’ll … I’m blocked by … (need …)
 
-结构：Yesterday → Today → Blockers
-模板：Yesterday I … Today I’ll … I’m blocked by … (need …).
+Example:
 
-示例：Yesterday I finished the Terraform module. Today I’ll wire the CI. I’m blocked by missing AWS credentials; I need SSO access.
+Yesterday I refactored the API client for better error handling.
+Today I’ll integrate it into the workflow runner.
+I’m blocked by missing staging credentials; I need temporary access to test it.
 
-B. 设计评审（Design Review）
+# 🧭 B. Design Review — 设计评审
 
-结构：Goal → Options → Trade-offs → Recommendation → Risks/Metrics
-模板：Our goal is … We considered A/B. The trade-offs are … I recommend … because … Risks are … We’ll track …
+Structure: Goal → Options → Trade-offs → Recommendation → Risks/Metrics
+Template: Our goal is … We considered A/B. The trade-offs are … I recommend … because … Risks are … We’ll track …
+Example:
 
-示例：Our goal is reduce p95 < 200ms. A: in-memory cache; B: CDN. Trade-off is cost vs. freshness. I recommend CDN for 30% hit ratio; risk is stale data; we’ll track hit rate & complaint counts.
+Our goal is to reduce cold-start latency.
+We considered pre-warming pods (A) and enabling lazy module loading (B).
+The trade-off is cost vs. simplicity.
+I recommend option B because it’s cheaper and easier to roll out.
+Risk: unexpected initialization delays; we’ll track p95 startup time.
 
-C. 事故通报（Incident Update）
-结构 （SBAR）：Situation → Background → Assessment → Recommendation
-模板： Situation: … Background: … Assessment: … Recommendation: …
-示例：Situation: elevated 5xx on checkout. Background: started 10:12 JST after deploy. Assessment: DB connections saturated. Recommendation: rollback + raise pool to 80 temporarily.
+# 🚨 C. Incident Update — 事故通报
 
-D. 代码评审反馈（Code Review）
+Structure (SBAR): Situation → Background → Assessment → Recommendation
+Template: Situation: … Background: … Assessment: … Recommendation: …
+Example:
 
-结构：肯定 → 具体问题 → 影响 → 建议
-模板： Nice work on … One concern: … It could cause … Suggest …
+Situation: Users are seeing 502 errors on login.
+Background: Started after the Redis upgrade this morning.
+Assessment: Session cache eviction rate increased due to lower memory limit.
+Recommendation: Roll back Redis config and scale vertically by +1GB RAM.
 
-示例：Nice work modularizing handlers. One concern: global state in cache may leak across tests; suggest DI for testability.
+# 💬 D. Code Review — 代码评审反馈
 
-E. 需求澄清（Requirements）
+Structure: Praise → Concern → Impact → Suggestion
+Template: Nice work on … One concern: … It could cause … Suggest …
+Example:
 
-结构：目标 → 约束 → 验收标准
-模板：To confirm, the goal is … Constraints are … Acceptance means …?
-示例：To confirm, the goal is <3% error on peak. Constraints: no new infra. Acceptance: green on synthetic + p95 < 200ms for 48h?
+Nice work simplifying the retry logic.
+One concern: the loop lacks exponential backoff.
+It could cause request flooding under failure.
+Suggest using time.Sleep(backoff * attempt) or a retry helper.
 
-F. 估时与承诺（Estimation）
+# 📋 E. Requirements Clarification — 需求澄清
 
-结构：假设 → 拆分 → 区间 → 风险
+Structure: Goal → Constraints → Acceptance Criteria
+Template: To confirm, the goal is … Constraints are … Acceptance means …?
+Example:
 
-模板：Assuming …, split into … I estimate … to … Risks: …
-示例：Assuming stable API, split into schema/ETL/dashboards. I estimate 3–5 days. Risk: data quality.
+To confirm, the goal is to auto-scale pods within 2 minutes under load.
+Constraints: no external autoscaler, must work on EKS.
+Acceptance means CPU-based scaling triggers and metrics stay within 70–90% for 24 hours?
 
-G. 异议/范围控制（Scope Control）
+# ⏱️ F. Estimation & Commitment — 估时与承诺
 
-模板：I see the value in … However, given the deadline, could we defer … to phase two?
+Structure: Assumption → Breakdown → Range → Risks
+Template: Assuming …, split into … I estimate … to … Risks: …
+Example:
 
-示例：I see the value in multi-region. However, given Black Friday, could we defer it to phase two?
+Assuming the API spec is stable, I’ll split this into SDK, integration tests, and release pipeline.
+I estimate 2–4 days total.
+Risks: CI build times and dependency caching.
+
+# 🚧 G. Scope Control — 异议 / 范围控制
+
+Template: I see the value in … However, given the deadline, could we defer … to phase two?
+Example:
+
+I see the value in adding a metrics dashboard for this feature.
+However, given the Q4 release deadline, could we defer it to phase two?

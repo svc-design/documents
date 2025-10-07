@@ -42,28 +42,29 @@
 "I am confident I can add value to your team."
 
 
-### 速答技巧：
+## 速答技巧：
 
 每个回答 结构一致：工具/行动 → 怎么做 → 带来的结果。
 时态用过去式（worked, built, used），突出 你做过的事。
 最后一句落在 价值 (improved reliability / reduced downtime / consistency / faster troubleshooting)。
 
-- 1. 监控 / Observability
+#### 1. 监控 / Observability
 
-Q: Can you share your experience with monitoring systems?
-A (3–4 句):
+- Q: Can you share your experience with monitoring systems?
+
+- A (3–4 句):
 “I set up monitoring with Prometheus and Grafana to track application and infrastructure health. I added alerts for key metrics like latency and error rates, so the team could respond quickly. This improved reliability and reduced downtime during incidents.”
 
-- 2. 基础设施即代码 (IaC)
+#### 2. 基础设施即代码 (IaC)
 
-Q: How have you used Infrastructure as Code in your work?
-A (3–4 句):
+- Q: How have you used Infrastructure as Code in your work?
+- A (3–4 句):
 “I used Terraform to provision cloud resources like VPCs, clusters, and databases. We stored code in Git and integrated it with CI/CD pipelines, so every change was reviewed and automated. This made infrastructure consistent and easier to scale.”
 
-- 3. 可观测性 / Logging & Tracing
+#### 3. 可观测性 / Logging & Tracing
 
-Q: What’s your approach to observability beyond metrics?
-A (3–4 句):
+- Q: What’s your approach to observability beyond metrics?
+- A (3–4 句):
 “I deployed centralized logging with Loki and tracing with Jaeger to give us full visibility. Developers could correlate logs, metrics, and traces in Grafana to troubleshoot issues faster. This reduced mean time to recovery and improved developer confidence.”
 
 

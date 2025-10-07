@@ -1,43 +1,41 @@
 
-Day 1 – 基础经历
+# Day 1 – 基础经历
 
 "I worked at the Tesla factory."
-
 "My job was to maintain the CI/CD system."
-
 "We used GitHub to manage the source code."
 
-Day 2 – 当前职责
+# Day 2 – 当前职责
 
 "I focus on automating deployments."
 "I monitor the system to ensure reliability."
 "I write scripts to improve daily operations."
 
-Day 3 – 技能亮点
+# Day 3 – 技能亮点
 
 "I have strong Linux and cloud skills."
 "I know how to build and maintain Kubernetes clusters."
 "I use GitHub Actions to automate the testing process."
 
-Day 4 – 团队合作
+# Day 4 – 团队合作
 
 "I worked with developers to improve release speed."
 "We solved incidents together during production outages."
 "I shared best practices with my teammates."
 
-Day 5 – 项目成果
+# Day 5 – 项目成果
 
 "I reduced deployment time from hours to minutes."
 "I improved system reliability by adding monitoring and alerts."
 "I helped the team adopt automated workflows."
 
-Day 6 – 未来目标
+# Day 6 – 未来目标
 
 "My goal is to improve my leadership skills."
 "I want to grow into a platform engineering leader."
 "I will focus on building scalable and reliable systems."
 
-Day 7 – 总结陈述
+# Day 7 – 总结陈述
 
 "I can combine operations and software engineering."
 "I bring both technical expertise and teamwork experience."
@@ -50,26 +48,27 @@ Day 7 – 总结陈述
 时态用过去式（worked, built, used），突出 你做过的事。
 最后一句落在 价值 (improved reliability / reduced downtime / consistency / faster troubleshooting)。
 
-1. 监控 / Observability
+- 1. 监控 / Observability
 
 Q: Can you share your experience with monitoring systems?
 A (3–4 句):
 “I set up monitoring with Prometheus and Grafana to track application and infrastructure health. I added alerts for key metrics like latency and error rates, so the team could respond quickly. This improved reliability and reduced downtime during incidents.”
 
-2. 基础设施即代码 (IaC)
+- 2. 基础设施即代码 (IaC)
 
 Q: How have you used Infrastructure as Code in your work?
 A (3–4 句):
 “I used Terraform to provision cloud resources like VPCs, clusters, and databases. We stored code in Git and integrated it with CI/CD pipelines, so every change was reviewed and automated. This made infrastructure consistent and easier to scale.”
 
-3. 可观测性 / Logging & Tracing
+- 3. 可观测性 / Logging & Tracing
 
 Q: What’s your approach to observability beyond metrics?
 A (3–4 句):
 “I deployed centralized logging with Loki and tracing with Jaeger to give us full visibility. Developers could correlate logs, metrics, and traces in Grafana to troubleshoot issues faster. This reduced mean time to recovery and improved developer confidence.”
 
 
-动词过去式发音对照表
+# 动词过去式发音对照表
+
 动词	过去式	音标	发音提示	示例句子
 build	built	/bɪlt/	“比尔特”，短促结尾	I built a CI/CD pipeline.
 deploy	deployed	/dɪˈplɔɪd/	结尾是 -d 音，读成“迪-普洛伊-德”	We deployed the app to Kubernetes.
@@ -81,16 +80,17 @@ design	designed	/dɪˈzaɪnd/	结尾 -nd，读“迪-宰-恩-德”	I designed t
 implement	implemented	/ˈɪmplɪmentɪd/	读“因普利-门提德”	I implemented Terraform modules.
 support	supported	/səˈpɔːrtɪd/	读“瑟-波尔-提德”	I supported production systems.
 configure	configured	/kənˈfɪɡjərd/	结尾“格-耶-儿-德”	I configured monitoring alerts.
+
 🎯 练习小技巧
 
 分解读音 → 先读词根，再加上 -ed 或特殊过去式。
-
 注意尾音 → 很多中国学习者容易吞掉 -d / -t，一定要读出来。
 
 造句练习 → 每个动词用 1 句话说出来，模仿面试场景。
 
 
-IT 单词易混发音表
+# IT 单词易混发音表
+
 单词 A	发音	单词 B	发音	区别/提示	示例
 code (代码)	/koʊd/ → “扣德”	cold (冷的)	/koʊld/ → “扣尔德”	cold 多了一个 /l/ 音	I write clean code.
 tool (工具)	/tuːl/ → “突尔”	two (数字 2)	/tuː/ → “突”	tool 带 /l/，舌尖抵上齿龈	Docker is a useful tool.
@@ -105,7 +105,6 @@ virtual	/ˈvɜːrtʃuəl/ → “沃尔丘尔”	virtue (美德)	/ˈvɜːrtʃuː
 🎯 使用技巧
 
 练对比 → 连续读 A-B-A-B，比如 code–cold, tool–two。
-
 加例句 → 每个词造句，比如 We use cache to speed up queries.
 
 录音自查 → 回放时注意尾音 (/d/、/l/、/tʃ/)。

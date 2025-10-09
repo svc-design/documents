@@ -4,7 +4,7 @@
 - **Name**: Pan Haitao
 - **Location**: Shanghai, China
 - **Current Status**: Available for work
-- **Phone**: +86 19286470192
+- **Phone**: +86 13691175694
 - **Email**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **Languages**: Chinese (native), English (conversational)
@@ -54,18 +54,19 @@ DevOps Engineer / SRE / Platform Engineer / Infrastructure Engineer
 ---
 
 ## Open Source Projects
+
 - **XControl**: Unified management platform (integrates XConfig / XCloudFlow / XScopeHub / Xstream), with web console support.
+- **Xstream**: Dart-based cross-border acceleration and connection management client.
 - **XConfig**: Rust Agent-driven DevOps orchestrator for modular deployment and configuration automation.
 - **XCloudFlow**: Multi-cloud automation framework for continuous infrastructure provisioning and orchestration.
 - **XScopeHub**: Observability suite (Vector / OpenTelemetry / PostgreSQL), combined with AI OPS Agent for nearline ETL and trace analysis.
-- **Xstream**: Dart-based cross-border acceleration and connection management client.
-- **Navi**: Desktop AI assistant for task guidance, tool orchestration, and knowledge Q&A.
 
 ---
 
-## Work Experience (DevOps Focus)
+## Work Experience
 
 ### Beijing Yunshan Century Network Technology Co., Ltd. — Senior Support Engineer 2024.11–2025.09
+
 - **Tech Stack**: Linux, Kubernetes, DeepFlow, NPM & APM, eBPF, Hybrid Cloud
 - **Responsibilities**: Deploy, tune, and maintain observability systems; optimize data collection and query performance; deliver AI Agent PoCs and hybrid cloud observability solutions.
 - **Key Achievements**:
@@ -86,7 +87,8 @@ DevOps Engineer / SRE / Platform Engineer / Infrastructure Engineer
 
 ---
 
-### H3C/Huaxun Network Systems Co., Ltd. — Senior Cloud Solutions Architect 2022.03–2023.10
+### Eccom Network Co., Ltd. — Senior Cloud Solutions Architect 2022.03–2023.10
+
 - **Tech Stack**: AWS/AliCloud, Terraform, Pulumi, GitLab CI, GitOps (FluxCD)
 - **Responsibilities**: Led cloud migration, IaC module development, and GitOps adoption; delivered enterprise DevOps platforms.
 - **Key Projects**:

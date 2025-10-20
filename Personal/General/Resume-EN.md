@@ -40,12 +40,16 @@
 | 2006.09 – 2010.06 | Bachelor | Changchun Institute of Technology | Electrical Engineering & Automation |
 
 ## Open-Source Projects
-- **XControl**: Web portal and control panel integrating XConfig / XCloudFlow / XScopeHub / Xstream for unified management.  
-- **XConfig (GitHub)**: Rust Agent-based DevOps orchestrator for modular deployment and automation.  
-- **XCloudFlow (GitHub)**: Multi-cloud management and automation framework supporting continuous infrastructure setup and orchestration.  
-- **XScopeHub (GitHub)**: Observability suite (Vector / OpenTelemetry / PostgreSQL) enabling nearline ETL, active call-graph analytics, and AI Ops Agent integration.  
-- **Xstream (GitHub)**: Dart-based cross-border acceleration and connection management client.  
-- **Navi (GitHub)**: Desktop AI assistant supporting guided tasks, tool orchestration, and knowledge Q&A.  
+
+- **XControl**:
+  - https://github.com/CloudNativeSuite/XControl.git
+  - Web portal and control panel integrating  XCloudFlow / XScopeHub  for unified management.
+- **XCloudFlow**:
+  - https://github.com/CloudNativeSuite/XCloudFlow
+  - Multi-cloud management and automation framework supporting continuous infrastructure setup and orchestration.  
+- **XScopeHub:
+  - https://github.com/CloudNativeSuite/XScopeHub.git
+  - Observability suite (Vector / OpenTelemetry / PostgreSQL) enabling nearline ETL, active call-graph analytics, and AI Ops Agent integration.  
 
 ## Work Experience
 

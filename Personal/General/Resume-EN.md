@@ -27,12 +27,14 @@
 - **Programming Languages**: Proficient in Python and Shell; working knowledge of Go, Rust, JavaScript  
 - **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch, DeepFlow (APM), Datadog  
 - **Automation Tools**: Ansible, Jenkins, Helm, GitHub Actions, GitLab CI, GitOps (ArgoCD, FluxCD)  
-- AI Infrastructure: K8S GPU clusters，vLLM/SGLang/Ollama Model Serving，MCP Server, RAG/AI Agent-based intelligent operations
+- **AI Infrastructure**: K8S GPU clusters，vLLM/SGLang/Ollama Model Serving，MCP Server, RAG/AI Agent-based intelligent operations
 
 ## Areas of Exploration
-- Passionate about open-source contributions (Rust / Go ecosystem, cloud-native DevOps toolchain).  
-- Focused on hybrid/multi-cloud automation and observability platform design.  
-- Actively exploring AI + Operations (RAG, AgentOps, intelligent monitoring), applying emerging technologies such as eBPF, vector databases, and GitOps toolchains in real projects, and summarizing best practices.  
+
+- Advocate of Cloud-Neutral architecture, building portable, observable, and automated infrastructure across multi-cloud and hybrid environments.
+- Focused on multi-cloud automation and observability platform engineering to ensure standardization and consistency.
+- Passionate about open-source tools and community contribution (Rust / Go ecosystem, cloud-native DevOps toolchain).
+- Exploring AI + Operations integration (RAG, AgentOps, intelligent monitoring) to build reusable AIOps capability frameworks.
 
 ## Education
 

@@ -28,14 +28,15 @@
 - **基础设施即代码 (IaC)**: Terraform, Pulumi
 - **编程语言**: 熟悉Python和Shell, 了解Go、Rust、JavaScript
 - **可观察性与监控**: Prometheus, Grafana, Deepflow (NPM), Datadog
-- AI基础设施：K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
+- **AI基础设施**：K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
 - **自动化工具**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
 
 ## 探索方向
 
-- 关注 混合云/多云自动化 与 可观测性平台化建设。
-- 热衷于开源工具研究与贡献（如 Rust / Go 生态、云原生 DevOps 工具链）。
-- 持续探索 AI + 运维结合（RAG、AgentOps、智能监控），并在实际项目中应用 eBPF、向量数据库、GitOps 工具链等新兴技术，总结最佳实践。
+- 坚持 Cloud-Neutral（云中立）架构理念，构建跨多云与混合云的可移植、可观察、自动化基础设施。
+- 专注 多云自动化 与 可观测性平台建设，推动云环境标准化与一致性。
+- 热衷 开源工具与社区实践（Rust / Go 生态、云原生 DevOps 工具链）。
+- 探索 AI + 运维结合（RAG、AgentOps、智能监控），形成可复用的 AIOps 能力体系。
 
 ## 教育背景
 

@@ -19,6 +19,13 @@
 - 技术栈：Linux、Python、Ansible、Docker、Kubernetes、IaC（Terraform/Ansible）、DevOps
 - AI 基础设施： K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
 
+** 关注方向 **
+
+- 坚持 Cloud-Neutral（云中立）架构理念，构建跨多云与混合云的可移植、可观察、自动化基础设施。
+- 专注 多云自动化 与 可观测性平台建设，推动云环境标准化与一致性。
+- 热衷 开源工具与社区实践（Rust / Go 生态、云原生 DevOps 工具链）。
+- 探索 AI + 运维结合（RAG、AgentOps、智能监控），形成可复用的 AIOps 能力体系。
+
 # 教育背景
 | 时间范围          | 最高学历       | 学校             | 专业              |
 | ------------------| -------------- | ---------------- | ----------------- |
@@ -55,25 +62,16 @@
 
 ## 个人开源项目
 
+- **XCloudFlow** ([GitHub](https://github.com/svc-design/XCloudFlow))  
+  多云管理与自动化框架，支持持续的基础设施部署与跨云编排。  
 - **XControl**  
   基于 Web 的控制端，集成 **XConfig、XCloudFlow、XScopeHub、Xstream** 等模块，提供统一的 DevOps、可观测性和 AI Agent 工作流管理界面。  
 - **XConfig** ([GitHub](https://github.com/svc-design/XConfig))  
   灵活的 DevOps 编排器，基于 Rust Agent，实现模块化部署与配置自动化。  
-- **XCloudFlow** ([GitHub](https://github.com/svc-design/XCloudFlow))  
-  多云管理与自动化框架，支持持续的基础设施部署与跨云编排。  
 - **XScopeHub** ([GitHub](https://github.com/svc-design/XScopeHub))  
   可观测性套件，集成 **Vector / OpenTelemetry / OpenObserve / PostgreSQL (Timescale/pgvector)**，支持近线 ETL、IaC/Ansible 拓扑与活跃调用链分析。  
-- **Xstream** ([GitHub](https://github.com/svc-design/Xstream))  
-  基于 Dart 的 GUI 客户端，用于跨境服务加速与连接管理，提升网络连接的可靠性与速度。  
-- **Navi** ([GitHub](https://github.com/svc-design/Navi))  
-  桌面级 AI 助手，旨在引导任务与提升效率，帮助用户更高效地完成工作。  
 
 ---
-
-### 关注方向
-- 基于 Web 的编排与可观测性平台（XControl）  
-- 云原生可观测性（指标、日志、链路）与 AI Agent + RAG 架构  
-- 多云自动化、DevOps 工具链与混合云基础设施优化  
 
 ## 企业项目
 
@@ -114,7 +112,6 @@
 **成就**：  
 - 完成 AI Agent POC 部署与演示，获得客户管理层认可。  
 - 提供可复用的环境搭建与验证文档，加速客户内部技术落地。
-  
 
 ## 项目 3：Tesla 上海内部项目
 

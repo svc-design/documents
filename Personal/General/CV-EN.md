@@ -8,7 +8,6 @@
 - LinkedIn: www.linkedin.com/in/haitaopan
 - Languages: Chinese (Native), English (Conversational)
 
-
 ## Key Experience and Expertise
 
 - 14 years of IT experience across manufacturing, finance, telecom, and internet industries
@@ -18,6 +17,13 @@
 - Observability: NPM & APM, eBPF, unified logging / metrics / tracing, performance tuning
 - Tech Stack: Linux, Python, Ansible, Docker, Kubernetes, IaC (Terraform / Ansible), DevOps
 - AI Infrastructure: K8S GPU clusters，vLLM/SGLang/Ollama Model Serving，MCP Server, RAG/AI Agent-based intelligent operations
+
+**Focus Areas**  
+
+- Advocate of Cloud-Neutral architecture, building portable, observable, and automated infrastructure across multi-cloud and hybrid environments.
+- Focused on multi-cloud automation and observability platform engineering to ensure standardization and consistency.
+- Passionate about open-source tools and community contribution (Rust / Go ecosystem, cloud-native DevOps toolchain).
+- Exploring AI + Operations integration (RAG, AgentOps, intelligent monitoring) to build reusable AIOps capability frameworks.
 
 # Education Background
 | Time Range        | Highest Degree | School           | Major             |
@@ -71,10 +77,6 @@
 - **Navi**  ([GitHub](https://github.com/svc-design/Navi)) 
   A desktop AI assistant designed to guide tasks and boost productivity, helping users accomplish work more efficiently.  
 
-**Focus Areas**  
-- Web-based orchestration & observability platform (XControl).  
-- Cloud-native observability (metrics, logs, traces) and AI Agent + RAG architectures.  
-- Multi-cloud automation, DevOps toolchains, and hybrid infrastructure optimization.  
 
 ### Project 1: DeepFlow North-South Traffic Collection System Maintenance – China Telecom Finance  
 **Duration**: Nov 2024 – Jul 2025  

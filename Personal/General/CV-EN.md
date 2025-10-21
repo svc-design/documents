@@ -129,10 +129,10 @@ Contributed to the deployment and validation of an AI Agent proof-of-concept (PO
 Implemented monitoring and alerting mechanisms to quickly detect and address issues.
     3. Collaborated with development teams to optimize deployment processes using GitHub Actions and GitOps with ArgoCD.
     4. Used Ansible, Helm, Jenkins, and GitHub Actions for regular software and system updates to enhance security and performance.
+    5. Maintained internal AI service GPU clusters and integrated with public cloud AI SaaS platforms to support unified hybrid-cloud inference operations.
 - Achievements:
     1. Enhanced the ITSM system CI/CD pipeline by redesigning the release process with GitHub Actions and ArgoCD.
     2. Developed Jenkins pipelines to automate edge software deployment, Ignition deployment, and upgrades, significantly improving deployment efficiency.
-
 
 ## Project 4: Roche MSP service with AWS/AliCloud
 

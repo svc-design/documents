@@ -130,6 +130,7 @@
   3. 实施监控和警报机制，快速检测和解决问题。
   4. 与开发团队合作，使用 GitHub Actions 和 ArgoCD 优化部署流程。
   5. 利用 Ansible、Helm、Jenkins 和 GitHub Actions 进行软件和系统的常规更新，提升安全性和性能。
+  6. 内部 AI 服务的混合 GPU 基础设施管理，集成本地集群与公有云 AI SaaS，实现统一的推理与运维体系。
 - **成就**：
   1. 通过 GitHub Actions 和 ArgoCD 重新设计发布流程，改进了 ITSM 系统的 CI/CD 流水线。
   2. 开发 Jenkins 流水线自动化边缘软件的部署、和升级，大大提升了部署效率。

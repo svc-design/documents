@@ -17,7 +17,7 @@
 - Architecture Design: Multi-cloud management, distributed systems, hybrid cloud, containerization, microservices, CI/CD
 - Observability: NPM & APM, eBPF, unified logging / metrics / tracing, performance tuning
 - Tech Stack: Linux, Python, Ansible, Docker, Kubernetes, IaC (Terraform / Ansible), DevOps
-- AI Infrastructure: K8S GPU clusters, vLLM / SGLang / Ollama deployment, MCP Server integration, RAG / AI Agent-based intelligent operations
+- AI Infrastructure: K8S GPU clusters，vLLM/SGLang/Ollama Model Serving，MCP Server, RAG/AI Agent-based intelligent operations
 
 # Education Background
 | Time Range        | Highest Degree | School           | Major             |

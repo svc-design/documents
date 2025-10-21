@@ -12,12 +12,12 @@
 # 关键经验与专长
 
 - 14 年 IT 从业经验（制造业 / 金融 / 运营商 / 互联网）
-- 技术栈：Linux、Python、Ansible、Docker、Kubernetes、IaC（Terraform/Ansible）、DevOps
+- 运维平台化：配置管理、自动化运维、平台化工具链
+- 项目交付与协作：客户支持、跨团队沟通、问题闭环
 - 架构设计：多云管理，分布式系统、混合云、容器化、微服务、CI/CD、
 - 可观测性：NPM & APM、eBPF、日志/指标/链路统一观测、性能优化
-- 运维平台化：配置管理、自动化运维、平台化工具链
-- AI 运维探索：AI Agent、RAG、智能化运维
-- 项目交付与协作：客户支持、跨团队沟通、问题闭环
+- 技术栈：Linux、Python、Ansible、Docker、Kubernetes、IaC（Terraform/Ansible）、DevOps
+- AI 基础设施： K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
 
 # 教育背景
 | 时间范围          | 最高学历       | 学校             | 专业              |

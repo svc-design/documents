@@ -27,6 +27,7 @@
 - **Programming Languages**: Proficient in Python and Shell; working knowledge of Go, Rust, JavaScript  
 - **Observability & Monitoring**: Prometheus, Grafana, Elasticsearch, DeepFlow (APM), Datadog  
 - **Automation Tools**: Ansible, Jenkins, Helm, GitHub Actions, GitLab CI, GitOps (ArgoCD, FluxCD)  
+- AI Infrastructure: K8S GPU clusters，vLLM/SGLang/Ollama Model Serving，MCP Server, RAG/AI Agent-based intelligent operations
 
 ## Areas of Exploration
 - Passionate about open-source contributions (Rust / Go ecosystem, cloud-native DevOps toolchain).  

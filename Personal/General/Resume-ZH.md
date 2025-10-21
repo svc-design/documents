@@ -4,16 +4,16 @@
 - **姓名**: 潘海涛 (Pan Haitao)
 - **位置**: 中国上海
 - **当前状态**: 离职
-- **电话**: 19286470192
+- **电话**: 13691175694
 - **邮箱**: manbuzhe2009@qq.com
 - **LinkedIn**: [www.linkedin.com/in/haitaopan](www.linkedin.com/in/haitaopan)
 - **语言**: 中文（母语），英语（会话）
 
 ## 期望职位
 
-- 云工程师
+- 基础设施运维
 - DevOps工程师
-- 解决方案架构师
+- 云架构师
 
 ## 职业概述
 
@@ -23,11 +23,12 @@
 - 近期专注于 AI 运维探索（AI Agent、RAG、智能化运维）。
 
 ## 技能概述
-- **云平台**: AWS, GCP, Azure，AliCloud
 - **容器化与编排**: Docker, Kubernetes
+- **云平台**: AWS, GCP, Azure，AliCloud
 - **基础设施即代码 (IaC)**: Terraform, Pulumi
-- **编程语言**: 熟悉Python和Shell；了解Go、Rust、JavaScript
-- **可观察性与监控**: Prometheus, Grafana, Elasticsearch,Deepflow (APM), Datadog
+- **编程语言**: 熟悉Python和Shell, 了解Go、Rust、JavaScript
+- **可观察性与监控**: Prometheus, Grafana, Deepflow (NPM), Datadog
+- AI基础设施：K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
 - **自动化工具**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
 
 ## 探索方向
@@ -74,8 +75,8 @@
 - **技术栈**: Linux, Kubernetes, GitHub Actions, GitOps (ArgoCD), Ansible, Helm, Jenkins
 - **职责**:
   1. 通过监控维护产线工业控制主机、虚拟机和 Kubernetes 集群，确保核心生产线的稳定性和高可用性。
-  2. 快速响应并解决生产软件和基础设施中的故障，最大限度地减少生产停机时间。
-  3. 实施监控和警报机制，快速检测和解决问题。
+  2. 实施监控和警报机制，快速检测和解决问题。
+  3. 快速响应并解决生产软件和基础设施中的故障，最大限度地减少生产停机时间。
   4. 与开发团队合作，使用 GitHub Actions 和 ArgoCD 优化部署流程。
   5. 利用 Ansible、Helm、Jenkins 和 GitHub Actions 进行软件和系统的常规更新，提升安全性和性能。
 

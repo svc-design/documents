@@ -11,13 +11,13 @@
 
 ## Key Experience and Expertise
 
-- 13+ years of IT experience (Manufacturing / Finance / Internet)
-- Tech Stack: Linux, Python, Ansible, Docker, Kubernetes, IaC (Terraform/Ansible), DevOps toolchains
-- Architecture Design: Distributed systems, hybrid cloud, containerization, microservices, CI/CD pipelines, multi-cloud management
-- Observability & Performance: NPM & APM, eBPF, unified metrics/logs/traces, performance tuning & stability optimization
-- Automation & Platformization: Configuration management, automated operations, platform-based DevOps solutions
-- AI-Driven Operations: AI Agent, RAG, intelligent operations and knowledge automation
-- Project Delivery & Collaboration: Customer support, cross-team coordination, issue resolution and closure
+- 14 years of IT experience across manufacturing, finance, telecom, and internet industries
+- Platform Operations: Configuration management, automation, and internal toolchains
+- Project Delivery & Collaboration: Customer support, cross-team coordination, issue resolution
+- Architecture Design: Multi-cloud management, distributed systems, hybrid cloud, containerization, microservices, CI/CD
+- Observability: NPM & APM, eBPF, unified logging / metrics / tracing, performance tuning
+- Tech Stack: Linux, Python, Ansible, Docker, Kubernetes, IaC (Terraform / Ansible), DevOps
+- AI Infrastructure: K8S GPU clusters, vLLM / SGLang / Ollama deployment, MCP Server integration, RAG / AI Agent-based intelligent operations
 
 # Education Background
 | Time Range        | Highest Degree | School           | Major             |

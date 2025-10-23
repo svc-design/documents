@@ -43,10 +43,10 @@
 ## 4. 核心技能
 
 - **容器化与编排**: Docker, Kubernetes
-- **云平台**: 熟悉AWS, 了解 GCP, Azure，AliCloud
 - **基础设施即代码 (IaC)**: Terraform, Pulumi
+- **云平台**: 熟悉AWS, 了解 GCP, Azure，AliCloud
+- **可观测**: Prometheus, Grafana, Deepflow (NPM), Datadog
 - **编程语言**: 熟悉Python和Shell, 了解Go、Rust、JavaScript
-- **可观察性与监控**: Prometheus, Grafana, Deepflow (NPM), Datadog
 - **AI基础设施**：K8S GPU 集群、vLLM/SGLang/Ollama、MCP Server、RAG/AI Agent 智能化运维
 - **自动化工具**: Ansible, Jenkins, Helm, GitHub Action, GitLab CI, GitOps (ArgoCD, FluxCD)
 ---
@@ -76,23 +76,9 @@
   2. 跟进采集器、DFServer与存储查询集群的优化与迁移
   3. 协助客户完成新技术PoC（AIAgent、混合云环境观测）
 - **重点项目与成果**：
-
-甜橙金融项目
-1. 优化采集器性能，解决高并发丢包问题，支撑南京区域 DFServer 迁移与扩容及信创改造。
-2. 完成硬件兼容性调优，提升系统稳定性与数据采集可靠性。
-3. 输出标准化维保与硬件调优手册，用于后续运维与复制部署。
-
-中远海运 AIAgent POC 项目
-1. 在企业私有云环境中完成多模型（LLM）集成与容器化部署，构建可复用的私有化 AIAgent 平台原型。
-2. 设计统一的模型接入层与 API 网关，实现多模型统一管理与安全调用。
-3. 基于 Kubernetes 构建容器化部署架构，支持多租户与弹性扩缩容。
-4. 编写标准化交付文档与复用模板，涵盖模型部署、配置与性能调优流程。
-5. 支撑业务 Case 智能分析场景验证，为后续生产化落地提供可复用框架。
-
-其他客户项目（上海电力、浙江移动、江苏电信、麦糖互联网）
-1. 云平台与自动化运维方案设计，涵盖多云监控、网络可观测性与容器化交付优化。
-2. 负责 Deepflow可观测性方案部署与优化。
-3. 推动多云环境标准化配置与自动化脚本复用，提升交付效率。
+  - 甜橙金融项目：优化采集器性能并解决高并发丢包问题，完成硬件兼容性调优与系统稳定性提升，输出标准化维保与调优手册支撑南京区域 DFServer 迁移与信创改造。
+  - 中远海运智能体 POC 项目: 构建可复用的私有化 AIAgent 平台原型，完成多模型集成与容器化部署，并结合 DeepFlow 可观测性系统实现智能分析与运维一体化。
+  - 负责 DeepFlow 可观测性产品在多家客户（上海电力、浙江移动、江苏电信、麦糖互联网）环境的交付、优化与使用支持，推动标准化配置与脚本复用以提升交付效率。
 
 ### 7.2 特斯拉（上海）有限公司 — 站点可靠性工程师（2024.01–2024.05）
 
@@ -104,11 +90,9 @@
   4. 监控并维护工业控制主机、虚拟机与 Kubernetes 集群，保障生产系统高可用与稳定性。
   5. 内部 AI 基础设施服务（AI Infra） 构建与外部 AI SaaS 集成，为智能监控与知识检索提供底层支撑。
 - **项目与成果**：
-  1. CI/CD 发布流程重构：通过 GitHub Actions + ArgoCD 重新设计 ITSM 系统发布流程，显著提升交付效率与安全性。
-  2. Grafana 配置自动化：编写 Ansible Playbook 将 Grafana 告警与仪表盘配置代码化，实现监控体系的自动化与可重复部署。
-  4. ArgoCD Server 部署与流水线模板设计：结合 GitHub Actions 打造 ITSM DMP 项目的自动化交付流程，减少部署时间、提升一致性。
-  5. AI Infra 与 AIOps 实践：集成内部 LLM 服务与外部 AI SaaS，支持知识检索、日志摘要、告警智能分析等功能，探索 AIOps 智能化运维场景。
-  6. Ignition 工控系统自动化部署流水线： 维护 Jenkins 自动化流水线，改进边缘设备与工业控制系统的持续集成与自动升级，显著提升部署速度与可靠性。
+  1. 重构企业级 CI/CD 自动化发布体系：整合 GitHub Actions、ArgoCD 与 Jenkins，统一 ITSM 与工控系统的交付流程，设计标准化流水线模板，显著提升部署速度、安全性与一致性。
+  2. 监控与配置自动化实现：编写 Ansible Playbook 将 Grafana 仪表盘与告警配置代码化，实现监控体系自动化与可重复部署，增强系统可维护性与可观测性。
+  4. AI Infra 与 AIOps 实践：集成内部 LLM 服务与外部 AI SaaS，支持知识检索、日志摘要、告警智能分析等功能，探索 AIOps 智能化运维场景。
 
 ### 7.3 华讯网络系统有限公司 — 云解决方案架构师（2022.03–2023.10）
 
@@ -120,12 +104,12 @@
   4. 参与基于 RAG 的智能运维 PoC，探索日志与告警的增强检索分析和异常定位方案。
   5. 指导团队进行监控与故障排除，构建基于 Prometheus/DeepFlow/Grafana 的开源全栈可观测体系。
 - **重点项目与成果**：
-成功交付多个云迁移项目，帮助客户在 AWS 与阿里云上建立混合云环境。实施 FluxCD GitOps 流程，显著提升部署自动化水平，减少人为干预。
   1. Roche MSP 项目：使用 FluxCD 管理 EKS Add-on 与 Datadog Agent，重构 Terraform 模块，实现集群迁移与自动化管理。
   2. 先正达种业 DevOps 平台：交付基于 AWS EKS 与 GitLab CI 的 DevOps 平台，引入 Prometheus、Grafana、DeepFlow APM 构建全栈监控体系。
   3. 联合力世纪云平台：为 AWS 与腾讯云规划标准化环境，集成 Keycloak 实现统一身份认证，并交付跨云监控方案。
 
 ### 7.4 江苏博云科技有限公司 — 解决方案架构师（2021.12–2022.01）
+
 - **技术栈**：Linux, Kubernetes, DevOPS
 - **职责**：
   1. 提供技术咨询，帮助客户优化云基础设施并采用Kubernetes编排方案。
@@ -203,34 +187,20 @@
 
 ## 8. 开源项目
 
-个人开源项目（Cloud-Neutral AI-Infra Platform）
-官方主页：www.svc.plus
-本系列项目基于 Cloud-Neutral（云中立） 架构理念，构建跨云环境下的统一管理、自动化运维与智能可观测平台。
-体系由 XCloudFlow、XScopeHub 与 XControl 三个核心模块组成，形成从基础设施到 AI 运维的全栈开源生态。
+- 个人开源项目
+  Cloud-Neutral AI-Infra Platform）https://github.com/CloudNativeSuite
 
-### 8.1 XControl
-- **简介**：XControl — Web 控制端与统一入口
-- **关键特性**：https://github.com/CloudNativeSuite/XControl
-提供统一的 Web 控制台，集成 XCloudFlow 与 XScopeHub，实现多云与可观测性的集中管理；支持资源视图、工作流与智能代理入口，并通过插件扩展 RAG 智能助手（AgentOps），实现自动诊断与知识检索。
+- 项目背景：
+基于 Cloud-Neutral（云中立）架构理念，构建跨云环境下的统一管理、自动化运维与智能可观测平台，覆盖基础设施编排、可观测性分析与 AI-Ops 智能化管理。
+- 主要子项目：
+• XControl — Web 控制端与统一入口，集成多云与可观测性管理，内置 RAG 智能助手（AgentOps）。
+• XCloudFlow — 多云自动化与编排框架，兼容 AWS / GCP / AliCloud / Azure，支持 IaC（Pulumi / Terraform）与 GitOps 工作流。
+• XScopeHub — 可观测性与智能分析套件，整合 Vector、OpenTelemetry、PostgreSQL（Timescale + PGVector），实现日志、指标、链路的统一观测与语义增强分析。
 
-### 8.2 XCloudFlow
-- **简介**：XCloudFlow — 多云自动化与编排框架 https://github.com/CloudNativeSuite/XCloudFlow
-- **关键特性**：
-面向 Cloud-Neutral 环境的自动化治理框架，兼容 AWS / GCP / AliCloud / Azure；支持跨云资源编排、持续部署与 IaC（Terraform / Pulumi）集成，采用 GitOps 流程与模块化设计，实现全生命周期的环境一致性管理。
-
-### 8.3 XScopeHub
-
-- **简介**： XScopeHub — 可观测性与智能分析套件 https://github.com/CloudNativeSuite/XScopeHub
-- **关键特性**： 整合 Vector / OpenTelemetry / PostgreSQL (Timescale / PGVector) 组件，实现日志、指标、链路的统一观测与近线 ETL 处理；结合 AI-OPS Agent 与 RAG 智能检索模块，支持观测数据的语义增强分析与智能根因提示。
-
-### 项目成果
-
-- 中立架构：遵循 Cloud-Neutral 原则，可在任意云或私有环境独立部署。
-- 全栈可观测性：覆盖从容器到应用层的指标、日志与调用链统一采集。
-- 智能化集成：结合 RAG + AgentOps，实现从数据到知识的语义增强与自动分析。
-- 模块化生态：各组件可独立运行或协同部署，通过 XControl 统一可视化与管理。
-
----
+- 项目成果：
+  - 完成 RAG 智能问答 Demo 与主站（www.svc.plus）上线。
+  - 建立模块化开源生态，实现从基础设施到 AI 运维的全栈闭环。
+  - 形成可复用的私有化 AI-Infra 部署框架与 DevOps 自动化模板。
 
 ## 9. 重点客户项目
 

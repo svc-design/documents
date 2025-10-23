@@ -15,12 +15,14 @@
 - Solutions Architect  
 
 ## Professional Summary
-- 14 years of IT experience spanning manufacturing, finance, telecom, and internet industries.  
-- Proficient in Linux, Kubernetes, Docker, Ansible, CI/CD, and IaC (Terraform/Ansible).  
-- Extensive experience in distributed system architecture, hybrid cloud, automation, and observability (NPM, APM, eBPF, unified logs/metrics/traces).  
-- Recently focused on AI-driven operations (AI Agents, RAG, intelligent operations).  
+
+1. Experienced in the IT field with a progressive background spanning Linux, Kubernetes, public cloud, and AI infrastructure, bringing cross-industry expertise and a strong systems-level architectural mindset.
+2. Skilled in building Cloud-Neutral multi-cloud and hybrid-cloud architectures, creating portable, observable, and automated infrastructure platforms.
+3. Proficient in Kubernetes, Terraform, Pulumi, Ansible, GitOps (ArgoCD / FluxCD), and modern CI/CD pipelines.
+4. Passionate about open-source and community practices, focusing on RAG, AgentOps, intelligent observability, and self-healing systems to advance infrastructure intelligence and autonomy.
 
 ## Skills Overview
+
 - **Cloud Platforms**: AWS, GCP, Azure, AliCloud  
 - **Containerization & Orchestration**: Docker, Kubernetes  
 - **Infrastructure as Code (IaC)**: Terraform, Pulumi  

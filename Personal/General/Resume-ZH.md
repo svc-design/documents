@@ -20,7 +20,7 @@
 1. 在 IT 领域持续深耕，历经 Linux、Kubernetes、公有云与 AI 基础设施等阶段，具备多行业实践与系统性架构能力。
 2. 擅长构建 Cloud-Neutral（云中立）多云与混合云架构，打造可移植、可观测、自动化 的基础设施平台。
 3. 精通 Kubernetes、Terraform，Pulumi、Ansible、GitOps（ArgoCD/FluxCD） 及现代化 CI/CD 流程。
-4.热衷开源与社区实践，聚焦 RAG、AgentOps、智能观测与自愈体系，推动基础设施智能化、自治化。
+4. 热衷开源与社区实践，聚焦 RAG、AgentOps、智能观测与自愈体系，推动基础设施智能化、自治化。
 
 ## 技能概述
 

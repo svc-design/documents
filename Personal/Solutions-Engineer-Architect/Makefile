@@ -43,7 +43,7 @@ FONTSIZE := -V fontsize=12pt
 
 .PHONY: all pdf docx html clean list help
 
-all: pdf docx html
+all: pdf
 
 help:
 	@echo "Usage:"

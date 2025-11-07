@@ -1,0 +1,33 @@
+graph TD
+  subgraph Fabric(多云/IDC 中立网络)
+    SDN[SD-WAN / Equinix / WireGuard Mesh]
+  end
+  subgraph Clouds(公有云)
+    AWS[AWS VPC]:::c
+    Ali[AliCloud VPC]:::c
+    Azure[Azure VNet]:::c
+    GCP[GCP VPC]:::c
+  end
+  subgraph DC(IDC / 私有云 / 边缘)
+    IDC[Private DC]
+    EDGE[Edge / GPU]
+  end
+  subgraph Control(中立控制层)
+    IaC[IaC (OpenTofu / Pulumi)]
+    GitOps[GitOps (Argo / Flux)]
+    Policy[Policy-as-Code (OPA / Kyverno)]
+  end
+  classDef c fill:#eef,stroke:#99f;
+
+  IDC --- SDN --- AWS
+  Ali --- SDN --- Azure
+  GCP --- SDN --- EDGE
+  IaC --> AWS
+  IaC --> Ali
+  IaC --> Azure
+  IaC --> GCP
+  IaC --> IDC
+  GitOps --> AWS
+  GitOps --> IDC
+  Policy --> AWS
+  Policy --> IDC

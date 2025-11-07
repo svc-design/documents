@@ -1,0 +1,13 @@
+graph TD
+  subgraph Hub(共享服务 / 检查 VPC)
+    CFW[Cloud Firewall] --> NAT[NAT Gateway]
+    PROXY[Egress Proxy (Squid / Envoy)]
+    DNS[(Private DNS)]
+  end
+  subgraph Spoke(业务 VPC)
+    APP[Apps / Containers]
+  end
+  APP -- http_proxy / https_proxy --> PROXY --> NAT --> Internet((Internet))
+  Internet --> WAF[WAF / L7 LB] --> APP
+  APP --- DNS
+  PROXY --- DNS

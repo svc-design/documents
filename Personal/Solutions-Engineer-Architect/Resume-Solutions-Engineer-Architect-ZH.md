@@ -19,16 +19,16 @@
 ---
 
 ## 专业概述
-拥有 14 年跨制造业、金融、电信与互联网行业的技术经验。
-具备 **云原生基础设施、DevOps 自动化、混合云架构与可观测性系统** 方面的丰富实践。
-专注于 **Cloud-Neutral（云中立）设计理念**，构建基于 Kubernetes、IaC 与 AI 智能运维的可迁移、自动化、智能化平台。
 
-- 设计并实施 AWS、阿里云及私有云环境下的多云与混合云架构。
-- 构建基于 Terraform / Pulumi / ArgoCD / GitHub Actions 的 GitOps 自动化流水线，使部署效率提升 50% 以上。
-- 设计并交付集成 Prometheus、Grafana、DeepFlow 与 Datadog 的统一可观测性体系，实现端到端可见性。
-- 主导 AIOps 与 RAG / AgentOps 方案，实现监控、分析与知识自动化闭环。
-- 开源项目贡献者，创建了 **Cloud-Neutral AI-Infra Platform**，支持分布式 AI 与可观测性基础设施。
+拥有 14 年跨制造业、金融、电信与互联网行业的技术经验，具备丰富的 云原生基础设施、DevOps 自动化、混合云架构与可观测性系统 实践。
+专注于 多云中立设计理念，构建基于 Kubernetes、IaC 与 AI 驱动运维（AIOps） 的可迁移、自动化、智能化平台。
 
+- 设计并实施 AWS、阿里云及私有云环境下的多云与混合云架构，支撑企业级 CI/CD 与 DevSecOps 实践；
+- 基于 GitLab/GitHub Actions、ArgoCD/FLuxCD、Terraform/Pulumi 构建端到端自动化交付流水线，使部署效率提升 50% 以上；
+- 设计并交付集成 Prometheus、Grafana、DeepFlow、Datadog 的统一可观测性体系，实现端到端可见性与智能分析；
+- 具备 GitLab DevOps 平台解决方案 设计与客户赋能经验，支持需求管理、代码托管、安全扫描与持续部署全流程；
+
+开源项目贡献者，创建 Cloud-Neutral AI-Infra Platform，支持分布式 AI 与可观测性基础设施。
 ---
 
 ## 核心技能
@@ -38,7 +38,7 @@
 | **云平台** | AWS · 阿里云 · GCP（基础） |
 | **云与容器化** | Kubernetes · Docker · Helm · K3s |
 | **基础设施即代码（IaC）** | Terraform · Pulumi · Ansible |
-| **DevOps / GitOps 自动化** | ArgoCD · FluxCD · GitHub Actions · Jenkins · GitLab CI |
+| **DevOps / GitOps 自动化** | ArgoCD · FluxCD · GitLab CI ·GitHub Actions · Jenkins|
 | **可观测性 / 智能运维** | Prometheus · Grafana · DeepFlow · Datadog · PGVector · RAG / AgentOps |
 | **网络与安全** | OpenResty / Nginx · TLS / Zero Trust · Proxy · WAF · eBPF |
 | **编程与脚本语言** | Python / Bash/ Go |
@@ -48,24 +48,32 @@
 
 ## 重点项目
 
-### COSCO 远洋集团 AIAgent 平台 – 云杉世纪（2025）
-- 设计并部署企业级多模型 AI-Agent 平台，集成 RAG 与 DeepFlow，实现智能可观测分析。
+### 中远海运集团 – 云杉世纪（2025）
+
 - 构建模块化容器化部署模板，降低集成成本 60%。
 - 将告警、指标与知识库数据打通，形成自动化诊断工作流。
+- 设计并部署企业级多模型 AI-Agent 平台，集成 RAG 与 DeepFlow，实现智能可观测分析。
 
 ### 特斯拉 ITSM 与 Ignition 系统 – 上海特斯拉（2024）
+
 - 使用 GitHub Actions 与 ArgoCD 重构 CI/CD 流程，使交付速度提升 40% 以上。
 - 通过 Ansible 自动化 Grafana 配置，实现统一告警与可视化管理。
 - 构建集成 LLM 的 AIOps 原型，实现告警摘要与根因分析自动化。
 
 ### Roche MSP 云平台 – 华讯网络（2023）
-- 设计并交付基于 EKS + FluxCD 的云原生环境，通过模块化 Terraform 实现可复现部署。
-- 集成 Prometheus、Datadog 与 DeepFlow，构建混合云可观测体系。
-- 通过标准化 IaC 模板，使资源交付效率提升 50%。
+
+- 集成 Prometheus、Datadog、DeepFlow，形成跨集群的混合云可观测体系；
+- 交付 Amazon EKS + FluxCD + GitLab CI 的云原生 MSP 平台，统一 IaC 自动化交付；
+- 构建 GitLab CI/CD 与 Terraform 模块化流水线，支持多租户环境下的基础设施与应用版本同步；
+- 优化 GitLab Runner 执行策略，提升 IaC 流水线稳定性与并行效率，使资源交付效率提升 50%+；
 
 ### 联合利世纪多云平台 – 华讯网络（2022）
-- 设计 AWS 与腾讯云混合架构，统一 Keycloak SSO 与跨云可观测性。
-- 集成 RAG 智能助手原型，用于多云事件知识检索与关联。
+
+- 结合 Terraform + ArgoCD + GitLab CI 实现 AWS 与腾讯云混合架构的全生命周期管理；
+- 设计并交付基于 完全开源 GitLab DevOps 平台 的多云自动化体系，统一 IaC 与应用交付；
+- 集成 Keycloak SSO 与跨云可观测性栈（Prometheus + Loki + Grafana），打通研发到运维的统一登录与监控；
+- 构建自托管 GitLab 生态（GitLab Server、Runner、Container Registry、Artifacts、Webhook）实现企业级持续交付；
+- 设计并实现 RAG 智能助手原型，支持多云事件知识检索与自动化故障关联，验证 AI 驱动的运维闭环场景。
 
 ### 光大银行 CPaaS 平台 – 灵雀云（2019）
 - 主导容器云 PaaS 平台升级（8 套 K8s 集群），提升稳定性与 DevOps 效率。
@@ -106,7 +114,8 @@
 
 ---
 
-### 易安信网络系统有限公司（Eccom Network Systems Co., Ltd.）
+### 华讯网络系统有限公司（Eccom Network Systems Co., Ltd.）
+
 **云解决方案架构师** | *2022.03 – 2023.10*
 **技术栈：** AWS · 阿里云 · Terraform · FluxCD · Prometheus · Datadog · DeepFlow · Ansible
 
@@ -116,12 +125,13 @@
 
 **主要成果：**
 - **Roche MSP 项目：** 使用 FluxCD 实现 EKS 集群自动化，模块化 Terraform 减少配置漂移 60%。
-- **先正达种子平台：** 交付集成 DeepFlow 与 Datadog 的全栈监控体系。
-- **联合利世纪平台：** 搭建多云单点登录与统一安全监控系统。
+- 先正达种业平台：设计并交付基于 DeepFlow 的全栈监控体系，结合 GitLab 实现 IaC 交付的一体化自动化方案。
+- 联合利世纪平台：搭建多云单点登录与统一安全监控系统，基于自建 GitLab 平台完成 IaC 与应用交付一体化。
 
 ---
 
 ### 优刻得科技股份有限公司（UCloud Technology Co., Ltd.）
+
 **高级解决方案架构师** | *2020.07 – 2021.11*
 **技术栈：** 云迁移 · Kubernetes · 混合云 · 分布式存储 · CI/CD · 日志与监控
 
@@ -137,6 +147,7 @@
 ---
 
 ## 早期经历（2011 – 2018）
+
 **职位路径：** 软件工程师 → 运维工程师 → 交付工程师
 **任职公司：** 统信软件（Deepin）、知道创宇、浪潮电子、标准软件（CS2C）、灵雀云
 
@@ -169,4 +180,3 @@
 - **解决方案思维：** 善于将复杂技术架构转化为可落地的工程方案。
 - **跨栈能力：** 从 Linux 内核与 eBPF 到多云编排与 AI 运维。
 - **AI 驱动的工程实践：** 利用 LLM 实现智能监控、日志分析与配置生成。
-- **开源与云中立倡导者：** 推动 “Cloud-Neutral Architecture” 理念，构建可移植、无厂商绑定的基础设施。

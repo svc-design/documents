@@ -1,0 +1,12 @@
+graph TD
+  classDef subnet fill:#eef,stroke:#66f,stroke-width:1px;
+  classDef external fill:#fff2e6,stroke:#f60,stroke-width:1px,font-weight:bold;
+
+  subgraph Cloud VPC/VNet
+    DMZ[DMZ Subnet<br/>ALB / WAF / Reverse Proxy]:::subnet --> IGW[Internet Gateway]:::subnet
+    Private[Private Subnets<br/>App / DB]:::subnet
+    Private -- 默认路由 0.0.0.0/0 --> NAT[NAT Gateway / Firewall]:::subnet
+  end
+  Internet((Internet)):::external --> DMZ
+  NAT --> IGW
+  DMZ --> Private

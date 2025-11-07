@@ -33,7 +33,7 @@
 | **GitOps / CI/CD** | ArgoCD · FluxCD · GitHub Actions · GitLab CI · Jenkins |
 | **可观测性与AIOps** | Prometheus · Grafana · DeepFlow · Datadog · RAG /AgentOps |
 | **云平台** | AWS · AliCloud · GCP（了解） |
-| **语言与脚本** | Python / Shell（熟练），Go / Rust（了解） |
+| **语言与脚本** | Python / Shell（熟练），Go / （了解） |
 | **AI基础设施** | GPU集群部署 · vLLM / SGLang / Ollama · MCP Server 集成 |
 
 ## 重点项目经历

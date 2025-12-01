@@ -3,15 +3,17 @@
 ## 个人信息
 
 - **姓名**: 潘海涛
-- **位置**: 中国上海
+- **位置**: 上海
 - **当前状态**: 离职
-- **电话**: 13691175694
-- **邮箱**: manbuzhe2009@qq.com
+- **电话**: 
+- **邮箱**: haitaopanhq@gmail.com
 
 ## 期望职位
-- 云原生架构师 / 云平台技术专家
-- 平台工程师 / DevOps工程师（偏架构方向）
-- 智能运维 / 可观测性方案专家（AIOps方向）
+
+- 云原生 / 云平台工程师
+- 平台工程师 / DevOps 工程师（偏架构与自动化）
+- 智能运维工程师 / 可观测性工程师（AIOps方向）
+- 全职岗位（非外包）
 
 ## 职业概述
 
@@ -22,18 +24,17 @@
 - 构建 Terraform / Pulumi + ArgoCD + GitHub Actions 自动化流水线，部署效率提升 50%+。
 - 设计 Prometheus + Grafana + DeepFlow + Datadog 可观测体系，统一指标、日志、链路数据。
 - 推动 RAG + AgentOps 结合，实现告警智能归类与知识联动分析。
-- 持续维护开源项目 **Cloud-Neutral AI-Infra Platform**（[github.com/CloudNativeSuite](https://github.com/CloudNativeSuite)）。
 
 ## 核心技能
 
 | 领域 | 能力 |
 |------|------|
+| **云平台** | AWS · AliCloud · GCP（了解） |
 | **容器化与编排** | Kubernetes · Docker · Helm |
 | **基础设施即代码 (IaC)** | Terraform · Pulumi · Ansible |
+| **语言与脚本** | Python / Shell（熟练），Go /NodeJS （了解） |
 | **GitOps / CI/CD** | ArgoCD · FluxCD · GitHub Actions · GitLab CI · Jenkins |
 | **可观测性与AIOps** | Prometheus · Grafana · DeepFlow · Datadog · RAG /AgentOps |
-| **云平台** | AWS · AliCloud · GCP（了解） |
-| **语言与脚本** | Python / Shell（熟练），Go / （了解） |
 | **AI基础设施** | GPU集群部署 · vLLM / SGLang / Ollama · MCP Server 集成 |
 
 ## 重点项目经历
@@ -103,16 +104,28 @@
 
 在灵雀云、UCloud、博云、深度科技等多家云计算与容器厂商任职，负责 PaaS 平台交付、Kubernetes 集群迁移与自动化运维体系建设。积累了从传统 Linux 服务器构建与运维，到现代化平台工程与 DevOps 体系建设的完整经验.
 
+| **时间范围**          | **公司**                              | **职位**                    |
+|-----------------------|---------------------------------------|-----------------------------|
+| 2021.12 ~ 2022.1      | 江苏博云科技有限公司                  | 容器云解决方案架构师        |
+| 2020.7 ~ 2021.11      | UCloud科技有限公司                    | 云解决方案架构师            |
+| 2018.5 ~ 2020.6       | 灵雀云科技有限公司                    | 交付工程师                  |
+| 2015.5 ~ 2018.4       | 深度科技有限公司                      | 软件工程师                  |
+| 2013.11 ~ 2015.4      | 知道创宇科技有限公司                  | 运维工程师                  |
+| 2013.5 ~ 2013.10      | 浪潮电子信息有限公司                  | 系统软件工程师              |
+| 2011.5 ~ 2013.4       | 中国标准软件有限公司                  | 软件工程师                  |
+
 ## 教育背景
 
 | 时间 | 学历 | 学校 | 专业 |
 |------|------|------|------|
 | 2006–2010 | 本科 | 长春工程学院 | 电气工程与自动化 |
 
-## 开源与社区项目
+## 个人开源与社区项目
 
-### Cloud-Neutral AI-Infra Platform — [github.com/CloudNativeSuite](https://github.com/CloudNativeSuite)
+** https://github.com/CloudNativeSuite **
 
-- **XCloudFlow**：多云 IaC + GitOps 编排框架
-- **XScopeHub**：可观测与智能分析套件（Vector / OTel / PGVector）
 - **XControl**：Web 控制台 + RAG 智能助手
+- **XCloudFlow**：多云 IaC + GitOps 编排框架
+- **XScopeHub**：可观测与智能分析套件（ OTel / PGVector /LLM ）
+- **XPlane** : 面向多云的声明式控制面，用于全局流量管理和自动扩缩容。
+- **CloudNativeArchitectureReference**：面向多云与混合环境的基础设施自动化与 GitOps 项目，涵盖 IaC 与 CI/CD 模块。

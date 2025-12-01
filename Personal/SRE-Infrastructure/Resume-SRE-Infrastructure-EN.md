@@ -5,15 +5,16 @@
 - Location: Shanghai, China
 - Status: Open to opportunities
 - Phone: +86 136-9117-5694
-- Email: manbuzhe2008@gmail.com
+- Email: haitaopanhq@gmail.com
 - LinkedIn: www.linkedin.com/in/haitaopan
 - Languages: Chinese (native), English (conversational)
 
 ## Target Positions
 
-- Cloud-Native Architect / Cloud Platform Technical Expert
-- Platform Engineer / DevOps Engineer (focused on architecture)
-- Intelligent Ops / Observability Solution Expert (AIOps)
+- SRE / Platform Operations Engineer
+- Cloud Engineer / Infrastructure Operations
+- IaC Automation Engineer / DevOps (Infrastructure-Focused)
+- Full-time, non-outsourcing (in-house) positions
 
 ## 📘 Professional Summary
 
@@ -29,13 +30,13 @@ Experienced in designing consistent, scalable hybrid-cloud environments that bal
 ## Core Skills
 | Category | Skills |
 |-----------|---------|
+| **Cloud Platforms** | AWS · AliCloud · Basic GCP |
 | **Containers & Orchestration** | Kubernetes · Docker · Helm |
 | **Infrastructure as Code** | Terraform · Pulumi · Ansible |
 | **GitOps / CI/CD** | ArgoCD · FluxCD · GitHub Actions · GitLab CI · Jenkins |
-| **Observability & AIOps** | Prometheus · Grafana · DeepFlow · Datadog · RAG / AgentOps |
-| **Cloud Platforms** | AWS · AliCloud · Basic GCP |
 | **Programming / Scripting** | Python / Shell (Proficient), Go / Rust (Familiar) |
 | **AI Infrastructure** | GPU Clusters · vLLM / SGLang / Ollama · MCP Server Integration |
+| **Observability & AIOps** | Prometheus · Grafana · DeepFlow · Datadog · RAG / AgentOps |
 
 ## Key Projects
 
@@ -102,8 +103,20 @@ Experienced in designing consistent, scalable hybrid-cloud environments that bal
   3. Lianheli Century Cloud Platform: Planned AWS + Tencent Cloud architecture, integrated Keycloak SSO, and built cross-cloud monitoring solutions.
 
 ### Early Career (2011 – 2021)
+
 Worked at LingqueCloud, UCloud, Boyun, and Deepin in roles focused on PaaS platform delivery, Kubernetes migration, and automation system design.
 Gained comprehensive experience from traditional Linux server operations to modern platform engineering and DevOps architecture development.
+
+| **Duration**          | **Company**                               | **Job Title**                     |
+|-----------------------|-------------------------------------------|-----------------------------------|
+| 2021.12 ~ 2022.1      | Jiangshu BoCloud Technology Co., Ltd.    | Senior Solution Architect          |
+| 2020.7 ~ 2021.11      | UCloud Technology Co., Ltd.               | Senior Solution Architect         |
+| 2018.5 ~ 2020.6       | Alauda Cloud Technology Co., Ltd.        | Delivery Engineer                  |
+| 2015.5 ~ 2018.4       | Tongxin Software Co., Ltd.               | Software Engineer                  |
+| 2013.11 ~ 2015.4      | KnowSec Technology Co., Ltd.             | Operations Engineer                |
+| 2013.5 ~ 2013.10      | Inspur Electronic Information Co., Ltd.  | System Software Engineer           |
+| 2011.5 ~ 2013.4       | China Standard Software Co., Ltd.        | Software Engineer                  |
+
 
 ## Education
 
@@ -111,9 +124,11 @@ Gained comprehensive experience from traditional Linux server operations to mode
 |--------|---------|-------------|-------|
 | 2006–2010 | Bachelor | Changchun Institute of Technology | Electrical Engineering & Automation |
 
-## Open-Source Projects
+## Open-Source & Community Projects
+**https://github.com/CloudNativeSuite**
 
-**Cloud-Neutral AI-Infra Platform** — [github.com/CloudNativeSuite](https://github.com/CloudNativeSuite)
-- **XCloudFlow** – Multi-cloud IaC + GitOps orchestration framework
-- **XScopeHub** – Observability & analytics suite (Vector / OTel / PGVector)
-- **XControl** – Web console + RAG intelligent assistant
+- **XControl**: Web console with an integrated RAG-based intelligent assistant
+- **XCloudFlow**: Multi-cloud IaC and GitOps orchestration framework
+- **XScopeHub**: Observability and intelligent analytics suite (OTel / PGVector / LLM)
+- **XPlane**: A cloud-neutral, declarative control plane for global traffic and autoscaling
+- **CloudNativeArchitectureReference**: Infrastructure automation and GitOps project for multi-cloud and hybrid environments, covering IaC and CI/CD modules
